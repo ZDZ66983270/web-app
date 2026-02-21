@@ -1,0 +1,46 @@
+2026-02-10 23:07:57,185 | 60131 | 8353292864 | [open_context_base.py:409] _init_connect_sync: New connect ready: conn=7427005411476177894(1) context=<futu.quote.open_quote_context.OpenQuoteContext object at 0x10277b0e0>
+DEBUG_RECORD: 800000
+basic {
+  security {
+    market: 1
+    code: "800000"
+  }
+  type: 6
+  isSuspend: false
+  listTime: "1970-01-01"
+  lotSize: 1
+  priceSpread: 0.01
+  updateTime: "2026-02-10 16:00:00"
+  highPrice: 27397.65
+  openPrice: 27202.96
+  lowPrice: 27104.82
+  lastClosePrice: 27027.16
+  curPrice: 27183.15
+  volume: 0
+  turnover: 234039585144.406
+  turnoverRate: 0.0
+  listTimestamp: 0.0
+  updateTimestamp: 1770710400.0
+  askPrice: 0.0
+  bidPrice: 0.0
+  askVol: 0
+  bidVol: 0
+  amplitude: 1.083
+  avgPrice: 27251.235
+  bidAskRatio: 0.0
+  volumeRatio: 0.0
+  highest52WeeksPrice: 28056.1
+  lowest52WeeksPrice: 19260.21
+  highestHistoryPrice: 33484.08
+  lowestHistoryPrice: 150.11
+  secStatus: 1
+  closePrice5Minute: 27145.9
+  name: "\346\201\222\347\224\237\346\214\207\346\225\260"
+}
+indexExData {
+  raiseCount: 55
+  fallCount: 33
+  equalCount: 0
+}
+
+2026-02-10 23:07:57,671 | 60131 | 6165966848 | [open_context_base.py:516] on_disconnect: Disconnected: conn=0(1) reason=CallClose

@@ -1,0 +1,849 @@
+Parsing data/reports/CN/600309/2025-04-15_万华化学2024年年度报告.pdf...
+[PDF_DEBUG] Detected GENERIC ENTERPRISE (non-bank)
+[PDF_DEBUG] Scanning first 80 pages for key content...
+[PDF_DEBUG]   Hot page detected: Page 7. Using layout-enhanced extraction.
+[PDF_DEBUG]   Hot page detected: Page 16. Using layout-enhanced extraction.
+[PDF_DEBUG]   Hot page detected: Page 19. Using layout-enhanced extraction.
+[PDF_DEBUG]   Hot page detected: Page 21. Using layout-enhanced extraction.
+[PDF_DEBUG]   Hot page detected: Page 75. Using layout-enhanced extraction.
+[PDF_DEBUG]   Hot page detected: Page 79. Using layout-enhanced extraction.
+[PDF_DEBUG] Extraction complete: 102487 chars.
+[PDF_DEBUG] --- Starting Financial Parsing ---
+[PDF_DEBUG] [DEBUG] A-Share (CN) Market Detected. Using conservative unit detection.
+[PDF_DEBUG] A-Share Global Unit Default: 1.0 (Reason: No explicit '单位:' header found)
+[PDF_DEBUG] Detected full report keyword in header: 万华化学集团股份有限公司2024年年度报告
+公司代码：600309 公司简称：万华化学
+万华化学集团股份有限公司
+2024 年年度报告
+1 / 223
+
+万华化学集团股份有限公司2024年年度报告
+重要提示
+一、本公司董事会、监事会及董事、监事、高级管理人员保证年度报告内容的真实性、
+准确性、完整性，不存在虚假记载、误导性陈述或重大遗漏，并承担个别和连带的法
+律责任。
+二、未出席董事情况
+未出席董事职务 未出席董事姓名 未出席董事的原因说明 被委托人姓名
+董事 荣锋 其他工作安排 王清春
+董事 刘勋章 其他工作安排 王清春
+三、安永华明会计师事务所（特殊普通合伙）为本公司出具了标准无保留意见的审计
+报告。
+四、公司负责人廖增太、主管会计工作负责人李立民及会计机构负责人（会计主管人
+员）聂辉强声明：保证年度报告中财务报告的真实、准确、完整。
+五、董事会决议通过的本报告期利润分配预案或公积金转增股本预案
+以实施权益分派股权登记日登记的总股本为基数，向全体股东每 10 股派发现金
+红利7.30元（含税）。截至 2024年12月31日，公司总股本 3,139,746,626.00 股，
+以此计算合计拟派发现金红利 2,292,015,036.98 元（含税），剩余未分配利润
+56,723,962,329.57 元结转以后年度分配。本年度公司现金分红（包括中期已分配的
+现金红利1,632,668,245.52 元）总额3,924,683,282.50 元，占本年度归属于上市公
+司股东净利润的比例为30.11%。
+六、前瞻性陈述的风险声明
+√适用 □不适用
+本报告中涉及的未来计划、发展战略等前瞻性描述，不构成公司对投资者的实质
+承诺，敬请投资者注意投资风险。
+七、是否存在被控股股东及其他关联方非经营性占用资金情况
+否
+八、是否存在违反规定决策程序对外提供担保的情况
+否
+2 / 223
+
+万华化学集团股份有限公司2024年年度报告
+九、是否存在半数以上董事无法保证公司所披露年度报告的真实性、准确性和完整性
+否
+十、重大风险提示
+报告期内暂无可能对公司未来发展战略和经营目标的实现产生不利影响的重大
+风险。
+十一、其他
+□适用 √不适用
+3 / 223
+
+万华化学集团股份有限公司2024年年度报告
+目录
+第一节 释义 .................................................................................................................................... 5
+第二节 公司简介和主要财务指标 ................................................................................................. 6
+第三节 管理层讨论与分析............................................................................................................. 9
+第四节 公司治理........................................................................................................................... 34
+第五节 环境与社会责任............................................................................................................... 48
+第六节 重要事项........................................................................................................................... 55
+第七节 股份变动及股东情况....................................................................................................... 64
+第八节 优先股相关情况............................................................................................................... 69
+第九节 债券相关情况................................................................................................................... 70
+第十节 财务报告........................................................................................................................... 75
+载有法定代表人、主管会计工作负责人、会计机构负责人签名并盖章
+的会计报表。
+备查文件目录
+报告期内在《中国证券报》、《上海证券报》、《证券时报》、《证
+券日报》披露过的所有公司文件的正本及公告原稿。
+4 / 223
+
+万华化学集团股份有限公司2024年年度报告
+第一节 释义
+一、 释义
+在本报告书中，除非文义另有所指，下列词语具有如下含义：
+常用词语释义
+中国证监会 指 中国证券监督管理委员会
+上交所 指 上海证券交易所
+公司、本公司、万华化学、万华 指 万华化学集团股份有限公司
+万华实业 指 公司原控股股东万华实业集团有限公司
+万华化工 指 公司原控股股东烟台万华化工有限公司
+烟台市国资委 指 烟台市人民政府国有资产监督管理委员会
+国丰集团、控股股东 指 烟台国丰投资控股集团有限公司
+中诚投资 指 烟台中诚投资股份有限公司
+宁波市中凯信创业投资股份有限公司，原名“深圳市
+中凯信 指 中凯信创业投资股份有限公司”，于2019年4月16
+日工商更名
+Prime Partner International Limited，中文名：
+合成国际 指
+合成国际控股有限公司
+BorsodChem Zártkörűen MűködőRészvénytársaság，
+BC公司 指
+简称：BorsodChem Zrt.中文名：宝思德化学公司
+万华宁波 指 万华化学(宁波)有限公司
+万华福建 指 万华化学(福建)有限公司
+MDI 指 二苯基甲烷二异氰酸酯
+HDI 指 六亚甲基二异氰酸酯
+脂肪族异氰酸酯（包括H MDI、HDI、HDI衍生物、IPDI
+ADI 指 12
+等）
+SAP 指 高吸水树脂
+TPU 指 热塑性聚氨酯弹性体
+LPG 指 液化石油气
+PO 指 环氧丙烷
+AE 指 丙烯酸酯
+PC 指 聚碳酸酯
+PMMA 指 聚甲基丙烯酸甲酯
+TDI 指 甲苯二异氰酸酯
+PVC 指 聚氯乙烯
+C2 指 碳2化学
+C3 指 碳3化学
+C4 指 碳4化学
+MS 指 甲基丙烯酸甲酯-苯乙烯共聚物
+XLPE 指 交联聚乙烯
+POE 指 聚烯烃弹性体
+POCHP 指 过氧化氢异丙苯制环氧丙烷
+PDH 指 丙烷脱氢
+LDPE 指 低密度聚乙烯
+5 / 223
+
+万华化学集团股份有限公司2024年年度报告
+第二节 公司简介和主要财务指标
+一、公司信息
+公司的中文名称 万华化学集团股份有限公司
+公司的中文简称 万华化学
+公司的外文名称 Wanhua Chemical Group Co.,Ltd.
+公司的外文名称缩写 wanhua
+公司的法定代表人 廖增太
+二、联系人和联系方式
+董事会秘书 证券事务代表
+姓名 李立民 肖明华
+联系地址 烟台市经济技术开发区三亚路3号 烟台市经济技术开发区三亚路3号
+电话 0535-3031588 0535-3031588
+传真 0535-6875686 0535-6875686
+电子信箱 lmli@whchem.com mhxiao@whchem.com
+三、基本情况简介
+公司注册地址 山东省烟台市开发区重庆大街59号
+1998年，公司成立时注册地址为“山东省烟台市幸福
+南路7号”；
+2015年，公司注册地址变更为“山东省烟台市开发区
+公司注册地址的历史变更情况
+天山路17号”；
+2021年，公司注册地址变更为“山东省烟台市开发区
+重庆大街59号”。
+公司办公地址 烟台市经济技术开发区三亚路3号
+公司办公地址的邮政编码 264006
+公司网址 www.whchem.com
+电子信箱 stocks@whchem.com
+四、信息披露及备置地点
+中国证券报（网址www.cs.com.cn）、上海证券报
+公司披露年度报告的媒体名称及网址 （网址www.cnstock.com）、证券时报（网址
+www.stcn.com）、证券日报（网址www.zqrb.cn）
+公司披露年度报告的证券交易所网址 上海证券交易所网站www.sse.com.cn
+公司年度报告备置地点 公司董事会秘书处
+五、公司股票简况
+公司股票简况
+股票种类 股票上市交易所 股票简称 股票代码 变更前股票简称
+A股 上海证券交易所 万华化学 600309 烟台万华
+6 / 223
+
+                                                                                  
+                                                                                  
+                                                                                  
+                           万华化学集团股份有限公司2024年年度报告                                  
+                                                                                  
+                                                                                  
+         六、其他相关资料                                                                 
+                        名称            安永华明会计师事务所（特殊普通合伙）                          
+          公司聘请的会计师事                   北京市东城区东长安街     1 号东方广场安永大楼    17            
+                        办公地址                                                      
+          务所（境内）                      层01-12室                                     
+                        签字会计师姓名       安秀艳、李辉华                                     
+                                                                                  
+         七、近三年主要会计数据和财务指标                                                         
+         (一) 主要会计数据                                                               
+                                                                                  
+                                                      单位：元   币种：人民币               
+                                                本期比上年同期                           
+      主要会计数据           2024年          2023年                     2022年             
+                                                  增减(%)                           
+     营业收入          182,069,119,160.94 175,360,935,668.36 3.83 165,565,484,373.69  
+     归属于上市公司股                                                                     
+                    13,033,066,612.84 16,815,755,534.31 -22.49 16,233,626,024.32  
+     东的净利润                                                                        
+     归属于上市公司股                                                                     
+     东的扣除非经常性       13,358,861,995.56 16,438,841,961.03 -18.74 15,797,326,614.07  
+     损益的净利润                                                                       
+     经营活动产生的现                                                                     
+                    30,053,435,178.33 26,796,752,552.51 12.15 36,336,824,920.33   
+     金流量净额                                                                        
+                                                本期末比上年同                           
+                      2024年末         2023年末                    2022年末             
+                                                期末增减（%）                           
+     归属于上市公司股                                                                     
+                    94,625,896,066.69 88,656,204,854.29 6.73 76,844,533,840.41    
+     东的净资产                                                                        
+     总资产           293,333,349,744.25 253,040,390,845.31 15.92 200,843,198,875.15 
+         (二) 主要财务指标                                                               
+           主要财务指标             2024年     2023年   本期比上年同期增减(%)       2022年          
+     基本每股收益（元／股）                  4.15     5.36            -22.57     5.17        
+     稀释每股收益（元／股）                  4.15     5.36            -22.57     5.17        
+     扣除非经常性损益后的基本每股                                                               
+                                  4.25     5.24            -18.89     5.03        
+     收益（元／股）                                                                      
+     加权平均净资产收益率（%）               14.29     20.42    减少6.13个百分点       22.75        
+     扣除非经常性损益后的加权平均                                                               
+                                 14.65     19.96    减少5.31个百分点       22.14        
+     净资产收益率（%）                                                                    
+         报告期末公司前三年主要会计数据和财务指标的说明                                                  
+         □适用  √不适用                                                                
+         八、境内外会计准则下会计数据差异                                                         
+         (一)同时按照国际会计准则与按中国会计准则披露的财务报告中净利润和归属于上                                    
+         市公司股东的净资产差异情况                                                            
+         □适用  √不适用                                                                
+                                                                                  
+         (二)同时按照境外会计准则与按中国会计准则披露的财务报告中净利润和归属于上                                    
+         市公司股东的净资产差异情况                                                            
+                                                                                  
+         □适用  √不适用                                                                
+                                     7 / 223                                      
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+
+万华化学集团股份有限公司2024年年度报告
+(三)境内外会计准则差异的说明：
+□适用 √不适用
+九、2024年分季度主要财务数据
+单位：元 币种：人民币
+第一季度 第二季度 第三季度 第四季度
+（1-3月份） （4-6月份） （7-9月份） （10-12月份）
+营业收入 46,161,004,693.46 50,906,358,863.63 50,536,786,854.36 34,464,968,749.49
+归属于上市公司股东的净利润 4,157,379,176.37 4,016,993,384.07 2,918,951,589.81 1,939,742,462.59
+归属于上市公司股东的扣除非
+4,127,075,821.44 3,971,881,566.64 2,828,985,853.35 2,430,918,754.13
+经常性损益后的净利润
+经营活动产生的现金流量净额 3,083,663,688.61 7,207,608,427.73 9,014,207,501.86 10,747,955,560.13
+季度数据与已披露定期报告数据差异说明
+□适用 √不适用
+十、非经常性损益项目和金额
+√适用 □不适用
+单位：元 币种：人民币
+附注（如适
+非经常性损益项目 2024年金额 2023年金额 2022年金额
+用）
+非流动性资产处置损益，包括已计提资产减
+-845,785,980.60 -242,321,258.75 -221,402,937.51
+值准备的冲销部分
+计入当期损益的政府补助，但与公司正常经
+营业务密切相关、符合国家政策规定、按照
+517,990,373.24 756,339,688.86 610,583,131.09
+确定的标准享有、对公司损益产生持续影响
+的政府补助除外
+除同公司正常经营业务相关的有效套期保值
+业务外，非金融企业持有金融资产和金融负
+-76,388,802.79 81,566,532.80 172,955,397.70
+债产生的公允价值变动损益以及处置金融资
+产和金融负债产生的损益
+债务重组损益 -2,063,125.34
+除上述各项之外的其他营业外收入和支出 -2,045,794.96 -136,472,401.83 -49,124,787.68
+其他符合非经常性损益定义的损益项目 1,443,284.25 6,134.90 991,610.01
+减：所得税影响额 -51,571,982.76 80,982,446.50 85,906,638.05
+少数股东权益影响额（税后） -27,419,555.38 1,222,676.20 -10,266,760.03
+合计 -325,795,382.72 376,913,573.28 436,299,410.25
+本集团对非经常性损益项目确认按照《公开发行证券的公司信息披露解释性公告第1号——
+非经常性损益》（证监会公告〔2023〕65号）的规定执行。对于将列举的非经常性损益项目界定为
+经常性损益的项目如下：
+√适用 □不适用
+单位：元 币种：人民币
+项目 涉及金额 原因
+资源综合利用即征即退、进项税加计抵
+662,653,837.01 与公司正常经营业务密切相关
+减、代扣个税手续费返还
+碳排放配额履约支出 -202,640,407.54 与公司正常经营业务密切相关
+碳排放权交易收益 47,948,930.72 与公司正常经营业务密切相关
+8 / 223
+
+万华化学集团股份有限公司2024年年度报告
+十一、采用公允价值计量的项目
+√适用 □不适用
+单位：元 币种：人民币
+项目名称 期初余额 期末余额 当期变动
+衍生金融资产 144,322,543.41 77,892,526.87 -66,430,016.54
+应收款项融资 1,697,775,630.06 1,298,979,936.80 -398,795,693.26
+其他权益工具投资 594,868,852.16 564,876,931.01 -29,991,921.15
+衍生金融负债 417,214,699.29 126,938,111.57 -290,276,587.72
+十二、其他
+□适用 √不适用
+第三节 管理层讨论与分析
+一、经营情况讨论与分析
+2024年，公司紧跟人工智能的发展浪潮，扎实推进“数智化年”管理主题，加快
+数字化转型步伐，利用数据和 AI赋能业务，不断提升装置生产效率和安全管理水平，
+提升企业运营和协同效率，持续增强企业综合竞争实力。
+2024年，公司集中科研力量，形成压强效应，聚氨酯制造技术持续精进领先；在
+合成生物学、电化学等多个前沿领域，加快探索步伐，为未来产业发展储备动能；通
+过收购兼并，实现了电池正极材料的全产业链布局，为第二增长曲线业务发展打下坚
+实基础；蓬莱产业园一期工程如期建成投产，乙烯二期项目建设稳步推进，万华产业
+继续走在高端化、智能化、绿色化的发展道路上。
+（一） 市场及营销情况
+聚氨酯业务在“深度国际化、深度渠道下沉、深度一体化协同”的工作方针指导
+下，坚定配置海外市场资源，加快国际团队建设，植根销售，细化海外市场开发颗粒
+度，在全球加快形成毛细血管式的销售网络，为全球合作伙伴提供极致产品、至臻服
+务。聚焦行业发展，深耕行业培育，建立行业标准，持续做大市场蛋糕，为行业发展
+赋能。研、产、销“铁三角”营销模式卓越落地，解决方案型业务、差异化产品业务
+快速发展，MDI、TDI、聚醚、改性产品销量和市场份额再创历史新高，成为全球聚氨
+酯行业市场领先企业。
+石化业务围绕“强化合作、协同发展，夯实石化产业链生态圈”的营销策略，积
+极应对石化业务有效需求增速不足、产能持续过剩、产业链利润压缩的不利局面。通
+过深化头部客户战略合作，发挥产业链联动优势，增收提效；通过新应用持续开发，
+市场份额不断提升、行业龙头地位持续强化；在研、产、销通力合作下，高端应用领
+域销售占比不断提升。在海外业务方面，发挥内外联动作用，有效疏导过剩产能。
+精细化学品及新材料业务方面，ADI 类业务面对市场需求低迷、市场竞争加剧的
+形势，围绕“提升销量、持续降本”的经营主线，致力于打造长期核心竞争力，国内
+外份额持续增加，并开发多款差异化产品。PC类业务聚焦在汽车、光学、医疗等细分
+特殊行业，持续开发高端产品，市场价格、差异化水平等均保持国内领先，在全球供
+应过剩、价格下滑的不利局面下，通过技改扩能实现产量新高，成本持续降低。TPU、
+PMMA、膜材料、SAP 等业务全球市场份额进一步提升，ADI 发泡剂、车衣膜等高附加
+9 / 223
+
+万华化学集团股份有限公司2024年年度报告
+值产品市场份额位居国内前列，POE、柠檬醛、尼龙 12弹性体、MQ树脂装置成功开车，
+稳定运行。
+2024年公司落实全球供应链一体化管理的战略规划，旨在通过整合全球各地仓储
+物流资源，实现跨区域共享，进一步优化海外供应链管理流程，提升海外物流仓储管
+理水平、降低物流运营成本、提升全球客户物流服务能力，建立起契合业务的战略服
+务商运营体系。
+（二） 生产运营情况
+1、烟台产业园
+2024年，烟台产业园以“数智化”为主题，推进智能工厂建设，遵循标准化、自
+动化、数字化、智能化、AI的规划路径开展工作，以卓越运营为指导思想，以精益管
+理为抓手，通过产业链一体化协同，打造极限制造优势，实现多个产品年度产量再创
+新高。通过余热回收项目投用、汽改电等手段，产品能耗持续降低。
+2024年，烟台产业园 “微创新”进入巩固提升、规范开展阶段，发布《微创新
+指导书》，激发个人与组织的创新活力，助力公司长远发展；优化阿米巴成本考核体
+系，提升业务单元的经营思维和成本管控能力，有效降低运行成本；以对标优秀企业
+为卓越运营的重要抓手，2024 年与外部 57 家企业开展对标，为强化公司低成本运营
+优势贡献力量。
+2、宁波工业园
+2024年，宁波工业园在保证安全生产的前提下，不断提升敏捷制造能力，灵活满
+足市场需求。极致产品成为客户首选，针对成熟业务，围绕价值创造，进行全流程挖
+潜；针对成长业务，落实两提（提产、提质）一降（降本），提升竞争能力。在项目
+建设方面，围绕延链、补链，实现高质量投资。
+宁波工业园 2024 年紧紧围绕“数智化”管理主题，通过多技术、多工具进一步
+赋能自主运行，提升本质安全水平和行业竞争优势。实时监测装置、工艺参数、设备
+运行状态参数，评价装置整体运行情况，指导生产处理；以 AI 模型代替人工经验操
+作，根据工艺参数实时预测最优用碱量，精准控制、优化成本。
+3、匈牙利 BC公司
+2024年，BC公司在生产方面持续进行三率（自控率、报警率、联锁率）优化，提
+升安全稳定运行能力。通过修订涉及卓越制造体系的 6 个核心要素(生产、质量、成
+本、生产技术、资产完整性、HSE)的制度，进一步提升卓越制造水平。
+BC公司面对欧洲经济持续低迷、需求不足的不利形势，共克时艰，MDI 和TDI欧
+洲区的销售份额进一步提升，解决方案型产品销量再创新高，支持国内各事业部欧洲
+区的销售工作。
+在“数智化”管理方面，BC公司围绕全产业链加快数字化转型步伐，规划项目共
+计 47 项，其中已上线项目 40 项；通过智能化改造不断提升装置生产效率和安全性，
+致力于将BC建设成为欧洲最有竞争力的聚氨酯制造商。
+4、万华福建
+2024年，万华福建高效完成 80万吨/年MDI 装置技改扩能，实现增产稳产；每月
+进行成本对标，树立经营思维，持续挖潜降本，将技术优势转化为成本优势。另外，
+在做好生产运行的同时，全力推进新项目建设。
+10 / 223
+
+万华化学集团股份有限公司2024年年度报告
+万华福建2024年紧密围绕“数智化”管理主题，持续打造数智化园区。首创“嵌
+入式监管模式”，获得海关总署高度认可。首个智慧化质检项目落地，实现水质、滴
+定等 21 个项目全自动无人分析。“微创新”方面，通过“专题引领、全员参与、聚
+焦创新”，形成了全员创新的氛围和文化。
+5、万华四川
+2024 年，万华四川各装置平稳运行，连续化石墨负极等电池产业链项目陆续投
+产。万华四川不断通过“极限制造、极致成本和产品差异化”打造卓越竞争力，打造
+万华电池业务技术迭代竞争优势，致力于成为电池材料“首席创新官”和“行业领导
+者”，深化集团公司第二增长曲线的战略布局。
+6、万华蓬莱
+2024年，万华蓬莱攻坚克难，实现了蓬莱一期项目主要装置一次性开车成功的目
+标。在生产准备方面，组织有经验的工程师全程盯盘，并对开车的 9 项能力再培训、
+再抽查、再提升，通过现场 PSSR（启动前安全检查）、“三查（查设计漏项、查施工
+质量、查未完工程）四定（定流程、定方案措施、定操作人员、定时间）”不断提升
+员工技能水平。
+在数智化建设方面，万华蓬莱 2024年围绕“职能巡检、自主运行、智慧仓储、智
+慧监管、智慧工程、无人调度、智慧平台、管理变革”八个工作组推进，将数智化投
+资转化为数智化生产力，降低人员需求，提高生产效率。
+（三） 技术创新
+2024年，公司持续开展各园区装置优化和技术迭代，开发并投用超低盐酸比等多
+项新技术，逐步突破装置运行瓶颈，在显著降本的同时实现产品质量再提升，保持万
+华MDI、TDI产品全球领先优势；POCHP 装置单套产能达到世界最大；多元醇新工艺投
+用，各项指标位居行业领先；开发多款高端聚烯烃产品，产品竞争力显著提升。
+公司持续突破精细化学品、高端化工新材料等关键技术，自主研发的 POE装置一
+次性开车成功，打破国外垄断；VA全产业链成功开车，正式进军营养健康领域；柠檬
+醛、特种异氰酸酯、聚氨酯固化剂等装置一次性开车成功，运行情况良好；膜材料、
+水性材料等不断推陈出新，成功进入多家行业头部客户。
+公司将电池材料业务作为第二增长曲线，紧抓战略机遇期。三大负极材料全流程
+快速打通，正极材料持续开发差异化新技术，加速技术升级，致力于成为电池材料行
+业“首席创新官”和“行业领导者”。
+公司坚持产业可持续发展，大力赋能下游行业低碳发展。持续提升可降解材料的
+产品竞争力和市场份额，加速开发低成本方案；推进聚氨酯回收，形成产品全生命周
+期的服务方案；推进CO 资源化利用方案落地，助力低碳经济发展。
+2
+公司持续深化与科研院所的有机合作，聚焦电池、人工智能、营养化学品、合成
+生物学、电化学、特种材料等前瞻性领域，与三十余家知名高校达成产学研深度合作，
+共同推动化学材料领域的技术创新和成果转化；北京大学-万华化学联合研究中心科
+研大楼正式启用，首批项目入驻，为公司的创新发展奠定基础。
+公司不断创新，全年共申请国内外发明专利 1220件，新获得授权649 件。
+（四） 管理创新
+1、“数智化”工作情况
+11 / 223
+
+万华化学集团股份有限公司2024年年度报告
+面对未来复杂多变的国际形势，万华发展需要“数智化”提供更多有力支撑，因
+此，公司将 2024 年管理主题确定为“数智化”年，在坚持“业务驱动，价值导向”
+原则指导下，做好项目把控，打造数智优势，建设智慧万华，为公司的健康发展保驾
+护航。万华研究院完成首批 AI For Science 项目，让 AI赋能研发，在减少实验量、
+提升试验效率方面有显著优势。万华与北大联合开发的材料大模型正式发布，作为化
+工行业首个材料大模型，能实现在售前发现潜在商机、售中售后问题处理、重点客户
+关注等方面为业务赋能。万华烟台、宁波基地推广质量预测 QPS系统，上岗“数字质
+检员”，装置分析频次降低超 4000次/年。
+2、卓越运营管理
+安全管理方面，2024 年公司制定了“聚焦现场风险识别和管控，提升管理者安全
+意识和安全专业能力，强化区域安全责任，切实落实以安全为核心的生产管理体系，
+实现安全管理业绩上台阶”的HSE工作方针。重点开展全面识别和管控现场新增风险、
+规范已运行装置风险动态更新、完善人机交互设计风险分析等工作。开发系列课程进
+行培训，提升各级管理者的安全意识；强化区域安全责任，切实落实“以安全为核心
+的生产管理体系”。
+采购管理方面，2024 年深入落实供应商源头治理与认证管理，形成四套认证标准，
+“飞行检查”认证超过 400 家，供应商透明度及成熟度持续提升；交付管理方面，7
+大项目群平稳上线，实现从需求到订单、从订单到交付的全面线上化管控，效率提升
+40%；搭建卓越采购管理体系，形成 12 个主要素及 25 个品类指南，为采购人才培养
+打下坚实基础。
+人才建设方面，基于公司的项目建设进度及各业务单元发展需要，2024 年全年招
+聘入职 4000 多人。人才培养上，紧跟公司战略与业务重点，围绕组织能力建设与推
+进，以文化为先导，持续优化完善人才培养体系，同时开展各基地、各子公司“微咨
+询”项目，提升组织能力，提高组织效能，全年共组织培训超过25000人次。2024年
+完成 BC 公司薪酬改革、岗评、领导力初级班等项目，调整 HR 架构，开启人力变革。
+审计合规方面，2024 年以审计前置为核心指导思想，紧扣“抓源头、定规则、严
+监管、全覆盖、抓重点、常复盘”的方针开展工作。审计聚焦业务源头，强化事中过
+程监督，开展多项事后复盘，提升风险管控水平；深化结算区域负责人机制，赋能工
+程管理持续提升。同时，完善合规管理体系，设立内部合规组织，全面梳理制定合规
+制度与流程，借助信息化系统推动合规管理水平提升。
+财务管理方面，2024 年成立集团财务共享中心，深化战略财务、业务财务、共享
+财务的三支柱模式，完成生产基地阿米巴体系推广，推行预算管理变革，提升全员经
+营意识，持续完善“合规、高效、智慧”的财务管理体系。
+3、文化建设
+全年围绕“数智化年”深化推进文化建设，紧贴业务需求进行文化赋能；开展海
+内外员工培训，推动文化践行和落地；创新文化认可形式，多个部门涌现典型人物和
+优秀做法；持续开展“鹊桥行动”、集体婚礼、感恩月等活动，温暖人心；开展健康
+阳光的多样化活动，激发员工活力；持续拓展“万华员工温暖路线”，营造聚焦公司
+发展、人人创新、温暖奋进的文化氛围。2024年，万华先后获得“全国优秀工会工作
+者、山东省产业工人队伍建设改革工作表现突出集体”等荣誉。
+12 / 223
+
+万华化学集团股份有限公司2024年年度报告
+二、报告期内公司所处行业情况
+2024年，国际环境复杂多变，地缘政治动荡、区域冲突不断，全球经济格局深度
+调整，产业链、供应链加速重构，部分国家和地区贸易保护措施频出，国际贸易紧张
+局势进一步加剧，全球经济增速低迷。受市场需求疲软、能源价格高企、贸易阻碍增
+多等因素的影响，石化化工行业投资整体放缓，竞争持续加剧，产品价格下行，企业
+经营效益面临压力。
+虽然外部环境变化带来不利影响，但中国经济呈现稳健向好态势，发展基础牢、
+增长潜能大。中国石化化工行业已发展成为全球的重要一极，总体规模大、产业集中
+度高、竞争力强。2024年国内石化化工行业克服了产能过剩、有效需求不足、竞争严
+重内卷等因素扰动，总体运行基本稳定，在创新驱动新质生产力发展、绿色低碳转型、
+数字化智能化升级等方面取得了新的成效，产业向高质量发展和新型工业化不断迈进。
+面向未来，围绕创新驱动、绿色低碳、结构优化、国际合作、集群发展仍然具有很大
+的发展空间。
+万华目前已形成产业链高度整合、深度一体化的聚氨酯、石化、精细化学品、新
+兴材料产业集群，通过持续加大技术创新、不断拓展国际化布局、深化构建卓越运营
+体系，公司持续快速发展。7月19日，美国《化学与工程新闻》(C&EN)公布“2024年
+全球化工企业50强”，万华化学位列第 16名。
+三、报告期内公司从事的业务情况
+聚氨酯业务板块
+聚氨酯业务包括异氰酸酯和聚醚多元醇两部分。
+大宗异氰酸酯分为 MDI 和 TDI 两类。截至 2024 年末，公司拥有 MDI 产能 380 万
+吨/年，同时万华福建 MDI 将技改扩能新增 70 万吨/年,预计 2026 年第二季度完成，
+届时万华全球 MDI 产能将达到 450 万吨/年；截至 2024 年末，公司拥有 TDI 产能 111
+万吨/年，同时万华福建第二套 33万吨/年TDI项目预计 2025年5月份建成投产，届
+时万华TDI总产能将达到 144万吨/年。公司目前是全球最大的MDI和TDI 供应商。
+聚醚多元醇是聚氨酯产业另一关键原料，与异氰酸酯有极强的协同效应。公司聚
+醚业务总产能159万吨，在聚醚业务领域已经发展成为家电、家居、汽车、涂料等下
+游行业的核心供应商，成为客户信赖的差异化解决方案提供商，成为中国市场领先、
+世界一流的聚醚多元醇供应商。
+石化业务板块
+石化业务目前主要发展C2、C3和C4烯烃衍生物，致力于成为具有独特竞争优势、
+最具影响力的高端烯烃及衍生物供应商。
+万华依托世界级规模 PO/AE 一体化装置和大乙烯装置，不断拓展 C2、C3、C4 产
+业链及价值链。2024 年，万华蓬莱一期 PDH 等项目完成建设并实现一次性开车成功，
+产品质量达到行业领先水平。2025 年初，万华烟台 25 万吨/年 LDPE 装置一次性开车
+成功，为公司迈入高端聚烯烃领域打下坚实基础。
+同时，为优化配置生产要素，实现石化高质量、高利润发展，公司已经在原料来
+源及深加工方面进行战略布局：
+2024 年 7 月 23 日，万华化学、万融新材料（福建）有限公司（以下简称“万融
+新材料”）与阿布扎比国家石油公司（ADNOC）、北欧化工（Borealis）、博禄化学
+13 / 223
+
+万华化学集团股份有限公司2024年年度报告
+（Borouge）签署《项目合作协议》。ADNOC、Borealis、Borouge组成投资联合体和万
+融新材料按照 50%:50%持股比例组建中外合资公司，共同启动在福建省福州市建设一
+套特种聚烯烃一体化设施。
+另外，万华化学（烟台）石化有限公司近期拟采用增资扩股方式引进拥有丰富 LPG
+资源的境外化工企业作为战略投资者，以保证 LPG 原料的长期稳定供应。
+精细化学品及新材料业务板块
+该板块包括功能化学品分公司、新材料事业部、表面材料事业部、高性能聚合物
+事业部、氯产品事业部、营养科技有限公司、电池科技有限公司等业务单元。
+功能化学品分公司拥有特种异氰酸酯、特种胺及中间体等多个产品系列，致力于
+为下游客户提供高性能、质量稳定的原材料和解决方案，推动复合材料、涂料、聚氨
+酯、橡胶助剂等产业绿色可持续发展。
+新材料事业部主要产品包括热塑性聚氨酯弹性体（TPU）、聚烯烃弹性体（POE）、
+尼龙弹性体（PEBA）、聚甲基丙烯酸甲酯（PMMA）、水处理膜等，广泛应用于光伏、汽
+车、鞋服等领域，为客户提供定制化材料解决方案。
+表面材料事业部致力于环保型涂料&粘合剂原材料、SAP、有机硅中间体及终端胶
+粘剂的研发、生产、销售和服务，下游市场涵盖建筑和工业涂料、汽车涂料、水性粘
+合剂、电子胶粘剂、织物涂层和合成革、个人和家庭护理、离型剂以及生物基产品等
+领域。
+高性能聚合物事业部业务主要包括聚碳酸酯、生物降解材料、尼龙 12、改性塑料
+等高端聚合物以及产业链相关化学品，产品广泛应用于新能源、医疗健康、电子电器、
+高端光学、绿色包装等领域，为客户提供高品质、差异化、绿色可持续聚合物产品及
+服务解决方案。
+氯产品事业部业务涵盖 PVC、烧碱、特种 PVC 及其他氯产品，主要应用于建筑材
+料、工业制品、日用品等领域。基于公司在异氰酸酯产业链的优势，做大做强氯碱
+MDI/TDI/PVC产业链。
+营养科技公司产品主要包括香料、营养品及高端中间体，下游应用覆盖营养与健
+康、日化香精、食品香精、个人护理等多个领域。通过优质、健康、绿色、低碳的产
+品推动行业健康可持续，提升用户生活品质。
+电池科技有限公司专注于电池材料及相关化学品领域，产品涵盖磷酸铁锂、硅碳
+负极、N-甲基吡咯烷酮（NMP）、聚丙烯酸（PAA）等，广泛应用于新能源汽车、储能、
+消费电子等领域。通过持续技术创新、产品迭代和产业链整合，为客户提供定制化、
+差异化、绿色低碳的电池材料解决方案。
+四、报告期内核心竞争力分析
+√适用 □不适用
+公司以优良文化为指引，以技术创新和卓越运营为双轮驱动，以“六有人才”为
+重要支撑和保障，推动万华未来的发展。
+1.优良文化
+文化是企业的灵魂，文化是企业活力的来源。
+万华的使命是“化学，让生活更美好！”。
+万华的愿景是“创建受社会尊敬、让员工自豪、国际领先的化工新材料公司”。
+14 / 223
+
+万华化学集团股份有限公司2024年年度报告
+万华人践行“务实创新、追求卓越、客户导向、责任关怀、感恩奉献、团队致胜”
+的核心价值观。
+公司将坚定走绿色发展的道路，不断创新、追求卓越，为客户、员工、股东带来
+更大价值，用化学的力量让生活更美好！
+2.技术创新
+万华化学已经形成了从基础研究、工程化开发、工艺流程优化到产品应用研发的
+创新型研发体系，拥有“先进聚合物国家工程研究中心”、“国家认定企业技术中心”、
+“国家技术标准创新基地(化工新材料)”及 9 个“国家认可分析实验室”等研发平
+台。
+2024年，万华持续开展各园区装置优化和技术迭代；突破化学品、高端化工新材
+料及解决方案；将电池材料业务作为第二增长曲线，紧抓机遇期；坚持产业可持续发
+展，大力赋能下游行业低碳发展；持续深化与科研院所的有机合作，聚焦电池、人工
+智能、营养化学品、合成生物学、电化学、特种材料等前瞻性领域。
+3.卓越运营
+万华始终以卓越运营为基础，通过多年的实践已经建立起具有万华特色的卓越运
+营体系；并且根据外部环境以及公司业务发展情况，持续改进，以提高业务效率、客
+户满意度和公司整体业绩，助力各业务高效能可持续发展。
+2024年，微创新进一步融入公司文化，与公司使命、愿景和价值观形成链接。同
+时，微创新与卓越制造体系相结合，成为优化流程、提升效率、降低成本的有效手段，
+不断提升自身竞争力，保持行业领先地位。完成生产基地阿米巴体系推广，推行预算
+管理变革，提升全员经营意识，在坚持“业务驱动，价值导向”原则指导下，做好项
+目把控，打造数智优势，建设智慧万华，为公司的健康发展保驾护航。
+4．六有人才
+万华化学一直把人才作为最重要的战略资源来精心培育和管理，始终以宏伟的事
+业愿景感召人、以科学的分配体系激励人、以优秀的企业文化凝聚人、以系统的成才
+机制培养人，以期打造一支符合万华标准的“六有人才”（有激情、有思想、有胸怀、
+有韧劲、有担当、有业绩）队伍，为提升企业自主创新能力提供不竭动力。
+万华化学加大人才培养力度，发挥万华大学人才培养平台的作用，筑牢人才发展
+高地，为公司培育更多“六有人才”，2024年培训超 25000人次。为员工提供良好的
+工作环境和福利待遇，确保员工的收入和生活质量得到保障。注重员工的职业发展，
+提供丰富的培训和发展机会，帮助员工提升技能，拓宽职业发展空间。
+五、报告期内主要经营情况
+2024年，国际环境复杂多变，全球经济格局深度调整，贸易限制措施增加，全球
+产业链、供应链加速重构。全球化工市场需求不足，竞争持续加剧，行业企业经营效
+益面临压力。公司积极应对全球经济贸易不确定性影响，不断深化全球渠道布局，通
+过数智化资源投入，持续提升装置自主运行水平，多套装置完成技改扩能。公司各业
+务板块主要产品销量及销售收入同比保持增长态势，同时加强贸易业务管控，审慎确
+认收入，贸易收入同比去年下降。2024 年公司实现销售收入 1,820.69 亿元，同比增
+15 / 223
+
+                                                                                  
+                                                        . Forcing is_summary=False.
+[PDF_DEBUG] Initial Detected Report Type: unknown (Is Summary: False)
+[PDF_DEBUG] Detected period-end date (Arabic): 2024-12-31
+[PDF_DEBUG] Attempting table-based extraction...
+[PDF_DEBUG] [DEBUG] _parse_tables: PDFPLUMBER_AVAILABLE=True, pdf_path=True
+[PDF_DEBUG] [DEBUG] _parse_tables: Opened 2025-04-15_万华化学2024年年度报告.pdf, scan depth: 150/223 pages
+[PDF_DEBUG]   [DEBUG] Processing Table with 3 rows. Top row: ['未出席董事职务', '未出席董事姓名', '未出席董事的原因说明', '被委托人姓名']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 13 rows. Top row: ['九、是否存在半数以上董事无法保证公司所披露年度报告的真实性、准确性和完整性']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['备查文件目录', '载有法定代表人、主管会计工作负责人、会计机构负责人签名并盖章\n的会计报表。']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 35 rows. Top row: ['常用词语释义', None, None]
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 5 rows. Top row: ['公司的中文名称', '万华化学集团股份有限公司']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 6 rows. Top row: ['', '董事会秘书', '证券事务代表']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 6 rows. Top row: ['公司注册地址', '山东省烟台市开发区重庆大街59号']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 3 rows. Top row: ['公司披露年度报告的媒体名称及网址', '中国证券报（网址www.cs.com.cn）、上海证券报\n（网址www.cnstock.com）、证券时报（网址\nwww.stcn.com）、证券日报（网址www.zqrb.cn）']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 3 rows. Top row: ['公司股票简况', None, None, None, None]
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 3 rows. Top row: ['公司聘请的会计师事\n务所（境内）', '名称', '安永华明会计师事务所（特殊普通合伙）']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 8 rows. Top row: ['主要会计数据', '2024年', '2023年', '本期比上年同期\n增减(%)', '2022年']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['营业收入', '182,069,119,160.94', '175,360,935,668.36', '3.83', '165,565,484,373.69']
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['营业收入', '182,069,119,160.94', '175,360,935,668.36', '3.83', '165,565,484,373.69']
+[PDF_DEBUG]   [DEBUG] Extracted Value: 182069119160.94 (Raw: 182,069,119,160.94) from Col 1
+[PDF_DEBUG]   [SmartUpdate] Try updating revenue: 182069119160.94 (Label: 营业收入, P-Score: 0, Scale: 1.0)
+[PDF_DEBUG]   [Table Match] revenue_ttm = 182,069,119,161 (Period: 0m, Label: '营业收入')
+[PDF_DEBUG]   [Table Match] net_income_ttm = 13,033,066,613 (Period: 0m, Label: '归属于上市公司股东的净利润')
+[PDF_DEBUG]   [DEBUG] Processing Table with 6 rows. Top row: ['主要财务指标', '2024年', '2023年', '本期比上年同期增减(%)', '2022年']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 5 rows. Top row: ['', '第一季度\n（1-3月份）', '第二季度\n（4-6月份）', '第三季度\n（7-9月份）', '第四季度\n（10-12月份）']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 20)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 1...
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['营业收入', '46,161,004,693.46', '50,906,358,863.63', '50,536,786,854.36', '34,464,968,749.49']
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['营业收入', '46,161,004,693.46', '50,906,358,863.63', '50,536,786,854.36', '34,464,968,749.49']
+[PDF_DEBUG]   [DEBUG] Extracted Value: 46161004693.46 (Raw: 46,161,004,693.46) from Col 1
+[PDF_DEBUG]   [SmartUpdate] Try updating revenue: 46161004693.46 (Label: 营业收入, P-Score: 0, Scale: 1.0)
+[PDF_DEBUG]   [SmartUpdate] Rejected: Better value exists (182069119160.94 P: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 10 rows. Top row: ['非经常性损益项目', '2024年金额', '附注（如适\n用）', '2023年金额', '2022年金额']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 4 rows. Top row: ['项目', '涉及金额', '原因']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 5 rows. Top row: ['项目名称', '期初余额', '期末余额', '当期变动']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 79 rows. Top row: ['值产品市场份额位居国内前列，POE、柠檬醛、尼龙 12弹性体、MQ树脂装置成功开车，']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 72 rows. Top row: ['入式监管模式”，获得海关总署高度认可。首个智慧化质检项目落地，实现水质、滴']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 77 rows. Top row: ['此，公司将 2024 年管理主题确定为“数智化”年，在坚持“业务驱动，价值导向”']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 79 rows. Top row: ['二、报告期内公司所处行业情况']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 71 rows. Top row: ['（Borouge）签署《项目合作协议》。ADNOC、Borealis、Borouge组成投资联合体和万']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 73 rows. Top row: ['的核心价值观。']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [Row Repair] Extracted value 1820.69 from merged label '认收入，贸易收入同比去年下降。2024 年公司实现销售收入 1,820.69 亿元，同比增'
+[PDF_DEBUG]   [SmartUpdate] Try updating revenue: 182069000000.0 (Label: 认收入，贸易收入同比去年下降。2024年公司实现销售收入1,820.69亿元，同比增, P-Score: 0, Scale: 100000000)
+[PDF_DEBUG]   [SmartUpdate] Rejected: Better value exists (182069119160.94 P: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 16 rows. Top row: ['科目', '本期数', '上年同期数', '变动比例\n（%）']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 40)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 1...
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['营业收入', '182,069,119,160.94', '175,360,935,668.36', '3.83']
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['营业收入', '182,069,119,160.94', '175,360,935,668.36', '3.83']
+[PDF_DEBUG]   [DEBUG] Extracted Value: 182069119160.94 (Raw: 182,069,119,160.94) from Col 1
+[PDF_DEBUG]   [SmartUpdate] Try updating revenue: 182069119160.94 (Label: 营业收入, P-Score: 0, Scale: 1.0)
+[PDF_DEBUG]   [SmartUpdate] Rejected: Better value exists (182069119160.94 P: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 19 rows. Top row: ['主营业务分行业情况', None, None, None, None, None, None]
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['主要产品', '单位', '生产量', '销售量', '库存量', '生产量比\n上年增减\n（%）', '销售量比\n上年增减\n（%）', '库存量比\n上年增减\n（%）']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['石化系列', '万吨', '544', '547', '14', '14.37', '15.69', '-17.60']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 33 rows. Top row: ['分行业情况', None, None, None, None, None, None, None]
+[PDF_DEBUG]   [Table Header] Selected Row 1, Column 2 (Score: 40)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 2...
+[PDF_DEBUG]   [DEBUG] Processing Table with 9 rows. Top row: ['料系列', '', '', '', '', '', '', '']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['序号', '客户名称', '销售额', '占年度销售总额比例（%）']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 5 rows. Top row: ['本期费用化研发投入', '4,550,357,851.17']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['研发投入总额占营业收入比例（%）', '2.50']
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['研发投入总额占营业收入比例（%）', '2.50']
+[PDF_DEBUG]   [DEBUG] Extracted Value: 2.5 (Raw: 2.50) from Col 1
+[PDF_DEBUG]   [SmartUpdate] Try updating revenue: 2.5 (Label: 研发投入总额占营业收入比例（%）, P-Score: 0, Scale: 1.0)
+[PDF_DEBUG]   [Table Match] revenue_ttm = 2 (Period: 0m, Label: '研发投入总额占营业收入比例（%）')
+[PDF_DEBUG]   [DEBUG] Processing Table with 14 rows. Top row: ['公司研发人员的数量', '4,763']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 18 rows. Top row: ['项目名称', '本期期末数', '本期期末数\n占总资产的\n比例（%）', '上期期末数', '上期期末\n数占总资\n产的比例\n（%）', '本期期末金\n额较上期期\n末变动比例\n（%）', '情况说明']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 6 rows. Top row: ['项目', '期末', None, None, None, '期初', None, None, None]
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 81 rows. Top row: ['化工行业经营性信息分析']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 4 rows. Top row: ['产品', '所属细分行业', '主要上游原材料', '主要下游应用领域', '价格主要影响因素']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 9 rows. Top row: ['公司产品门类众多，涵盖了化工领域所涉及的氧化、加氢、光气化、聚合、羰基']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 6 rows. Top row: ['主要厂区或项目', '设计产能', '产能利用\n率（%）']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 5 rows. Top row: ['主要原材料', '采购模式', '结算方式', '价格同比变动比\n率（%）', '采购量']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['主要能源', '采购模式', '结算方式', '价格同比变动比\n率（%）', '采购量']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 5 rows. Top row: ['细分行业', '营业收入', '营业成本', '毛利率\n(%)', '营业收入\n比上年增\n减（%）', '营业成本比\n上年增减\n（%）', '毛利率比上年增减\n（%）', '同行业同领\n域产品毛利\n率情况']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 3 rows. Top row: ['销售渠道', '营业收入', '营业收入比上年增减（%）']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['项目', '2024年度', '2023年度']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 80)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 1...
+[PDF_DEBUG]   [DEBUG] Processing Table with 11 rows. Top row: ['公司名称', '经营活动', '类型', '投资额']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 5 rows. Top row: ['资产类别', '期初数', '本期公允价值变\n动损益', '计入权益的累计\n公允价值变动', '本期计\n提的减\n值', '本期购买金额', '本期出售/赎回金额', '其他变动', '期末数']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 11 rows. Top row: ['□适用 √不适用']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 75 rows. Top row: ['4、报告期内重大资产重组整合的具体进展情况']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['万元，净资产 1,613,003 万元。报告期内实现营业收入 3,518,336 万元，营业利润']
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['万元，净资产 1,613,003 万元。报告期内实现营业收入 3,518,336 万元，营业利润']
+[PDF_DEBUG]   [DEBUG] Extracted Value: None (Raw: None) from Col 1
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['源成本、期间费用同比增加的影响，公司盈利同比减少，实现营业收入 1,903,933万']
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['源成本、期间费用同比增加的影响，公司盈利同比减少，实现营业收入 1,903,933万']
+[PDF_DEBUG]   [DEBUG] Extracted Value: None (Raw: None) from Col 1
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['净资产156,282万元。报告期内实现营业收入 2,611,525万元,净利润 1,566万元。']
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['净资产156,282万元。报告期内实现营业收入 2,611,525万元,净利润 1,566万元。']
+[PDF_DEBUG]   [DEBUG] Extracted Value: None (Raw: None) from Col 1
+[PDF_DEBUG]   [DEBUG] Processing Table with 75 rows. Top row: ['(八) 公司控制的结构化主体情况']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 75 rows. Top row: ['向的观念，强化价值创造，打破大锅饭思想，将个人利益和部门经营业绩更加紧密地']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['会议届次', '召开日期', '决议刊登的指定网\n站的查询索引', '决议刊登的披露\n日期', '会议决议']
+[PDF_DEBUG]   [Table Header] Selected Row 1, Column 4 (Score: 80)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 2...
+[PDF_DEBUG]   [DEBUG] Processing Table with 7 rows. Top row: ['表决权恢复的优先股股东请求召开临时股东大会']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 23 rows. Top row: ['姓名', '职务', '性\n别', '年龄', '任期起始日期', '任期终止日期', '年初\n持股\n数', '年末持\n股数', '年度内股份\n增减变动量', '增减\n变动\n原因', '报告期内从公\n司获得的税后\n报酬总额（万\n元）', '个人所得税\n及社保公积\n金（万元）', '是否在公司\n关联方获取\n报酬']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 8 rows. Top row: ['姓名', '主要工作经历']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 9 rows. Top row: ['武常岐', '1955 年 6 月出生，博士研究生学历。现任北京大学光华管理学院组织与战略管理系教授，北京大学国家高新技术产业开发区发展战略\n研究院常务副院长、国际经营管理研究所常务副所长，山东大学学术委员会副主任委员、讲席教授，万华化学集团股份有限公司独立董\n事，天能电池集团股份有限公司独立董事，申万宏源集团股份有限公司独立董事。']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 6 rows. Top row: ['任职人员姓名', '股东单位名称', '在股东单位担任的职务', '任期起始日期', '任期终止日期']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 14 rows. Top row: ['任职人员姓名', '其他单位名称', '在其他单位担任\n的职务', '任期起始日期', '任期终止日期']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 4 rows. Top row: ['董事、监事、高级管理人员报\n酬的决策程序', '由公司董事会、股东大会决定通过']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 3 rows. Top row: ['酬确定依据', '事津贴制度》和岗位职级薪酬体系执行。']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 3 rows. Top row: ['姓名', '担任的职务', '变动情形', '变动原因']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 5 rows. Top row: ['会议届次', '召开日期', '会议决议']
+[PDF_DEBUG]   [Table Header] Selected Row 1, Column 2 (Score: 80)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 2...
+[PDF_DEBUG]   [DEBUG] Processing Table with 5 rows. Top row: ['董事\n姓名', '是否\n独立\n董事', '参加董事会情况', None, None, None, None, None, '参加股东\n大会情况']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 8 rows. Top row: ['荣锋', '否', '4', '1', '2', '1', '0', '否', '0']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 4 rows. Top row: ['年内召开董事会会议次数', '4']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 6 rows. Top row: ['专门委员会类别', '成员姓名']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 3 rows. Top row: ['召开日期', '会议内容', '重要意见和建议', '其他履行职\n责情况']
+[PDF_DEBUG]   [Table Header] Selected Row 1, Column 1 (Score: 80)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 2...
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['2024年8月5日', '《公司2024年半年度报告》', '审议通过会议事项，并\n同意提交董事会审议', '无']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 80)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 1...
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['召开日期', '会议内容', '重要意见和建议', '其他履行职责情\n况']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['召开日期', '会议内容', '重要意见和\n建议', '其他履行职责\n情况']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 3 rows. Top row: ['召开日期', '会议内容', '重要意见和建议', '其他履行职\n责情况']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['召开日期', '会议内容', '重要意见和\n建议', '其他履行职责\n情况']
+[PDF_DEBUG]   [Table Header] Selected Row 1, Column 1 (Score: 80)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 2...
+[PDF_DEBUG]   [DEBUG] Processing Table with 20 rows. Top row: ['母公司在职员工的数量', '11,699']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['劳务外包的工时总数', '5,256,240小时']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 5 rows. Top row: ['是否符合公司章程的规定或股东大会决议的要求', '√是 □否']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 9 rows. Top row: ['每10股送红股数（股）', '']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG] ❌ Table extraction error: TypeError: PDFFinancialParser._extract_from_table.<locals>.smart_update() missing 1 required positional argument: 'row_p_score'
+[PDF_DEBUG] Traceback: Traceback (most recent call last):
+  File "/Users/zhangzy/My Docs/Privates/22-AI编程/AI+风控App/web-app/backend/parsers/pdf_parser.py", line 949, in _parse_tables
+    self._extract_from_table(table, data, page_text)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhangzy/My Docs/Privates/22-AI编程/AI+风控App/web-app/backend/parsers/pdf_parser.py", line 1171, in _extract_from_table
+    smart_update('dividends_paid_cashflow', value, label)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: PDFFinancialParser._extract_from_table.<locals>.smart_update() missing 1 required positional argument: 'row_p_score'
+
+[PDF_DEBUG] [DEBUG] _parse_tables: Returning data with 6 fields
+[PDF_DEBUG] [DEBUG] table_data keys: ['revenue_ttm', 'revenue_ttm_period', 'revenue_ttm_label', 'net_income_ttm', 'net_income_ttm_period', 'net_income_ttm_label']
+[PDF_DEBUG] [DEBUG] table_data revenue: None
+[PDF_DEBUG] ✅ Table extraction successful: 6 fields found
+[PDF_DEBUG] [DEBUG] AFTER Table Extraction: revenue=None
+[PDF_DEBUG]   [total_assets] Found 4 candidates:
+[PDF_DEBUG]     1. 293,333,349,744 (Dist: -280, Scale: 1.0, KW: 资产总计, Period: 12m)
+[PDF_DEBUG]     2. 223,342,918,307 (Dist: -280, Scale: 1.0, KW: 资产合计, Period: 12m)
+[PDF_DEBUG]     3. 69,990,431,437 (Dist: 200, Scale: 1.0, KW: 资产合计, Period: 0m)
+[PDF_DEBUG]     4. 293,333,349,744 (Dist: 200, Scale: 1.0, KW: 总资产, Period: 0m)
+[PDF_DEBUG]   [total_assets] Selected Best Match: 293333349744.25 (Dist: -280)
+[PDF_DEBUG]   [total_liabilities] Found 3 candidates:
+[PDF_DEBUG]     1. 126,082,780,126 (Dist: 200, Scale: 1.0, KW: 负债合计, Period: 0m)
+[PDF_DEBUG]     2. 63,750,419,751 (Dist: 200, Scale: 1.0, KW: 负债合计, Period: 0m)
+[PDF_DEBUG]     3. 189,833,199,878 (Dist: 200, Scale: 1.0, KW: 负债合计, Period: 0m)
+[PDF_DEBUG]   [total_liabilities] Selected Best Match: 126082780126.36 (Dist: 200)
+[PDF_DEBUG]   [gross_profit] Found 11 candidates:
+[PDF_DEBUG]     1. 75,844,150,078 (Dist: -253, Scale: 1.0, KW: 毛利, Period: 12m)
+[PDF_DEBUG]     2. 179,761,567,890 (Dist: -233, Scale: 1.0, KW: 毛利, Period: 12m)
+[PDF_DEBUG]     3. 75,844,150,078 (Dist: -232, Scale: 1.0, KW: 毛利, Period: 12m)
+[PDF_DEBUG]     4. 75,844,150,078 (Dist: -216, Scale: 1.0, KW: 毛利, Period: 12m)
+[PDF_DEBUG]     5. 179,761,567,890 (Dist: -215, Scale: 1.0, KW: 毛利, Period: 12m)
+[PDF_DEBUG]   [gross_profit] Selected Best Match: 75844150078.36 (Dist: -253)
+[PDF_DEBUG]   [rd_expense] Selected Best Match: 4550357851.17 (Dist: 200)
+[PDF_DEBUG]   [shares_outstanding] Selected Best Match: 190490.0 (Dist: -146)
+[PDF_DEBUG] Shares raw 190490.0 detected as Millions -> 190,490,000,000
+[PDF_DEBUG]   [operating_cashflow] Found 2 candidates:
+[PDF_DEBUG]     1. 3,083,663,689 (Dist: 80, Scale: 1.0, KW: 经营活动产生的现金流量净额, Period: 3m)
+[PDF_DEBUG]     2. 30,053,435,178 (Dist: 200, Scale: 1.0, KW: 经营活动产生的现金流量净额, Period: 0m)
+[PDF_DEBUG]   [operating_cashflow] Selected Best Match: 3083663688.61 (Dist: 80)
+[PDF_DEBUG]   [cash_and_equivalents] Found 12 candidates:
+[PDF_DEBUG]     1. 1,858,005,902 (Dist: -280, Scale: 1.0, KW: 货币资金, Period: 12m)
+[PDF_DEBUG]     2. 2,292,015,037 (Dist: -278, Scale: 1.0, KW: 现金, Period: 12m)
+[PDF_DEBUG]     3. 1,632,668,246 (Dist: -278, Scale: 1.0, KW: 现金, Period: 12m)
+[PDF_DEBUG]     4. 1,632,668,246 (Dist: -278, Scale: 1.0, KW: 现金, Period: 12m)
+[PDF_DEBUG]     5. 2,292,015,037 (Dist: -278, Scale: 1.0, KW: 现金, Period: 12m)
+[PDF_DEBUG]   [cash_and_equivalents] Selected Best Match: 1858005902.45 (Dist: -280)
+[PDF_DEBUG]   [short_term_debt] Selected Best Match: 35557147552.13 (Dist: -275)
+[PDF_DEBUG]   [long_term_debt] Found 4 candidates:
+[PDF_DEBUG]     1. 2,038,896,259 (Dist: 200, Scale: 1.0, KW: 长期应付款, Period: 0m)
+[PDF_DEBUG]     2. 48,176,160,956 (Dist: 205, Scale: 1.0, KW: 长期借款, Period: 0m)
+[PDF_DEBUG]     3. 2,038,896,259 (Dist: 205, Scale: 1.0, KW: 长期应付款, Period: 0m)
+[PDF_DEBUG]     4. 11,181,705,458 (Dist: 221, Scale: 1.0, KW: 长期借款, Period: 0m)
+[PDF_DEBUG]   [long_term_debt] Selected Best Match: 2038896258.73 (Dist: 200)
+[PDF_DEBUG]   [inventory] Selected Best Match: 24107312714.47 (Dist: 227)
+[PDF_DEBUG]   [total_debt] Found 2 candidates:
+[PDF_DEBUG]     1. 3,400,000,000 (Dist: 200, Scale: 1.0, KW: 应付债券, Period: 0m)
+[PDF_DEBUG]     2. 3,400,000,000 (Dist: 205, Scale: 1.0, KW: 应付债券, Period: 0m)
+[PDF_DEBUG]   [total_debt] Selected Best Match: 3400000000.0 (Dist: 200)
+[PDF_DEBUG] [DEBUG] BEFORE Validation: rev=2.5, np=13033066612.84
+[PDF_DEBUG] ⚠️ [VALIDATION] GP (75844150078.36) > Revenue (2.5). Clearing GP.
+[PDF_DEBUG] ⚠️ [VALIDATION] Net Profit (13033066612.84) > Revenue (2.5). Likely error.
+[PDF_DEBUG] [DEBUG] AFTER Validation: rev=2.5
+----------------------------------------
+Report Date: 2024-12-31
+Revenue: 2.5 (Raw: 2.5)
+Net Income: None (Raw: 13033066612.84)
+Total Assets: 293333349744.25
+----------------------------------------

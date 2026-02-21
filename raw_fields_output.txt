@@ -1,0 +1,12 @@
+2026-02-10 23:21:00,361 | 72897 | 8353292864 | [open_context_base.py:409] _init_connect_sync: New connect ready: conn=7427008696357087723(1) context=<futu.quote.open_quote_context.OpenQuoteContext object at 0x1029ef0e0>
+DEBUG_RAW_FIELDS for 02800:
+  Field: basic, Value Type: <class 'Qot_GetSecuritySnapshot_pb2.SnapshotBasicData'>
+    Basic Name: 盈富基金
+  Field: trustExData, Value Type: <class 'Qot_GetSecuritySnapshot_pb2.TrustSnapshotExData'>
+    DividendYield: 2.812
+DEBUG_RAW_FIELDS for 00700:
+  Field: basic, Value Type: <class 'Qot_GetSecuritySnapshot_pb2.SnapshotBasicData'>
+    Basic Name: 腾讯控股
+  Field: equityExData, Value Type: <class 'Qot_GetSecuritySnapshot_pb2.EquitySnapshotExData'>
+    PE: 23.941, PE_TTM: 21.022
+2026-02-10 23:21:00,848 | 72897 | 6163394560 | [open_context_base.py:516] on_disconnect: Disconnected: conn=0(1) reason=CallClose

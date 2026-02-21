@@ -1,0 +1,1562 @@
+================================================================================
+📊 统一历史数据下载 (基于 Watchlist)
+================================================================================
+2026-01-09 22:41:14,397 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:14,400 INFO sqlalchemy.engine.Engine SELECT watchlist.id, watchlist.symbol, watchlist.name, watchlist.market, watchlist.added_at 
+FROM watchlist
+2026-01-09 22:41:14,400 INFO sqlalchemy.engine.Engine [generated in 0.00010s] ()
+2026-01-09 22:41:14,400 INFO sqlalchemy.engine.Engine ROLLBACK
+
+共 70 个标的
+
+
+[1/70] [INDEX] 000001
+
+======================================================================
+下载 CN:INDEX:000001 (CN) -> 000001.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6911 条记录
+📅 日期范围: 1997-07-02 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:41:19,243 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:19,244 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:19,244 INFO sqlalchemy.engine.Engine [generated in 0.00010s] ('yfinance', 'CN:INDEX:000001', 'CN', '1d', '2026-01-09 22:41:19.243416', '{"symbol": "CN:INDEX:000001", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:41:19", "data": [{"timestamp": "1997-07-02", "open": ... (1312016 characters truncated) ... 762451171875, "high": 4121.72265625, "low": 4083.615478515625, "close": 4120.42578125, "volume": 4264321764, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:41:19,247 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:19,260 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:19,261 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:19,261 INFO sqlalchemy.engine.Engine [generated in 0.00007s] (1,)
+2026-01-09 22:41:19,262 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 1)
+✅ 成功保存 6911 条记录
+
+[2/70] [INDEX] 000300
+
+======================================================================
+下载 CN:INDEX:000300 (CN) -> 000300.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 1174 条记录
+📅 日期范围: 2021-03-11 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:41:21,426 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:21,427 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:21,427 INFO sqlalchemy.engine.Engine [cached since 2.182s ago] ('yfinance', 'CN:INDEX:000300', 'CN', '1d', '2026-01-09 22:41:21.426341', '{"symbol": "CN:INDEX:000300", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:41:21", "data": [{"timestamp": "2021-03-11", "open": ... (219990 characters truncated) ... : 4725.95703125, "high": 4771.427734375, "low": 4719.1337890625, "close": 4758.921875, "volume": 3993967320, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:41:21,428 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:21,435 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:21,435 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:21,435 INFO sqlalchemy.engine.Engine [cached since 2.174s ago] (2,)
+2026-01-09 22:41:21,436 INFO sqlalchemy.engine.Engine ROLLBACK
+000016.SS: Period 'max' is invalid, must be one of: 1d, 5d
+      ✅ 已保存到 RawMarketData (ID: 2)
+✅ 成功保存 1174 条记录
+
+[3/70] [INDEX] 000016
+
+======================================================================
+下载 CN:INDEX:000016 (CN) -> 000016.SS
+======================================================================
+📥 Fetching period='max' ...
+⚠️  yfinance (max & 1y) 均无数据
+⚠️  尝试 AkShare 补全 CN:INDEX:000016 数据 (cn_index)...
+✅ AkShare 获取 5349 条记录
+2026-01-09 22:41:24,846 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:24,846 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:24,846 INFO sqlalchemy.engine.Engine [cached since 5.602s ago] ('akshare', 'CN:INDEX:000016', 'CN', '1d', '2026-01-09 22:41:24.845981', '{"symbol": "CN:INDEX:000016", "market": "CN", "source": "akshare", "fetch_time": "2026-01-09 22:41:24", "data": [{"timestamp": "2004-01-02", "open":  ... (753300 characters truncated) ... 7.0}, {"timestamp": "2026-01-09", "open": 3121.16, "close": 3134.32, "high": 3146.73, "low": 3112.46, "volume": 60149277, "amount": 177739531505.0}]}', 0, None)
+2026-01-09 22:41:24,848 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:24,856 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:24,856 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:24,856 INFO sqlalchemy.engine.Engine [cached since 5.595s ago] (3,)
+2026-01-09 22:41:24,857 INFO sqlalchemy.engine.Engine ROLLBACK
+000905.SS: Period 'max' is invalid, must be one of: 1d, 5d
+      ✅ 已保存到 RawMarketData (ID: 3)
+
+[4/70] [INDEX] 000905
+
+======================================================================
+下载 CN:INDEX:000905 (CN) -> 000905.SS
+======================================================================
+📥 Fetching period='max' ...
+⚠️  yfinance (max & 1y) 均无数据
+⚠️  尝试 AkShare 补全 CN:INDEX:000905 数据 (cn_index)...
+✅ AkShare 获取 5106 条记录
+2026-01-09 22:41:27,337 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:27,337 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:27,337 INFO sqlalchemy.engine.Engine [cached since 8.093s ago] ('akshare', 'CN:INDEX:000905', 'CN', '1d', '2026-01-09 22:41:27.336840', '{"symbol": "CN:INDEX:000905", "market": "CN", "source": "akshare", "fetch_time": "2026-01-09 22:41:27", "data": [{"timestamp": "2005-01-04", "open":  ... (724690 characters truncated) ... .6}, {"timestamp": "2026-01-09", "open": 7907.85, "close": 8056.69, "high": 8064.76, "low": 7907.85, "volume": 314624674, "amount": 631145879411.5}]}', 0, None)
+2026-01-09 22:41:27,339 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:27,349 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:27,350 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:27,350 INFO sqlalchemy.engine.Engine [cached since 8.088s ago] (4,)
+2026-01-09 22:41:27,350 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 4)
+
+[5/70] [INDEX] HSI
+
+======================================================================
+下载 HK:INDEX:HSI (HK) -> ^HSI
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 9632 条记录
+📅 日期范围: 1986-12-31 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:41:30,527 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:30,527 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:30,527 INFO sqlalchemy.engine.Engine [cached since 11.28s ago] ('yfinance', 'HK:INDEX:HSI', 'HK', '1d', '2026-01-09 22:41:30.527165', '{"symbol": "HK:INDEX:HSI", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:41:30", "data": [{"timestamp": "1986-12-31", "open": 25 ... (1744053 characters truncated) ... ", "open": 26272.5390625, "high": 26299.3203125, "low": 26114.41015625, "close": 26231.7890625, "volume": 0, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:41:30,531 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:30,547 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:30,548 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:30,548 INFO sqlalchemy.engine.Engine [cached since 11.29s ago] (5,)
+2026-01-09 22:41:30,549 INFO sqlalchemy.engine.Engine ROLLBACK
+HSTECH.HK: Period 'max' is invalid, must be one of: 1d, 5d
+      ✅ 已保存到 RawMarketData (ID: 5)
+✅ 成功保存 9632 条记录
+
+[6/70] [INDEX] HSTECH
+
+======================================================================
+下载 HK:INDEX:HSTECH (HK) -> HSTECH.HK
+======================================================================
+📥 Fetching period='max' ...
+⚠️  yfinance (max & 1y) 均无数据
+⚠️  尝试 AkShare 补全 HK:INDEX:HSTECH 数据 (hk_index_sina)...
+✅ AkShare 获取 1327 条记录
+2026-01-09 22:41:32,969 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:32,969 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:32,969 INFO sqlalchemy.engine.Engine [cached since 13.72s ago] ('akshare', 'HK:INDEX:HSTECH', 'HK', '1d', '2026-01-09 22:41:32.969012', '{"symbol": "HK:INDEX:HSTECH", "market": "HK", "source": "akshare", "fetch_time": "2026-01-09 22:41:32", "data": [{"timestamp": "2020-08-17", "open":  ... (156345 characters truncated) ... 78.34, "volume": 2008530646}, {"timestamp": "2026-01-09", "open": 5699.97, "high": 5737.22, "low": 5661.28, "close": 5687.14, "volume": 1723966101}]}', 0, None)
+2026-01-09 22:41:32,969 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:32,971 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:32,971 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:32,971 INFO sqlalchemy.engine.Engine [cached since 13.71s ago] (6,)
+2026-01-09 22:41:32,971 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 6)
+
+[7/70] [INDEX] HSCC
+
+======================================================================
+下载 HK:INDEX:HSCC (HK) -> ^HSCC
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 3685 条记录
+📅 日期范围: 2011-01-03 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:41:35,528 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:35,528 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:35,528 INFO sqlalchemy.engine.Engine [cached since 16.28s ago] ('yfinance', 'HK:INDEX:HSCC', 'HK', '1d', '2026-01-09 22:41:35.528213', '{"symbol": "HK:INDEX:HSCC", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:41:35", "data": [{"timestamp": "2011-01-03", "open": 4 ... (700598 characters truncated) ... 4112.85986328125, "high": 4121.43994140625, "low": 4085.47998046875, "close": 4101.06982421875, "volume": 0, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:41:35,530 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:35,539 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:35,539 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:35,539 INFO sqlalchemy.engine.Engine [cached since 16.28s ago] (7,)
+2026-01-09 22:41:35,539 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 7)
+✅ 成功保存 3685 条记录
+
+[8/70] [INDEX] HSCE
+
+======================================================================
+下载 HK:INDEX:HSCE (HK) -> ^HSCE
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 8014 条记录
+📅 日期范围: 1993-07-15 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:41:38,841 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:38,841 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:38,841 INFO sqlalchemy.engine.Engine [cached since 19.6s ago] ('yfinance', 'HK:INDEX:HSCE', 'HK', '1d', '2026-01-09 22:41:38.840773', '{"symbol": "HK:INDEX:HSCE", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:41:38", "data": [{"timestamp": "1993-07-15", "open": 3 ... (1485436 characters truncated) ...  "open": 9070.91015625, "high": 9103.580078125, "low": 9024.58984375, "close": 9048.5302734375, "volume": 0, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:41:38,845 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:38,864 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:38,864 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:38,865 INFO sqlalchemy.engine.Engine [cached since 19.6s ago] (8,)
+2026-01-09 22:41:38,866 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 8)
+✅ 成功保存 8014 条记录
+
+[9/70] [INDEX] DJI
+
+======================================================================
+下载 US:INDEX:DJI (US) -> ^DJI
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 8566 条记录
+📅 日期范围: 1992-01-02 → 2026-01-08
+💾 保存到数据库...
+2026-01-09 22:41:42,574 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:42,574 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:42,574 INFO sqlalchemy.engine.Engine [cached since 23.33s ago] ('yfinance', 'US:INDEX:DJI', 'US', '1d', '2026-01-09 22:41:42.574167', '{"symbol": "US:INDEX:DJI", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:41:42", "data": [{"timestamp": "1992-01-02", "open": 31 ... (1593326 characters truncated) ... n": 48850.171875, "high": 49357.73828125, "low": 48792.33984375, "close": 49266.109375, "volume": 515070000, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:41:42,578 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:42,595 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:42,595 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:42,595 INFO sqlalchemy.engine.Engine [cached since 23.33s ago] (9,)
+2026-01-09 22:41:42,596 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 9)
+✅ 成功保存 8566 条记录
+
+[10/70] [INDEX] NDX
+
+======================================================================
+下载 US:INDEX:NDX (US) -> ^NDX
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 10148 条记录
+📅 日期范围: 1985-10-01 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:41:45,818 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:45,818 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:45,818 INFO sqlalchemy.engine.Engine [cached since 26.57s ago] ('yfinance', 'US:INDEX:NDX', 'US', '1d', '2026-01-09 22:41:45.818264', '{"symbol": "US:INDEX:NDX", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:41:45", "data": [{"timestamp": "1985-10-01", "open": 11 ... (1966073 characters truncated) ... ": 25518.822265625, "high": 25621.375, "low": 25489.544921875, "close": 25605.712890625, "volume": 98933351, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:41:45,824 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:45,844 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:45,844 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:45,845 INFO sqlalchemy.engine.Engine [cached since 26.58s ago] (10,)
+2026-01-09 22:41:45,846 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 10)
+✅ 成功保存 10148 条记录
+
+[11/70] [INDEX] SPX
+
+======================================================================
+下载 US:INDEX:SPX (US) -> ^GSPC
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 24622 条记录
+📅 日期范围: 1927-12-30 → 2026-01-08
+💾 保存到数据库...
+2026-01-09 22:41:49,607 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:49,607 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:49,607 INFO sqlalchemy.engine.Engine [cached since 30.36s ago] ('yfinance', 'US:INDEX:SPX', 'US', '1d', '2026-01-09 22:41:49.606934', '{"symbol": "US:INDEX:SPX", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:41:49", "data": [{"timestamp": "1927-12-30", "open": 17 ... (4765982 characters truncated) ... 0986328125, "high": 6931.27978515625, "low": 6899.330078125, "close": 6921.4599609375, "volume": 5333200000, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:41:49,627 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:49,655 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:49,655 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:49,655 INFO sqlalchemy.engine.Engine [cached since 30.39s ago] (11,)
+2026-01-09 22:41:49,657 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 11)
+✅ 成功保存 24622 条记录
+
+[12/70] [STOCK] 600030
+
+======================================================================
+下载 CN:STOCK:600030 (CN) -> 600030.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 5645 条记录
+📅 日期范围: 2003-01-06 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:41:52,749 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:52,749 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:52,749 INFO sqlalchemy.engine.Engine [cached since 33.5s ago] ('yfinance', 'CN:STOCK:600030', 'CN', '1d', '2026-01-09 22:41:52.749310', '{"symbol": "CN:STOCK:600030", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:41:52", "data": [{"timestamp": "2003-01-06", "open": ... (1118826 characters truncated) ... 344, "high": 28.670000076293945, "low": 28.350000381469727, "close": 28.56999969482422, "volume": 232677161, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:41:52,752 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:52,762 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:52,762 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:52,762 INFO sqlalchemy.engine.Engine [cached since 33.5s ago] (12,)
+2026-01-09 22:41:52,763 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 12)
+✅ 成功保存 5645 条记录
+
+[13/70] [STOCK] 600309
+
+======================================================================
+下载 CN:STOCK:600309 (CN) -> 600309.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6166 条记录
+📅 日期范围: 2001-01-05 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:41:55,526 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:55,527 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:55,527 INFO sqlalchemy.engine.Engine [cached since 36.28s ago] ('yfinance', 'CN:STOCK:600309', 'CN', '1d', '2026-01-09 22:41:55.526658', '{"symbol": "CN:STOCK:600309", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:41:55", "data": [{"timestamp": "2001-01-05", "open": ... (1211995 characters truncated) ... ": 80.0, "high": 80.61000061035156, "low": 78.41000366210938, "close": 79.3499984741211, "volume": 33361851, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:41:55,529 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:55,544 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:55,545 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:55,545 INFO sqlalchemy.engine.Engine [cached since 36.28s ago] (13,)
+2026-01-09 22:41:55,546 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 13)
+✅ 成功保存 6166 条记录
+
+[14/70] [STOCK] 600536
+
+======================================================================
+下载 CN:STOCK:600536 (CN) -> 600536.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 5811 条记录
+📅 日期范围: 2002-05-17 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:41:58,719 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:58,719 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:41:58,719 INFO sqlalchemy.engine.Engine [cached since 39.47s ago] ('yfinance', 'CN:STOCK:600536', 'CN', '1d', '2026-01-09 22:41:58.718988', '{"symbol": "CN:STOCK:600536", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:41:58", "data": [{"timestamp": "2002-05-17", "open": ... (1140365 characters truncated) ... : 47.02000045776367, "high": 47.56999969482422, "low": 47.02000045776367, "close": 47.5, "volume": 16644385, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:41:58,721 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:41:58,733 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:41:58,733 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:41:58,733 INFO sqlalchemy.engine.Engine [cached since 39.47s ago] (14,)
+2026-01-09 22:41:58,734 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 14)
+✅ 成功保存 5811 条记录
+
+[15/70] [STOCK] 601519
+
+======================================================================
+下载 CN:STOCK:601519 (CN) -> 601519.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 3628 条记录
+📅 日期范围: 2011-01-28 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:01,334 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:01,334 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:01,334 INFO sqlalchemy.engine.Engine [cached since 42.09s ago] ('yfinance', 'CN:STOCK:601519', 'CN', '1d', '2026-01-09 22:42:01.334438', '{"symbol": "CN:STOCK:601519", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:42:01", "data": [{"timestamp": "2011-01-28", "open": ... (702053 characters truncated) ... 4.0, "high": 14.460000038146973, "low": 13.949999809265137, "close": 14.170000076293945, "volume": 67030367, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:01,336 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:01,343 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:01,343 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:01,343 INFO sqlalchemy.engine.Engine [cached since 42.08s ago] (15,)
+2026-01-09 22:42:01,343 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 15)
+✅ 成功保存 3628 条记录
+
+[16/70] [STOCK] 601919
+
+======================================================================
+下载 CN:STOCK:601919 (CN) -> 601919.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 4509 条记录
+📅 日期范围: 2007-06-26 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:04,469 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:04,469 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:04,470 INFO sqlalchemy.engine.Engine [cached since 45.22s ago] ('yfinance', 'CN:STOCK:601919', 'CN', '1d', '2026-01-09 22:42:04.469197', '{"symbol": "CN:STOCK:601919", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:42:04", "data": [{"timestamp": "2007-06-26", "open": ... (890035 characters truncated) ... 9727, "high": 14.90999984741211, "low": 14.819999694824219, "close": 14.899999618530273, "volume": 55870275, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:04,472 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:04,481 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:04,481 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:04,481 INFO sqlalchemy.engine.Engine [cached since 45.22s ago] (16,)
+2026-01-09 22:42:04,482 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 16)
+✅ 成功保存 4509 条记录
+
+[17/70] [STOCK] 601998
+
+======================================================================
+下载 CN:STOCK:601998 (CN) -> 601998.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 4548 条记录
+📅 日期范围: 2007-04-27 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:07,851 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:07,851 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:07,851 INFO sqlalchemy.engine.Engine [cached since 48.61s ago] ('yfinance', 'CN:STOCK:601998', 'CN', '1d', '2026-01-09 22:42:07.851336', '{"symbol": "CN:STOCK:601998", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:42:07", "data": [{"timestamp": "2007-04-27", "open": ... (896410 characters truncated) ... 485596, "high": 7.409999847412109, "low": 7.320000171661377, "close": 7.389999866485596, "volume": 64640787, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:07,854 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:07,870 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:07,870 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:07,870 INFO sqlalchemy.engine.Engine [cached since 48.61s ago] (17,)
+2026-01-09 22:42:07,871 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 17)
+✅ 成功保存 4548 条记录
+
+[18/70] [ETF] 159662
+
+======================================================================
+下载 CN:ETF:159662 (CN) -> 159662.SZ
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 756 条记录
+📅 日期范围: 2022-11-23 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:10,255 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:10,255 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:10,255 INFO sqlalchemy.engine.Engine [cached since 51.01s ago] ('yfinance', 'CN:ETF:159662', 'CN', '1d', '2026-01-09 22:42:10.255046', '{"symbol": "CN:ETF:159662", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:42:10", "data": [{"timestamp": "2022-11-23", "open": 1 ... (149883 characters truncated) ... 672, "high": 1.0549999475479126, "low": 1.0479999780654907, "close": 1.0509999990463257, "volume": 13938500, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:10,256 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:10,260 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:10,260 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:10,261 INFO sqlalchemy.engine.Engine [cached since 51s ago] (18,)
+2026-01-09 22:42:10,261 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 18)
+✅ 成功保存 756 条记录
+
+[19/70] [ETF] 159751
+
+======================================================================
+下载 CN:ETF:159751 (CN) -> 159751.SZ
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 981 条记录
+📅 日期范围: 2021-12-10 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:13,261 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:13,261 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:13,261 INFO sqlalchemy.engine.Engine [cached since 54.02s ago] ('yfinance', 'CN:ETF:159751', 'CN', '1d', '2026-01-09 22:42:13.260785', '{"symbol": "CN:ETF:159751", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:42:13", "data": [{"timestamp": "2021-12-10", "open": 1 ... (194665 characters truncated) ... 1399, "high": 1.0700000524520874, "low": 1.059000015258789, "close": 1.0670000314712524, "volume": 78903900, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:13,262 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:13,266 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:13,266 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:13,266 INFO sqlalchemy.engine.Engine [cached since 54s ago] (19,)
+2026-01-09 22:42:13,266 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 19)
+✅ 成功保存 981 条记录
+
+[20/70] [ETF] 159851
+
+======================================================================
+下载 CN:ETF:159851 (CN) -> 159851.SZ
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 1170 条记录
+📅 日期范围: 2021-03-05 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:15,476 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:15,476 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:15,476 INFO sqlalchemy.engine.Engine [cached since 56.23s ago] ('yfinance', 'CN:ETF:159851', 'CN', '1d', '2026-01-09 22:42:15.476202', '{"symbol": "CN:ETF:159851", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:42:15", "data": [{"timestamp": "2021-03-05", "open": 1 ... (232246 characters truncated) ... 61, "high": 0.8880000114440918, "low": 0.8650000095367432, "close": 0.8870000243186951, "volume": 691587597, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:15,477 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:15,482 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:15,482 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:15,482 INFO sqlalchemy.engine.Engine [cached since 56.22s ago] (20,)
+2026-01-09 22:42:15,483 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 20)
+✅ 成功保存 1170 条记录
+
+[21/70] [ETF] 159852
+
+======================================================================
+下载 CN:ETF:159852 (CN) -> 159852.SZ
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 1193 条记录
+📅 日期范围: 2021-01-29 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:17,704 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:17,704 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:17,704 INFO sqlalchemy.engine.Engine [cached since 58.46s ago] ('yfinance', 'CN:ETF:159852', 'CN', '1d', '2026-01-09 22:42:17.704206', '{"symbol": "CN:ETF:159852", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:42:17", "data": [{"timestamp": "2021-01-29", "open": 1 ... (237756 characters truncated) ... 65, "high": 0.9459999799728394, "low": 0.9089999794960022, "close": 0.9459999799728394, "volume": 725470912, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:17,705 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:17,709 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:17,709 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:17,709 INFO sqlalchemy.engine.Engine [cached since 58.45s ago] (21,)
+2026-01-09 22:42:17,709 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 21)
+✅ 成功保存 1193 条记录
+
+[22/70] [ETF] 512800
+
+======================================================================
+下载 CN:ETF:512800 (CN) -> 512800.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 65 条记录
+📅 日期范围: 2025-10-09 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:19,742 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:19,742 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:19,742 INFO sqlalchemy.engine.Engine [cached since 60.5s ago] ('yfinance', 'CN:ETF:512800', 'CN', '1d', '2026-01-09 22:42:19.742416', '{"symbol": "CN:ETF:512800", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:42:19", "data": [{"timestamp": "2025-10-09", "open": 0 ... (12913 characters truncated) ... 25, "high": 0.8130000233650208, "low": 0.8059999942779541, "close": 0.8080000281333923, "volume": 802612900, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:19,743 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:19,745 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:19,745 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:19,745 INFO sqlalchemy.engine.Engine [cached since 60.48s ago] (22,)
+2026-01-09 22:42:19,745 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 22)
+✅ 成功保存 65 条记录
+
+[23/70] [ETF] 512880
+
+======================================================================
+下载 CN:ETF:512880 (CN) -> 512880.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 2289 条记录
+📅 日期范围: 2016-07-26 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:22,286 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:22,286 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:22,286 INFO sqlalchemy.engine.Engine [cached since 63.04s ago] ('yfinance', 'CN:ETF:512880', 'CN', '1d', '2026-01-09 22:42:22.286046', '{"symbol": "CN:ETF:512880", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:42:22", "data": [{"timestamp": "2016-07-26", "open": 1 ... (458128 characters truncated) ... 3, "high": 1.2430000305175781, "low": 1.2280000448226929, "close": 1.2369999885559082, "volume": 2578785208, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:22,287 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:22,292 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:22,292 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:22,292 INFO sqlalchemy.engine.Engine [cached since 63.03s ago] (23,)
+2026-01-09 22:42:22,293 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 23)
+✅ 成功保存 2289 条记录
+
+[24/70] [ETF] 513190
+
+======================================================================
+下载 CN:ETF:513190 (CN) -> 513190.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 550 条记录
+📅 日期范围: 2023-09-25 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:24,517 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:24,518 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:24,518 INFO sqlalchemy.engine.Engine [cached since 65.27s ago] ('yfinance', 'CN:ETF:513190', 'CN', '1d', '2026-01-09 22:42:24.517540', '{"symbol": "CN:ETF:513190", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:42:24", "data": [{"timestamp": "2023-09-25", "open": 1 ... (109019 characters truncated) ... 273, "high": 1.7990000247955322, "low": 1.7799999713897705, "close": 1.784999966621399, "volume": 241787000, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:24,519 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:24,521 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:24,522 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:24,522 INFO sqlalchemy.engine.Engine [cached since 65.26s ago] (24,)
+2026-01-09 22:42:24,522 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 24)
+✅ 成功保存 550 条记录
+
+[25/70] [ETF] 516020
+
+======================================================================
+下载 CN:ETF:516020 (CN) -> 516020.SS
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 1181 条记录
+📅 日期范围: 2021-02-26 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:26,940 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:26,940 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:26,940 INFO sqlalchemy.engine.Engine [cached since 67.69s ago] ('yfinance', 'CN:ETF:516020', 'CN', '1d', '2026-01-09 22:42:26.940093', '{"symbol": "CN:ETF:516020", "market": "CN", "source": "yfinance", "fetch_time": "2026-01-09 22:42:26", "data": [{"timestamp": "2021-02-26", "open": 1 ... (234857 characters truncated) ... 38, "high": 0.9129999876022339, "low": 0.8980000019073486, "close": 0.9070000052452087, "volume": 251179800, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:26,941 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:26,945 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:26,945 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:26,945 INFO sqlalchemy.engine.Engine [cached since 67.68s ago] (25,)
+2026-01-09 22:42:26,945 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 25)
+✅ 成功保存 1181 条记录
+
+[26/70] [STOCK] 00005
+
+======================================================================
+下载 HK:STOCK:00005 (HK) -> 0005.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6489 条记录
+📅 日期范围: 2000-01-03 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:31,099 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:31,099 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:31,099 INFO sqlalchemy.engine.Engine [cached since 71.85s ago] ('yfinance', 'HK:STOCK:00005', 'HK', '1d', '2026-01-09 22:42:31.099162', '{"symbol": "HK:STOCK:00005", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:42:31", "data": [{"timestamp": "2000-01-03", "open":  ... (1275481 characters truncated) ... 125.4000015258789, "high": 125.4000015258789, "low": 123.0, "close": 124.80000305175781, "volume": 11801759, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:31,102 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:31,111 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:31,112 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:31,112 INFO sqlalchemy.engine.Engine [cached since 71.85s ago] (26,)
+2026-01-09 22:42:31,112 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 26)
+✅ 成功保存 6489 条记录
+
+[27/70] [STOCK] 00700
+
+======================================================================
+下载 HK:STOCK:00700 (HK) -> 0700.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 5327 条记录
+📅 日期范围: 2004-06-16 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:35,529 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:35,529 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:35,529 INFO sqlalchemy.engine.Engine [cached since 76.28s ago] ('yfinance', 'HK:STOCK:00700', 'HK', '1d', '2026-01-09 22:42:35.529423', '{"symbol": "HK:STOCK:00700", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:42:35", "data": [{"timestamp": "2004-06-16", "open":  ... (1043651 characters truncated) ...  {"timestamp": "2026-01-09", "open": 616.0, "high": 617.0, "low": 610.0, "close": 611.0, "volume": 17813669, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:35,531 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:35,543 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:35,543 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:35,543 INFO sqlalchemy.engine.Engine [cached since 76.28s ago] (27,)
+2026-01-09 22:42:35,544 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 27)
+✅ 成功保存 5327 条记录
+
+[28/70] [STOCK] 00998
+
+======================================================================
+下载 HK:STOCK:00998 (HK) -> 0998.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 4612 条记录
+📅 日期范围: 2007-04-27 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:38,811 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:38,811 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:38,811 INFO sqlalchemy.engine.Engine [cached since 79.57s ago] ('yfinance', 'HK:STOCK:00998', 'HK', '1d', '2026-01-09 22:42:38.810666', '{"symbol": "HK:STOCK:00998", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:42:38", "data": [{"timestamp": "2007-04-27", "open":  ... (913334 characters truncated) ... 440918, "high": 6.929999828338623, "low": 6.829999923706055, "close": 6.869999885559082, "volume": 18483588, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:38,813 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:38,827 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:38,827 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:38,827 INFO sqlalchemy.engine.Engine [cached since 79.56s ago] (28,)
+2026-01-09 22:42:38,828 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 28)
+✅ 成功保存 4612 条记录
+
+[29/70] [STOCK] 01919
+
+======================================================================
+下载 HK:STOCK:01919 (HK) -> 1919.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 5064 条记录
+📅 日期范围: 2005-06-30 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:42,364 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:42,365 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:42,365 INFO sqlalchemy.engine.Engine [cached since 83.12s ago] ('yfinance', 'HK:STOCK:01919', 'HK', '1d', '2026-01-09 22:42:42.364430', '{"symbol": "HK:STOCK:01919", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:42:42", "data": [{"timestamp": "2005-06-30", "open":  ... (1002348 characters truncated) ... 273, "high": 13.789999961853027, "low": 13.630000114440918, "close": 13.770000457763672, "volume": 12392212, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:42,367 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:42,382 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:42,382 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:42,382 INFO sqlalchemy.engine.Engine [cached since 83.12s ago] (29,)
+2026-01-09 22:42:42,382 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 29)
+✅ 成功保存 5064 条记录
+
+[30/70] [STOCK] 06099
+
+======================================================================
+下载 HK:STOCK:06099 (HK) -> 6099.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 2279 条记录
+📅 日期范围: 2016-10-07 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:44,969 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:44,969 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:44,969 INFO sqlalchemy.engine.Engine [cached since 85.72s ago] ('yfinance', 'HK:STOCK:06099', 'HK', '1d', '2026-01-09 22:42:44.968649', '{"symbol": "HK:STOCK:06099", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:42:44", "data": [{"timestamp": "2016-10-07", "open":  ... (444061 characters truncated) ... 30273, "high": 15.59000015258789, "low": 15.119999885559082, "close": 15.470000267028809, "volume": 8050800, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:44,971 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:44,977 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:44,978 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:44,978 INFO sqlalchemy.engine.Engine [cached since 85.72s ago] (30,)
+2026-01-09 22:42:44,978 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 30)
+✅ 成功保存 2279 条记录
+
+[31/70] [STOCK] 09988
+
+======================================================================
+下载 HK:STOCK:09988 (HK) -> 9988.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 1506 条记录
+📅 日期范围: 2019-11-26 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:47,303 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:47,304 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:47,304 INFO sqlalchemy.engine.Engine [cached since 88.06s ago] ('yfinance', 'HK:STOCK:09988', 'HK', '1d', '2026-01-09 22:42:47.303656', '{"symbol": "HK:STOCK:09988", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:42:47", "data": [{"timestamp": "2019-11-26", "open":  ... (294912 characters truncated) ...  "2026-01-09", "open": 148.0, "high": 149.5, "low": 145.89999389648438, "close": 146.5, "volume": 115234756, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:47,304 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:47,309 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:47,309 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:47,309 INFO sqlalchemy.engine.Engine [cached since 88.05s ago] (31,)
+2026-01-09 22:42:47,309 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 31)
+✅ 成功保存 1506 条记录
+
+[32/70] [STOCK] 03690
+
+======================================================================
+下载 HK:STOCK:03690 (HK) -> 3690.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 1796 条记录
+📅 日期范围: 2018-09-20 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:49,609 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:49,609 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:49,609 INFO sqlalchemy.engine.Engine [cached since 90.36s ago] ('yfinance', 'HK:STOCK:03690', 'HK', '1d', '2026-01-09 22:42:49.608787', '{"symbol": "HK:STOCK:03690", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:42:49", "data": [{"timestamp": "2018-09-20", "open":  ... (326951 characters truncated) ... -09", "open": 100.0, "high": 100.5999984741211, "low": 98.19999694824219, "close": 98.5, "volume": 71607901, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:42:49,611 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:49,618 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:49,618 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:49,618 INFO sqlalchemy.engine.Engine [cached since 90.36s ago] (32,)
+2026-01-09 22:42:49,619 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 32)
+✅ 成功保存 1796 条记录
+
+[33/70] [ETF] 02800
+
+======================================================================
+下载 HK:ETF:02800 (HK) -> 2800.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 4441 条记录
+📅 日期范围: 2008-01-02 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:52,420 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:52,421 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:52,421 INFO sqlalchemy.engine.Engine [cached since 93.18s ago] ('yfinance', 'HK:ETF:02800', 'HK', '1d', '2026-01-09 22:42:52.420625', '{"symbol": "HK:ETF:02800", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:42:52", "data": [{"timestamp": "2008-01-02", "open": 17 ... (978117 characters truncated) ... gh": 26.5, "low": 26.31999969482422, "close": 26.399999618530273, "volume": 458154534, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:42:52,423 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:52,438 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:52,439 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:52,439 INFO sqlalchemy.engine.Engine [cached since 93.18s ago] (33,)
+2026-01-09 22:42:52,440 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 33)
+✅ 成功保存 4441 条记录
+
+[34/70] [ETF] 03033
+
+======================================================================
+下载 HK:ETF:03033 (HK) -> 3033.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 1319 条记录
+📅 日期范围: 2020-08-27 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:54,653 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:54,653 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:54,653 INFO sqlalchemy.engine.Engine [cached since 95.41s ago] ('yfinance', 'HK:ETF:03033', 'HK', '1d', '2026-01-09 22:42:54.653159', '{"symbol": "HK:ETF:03033", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:42:54", "data": [{"timestamp": "2020-08-27", "open": 7. ... (286520 characters truncated) ... 885559082, "low": 5.545000076293945, "close": 5.565000057220459, "volume": 1155542906, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:42:54,654 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:54,660 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:54,660 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:54,660 INFO sqlalchemy.engine.Engine [cached since 95.4s ago] (34,)
+2026-01-09 22:42:54,660 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 34)
+✅ 成功保存 1319 条记录
+
+[35/70] [ETF] 03110
+
+======================================================================
+下载 HK:ETF:03110 (HK) -> 3110.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 3101 条记录
+📅 日期范围: 2013-06-10 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:57,445 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:57,445 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:57,445 INFO sqlalchemy.engine.Engine [cached since 98.2s ago] ('yfinance', 'HK:ETF:03110', 'HK', '1d', '2026-01-09 22:42:57.444643', '{"symbol": "HK:ETF:03110", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:42:57", "data": [{"timestamp": "2013-06-10", "open": 11 ... (672568 characters truncated) ... .8799991607666, "low": 30.6200008392334, "close": 30.84000015258789, "volume": 442510, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:42:57,447 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:57,455 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:57,455 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:57,455 INFO sqlalchemy.engine.Engine [cached since 98.19s ago] (35,)
+2026-01-09 22:42:57,456 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 35)
+✅ 成功保存 3101 条记录
+
+[36/70] [ETF] 03437
+
+======================================================================
+下载 HK:ETF:03437 (HK) -> 3437.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 367 条记录
+📅 日期范围: 2024-07-10 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:42:59,734 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:59,734 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:42:59,734 INFO sqlalchemy.engine.Engine [cached since 100.5s ago] ('yfinance', 'HK:ETF:03437', 'HK', '1d', '2026-01-09 22:42:59.734240', '{"symbol": "HK:ETF:03437", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:42:59", "data": [{"timestamp": "2024-07-10", "open": 9. ... (78549 characters truncated) ... 50000190734863, "low": 9.9399995803833, "close": 10.020000457763672, "volume": 668402, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:42:59,735 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:42:59,737 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:42:59,738 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:42:59,738 INFO sqlalchemy.engine.Engine [cached since 100.5s ago] (36,)
+2026-01-09 22:42:59,738 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 36)
+✅ 成功保存 367 条记录
+
+[37/70] [ETF] 03447
+
+======================================================================
+下载 HK:ETF:03447 (HK) -> 3447.HK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 165 条记录
+📅 日期范围: 2025-05-13 → 2026-01-08
+💾 保存到数据库...
+2026-01-09 22:43:01,755 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:01,755 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:01,755 INFO sqlalchemy.engine.Engine [cached since 102.5s ago] ('yfinance', 'HK:ETF:03447', 'HK', '1d', '2026-01-09 22:43:01.755284', '{"symbol": "HK:ETF:03447", "market": "HK", "source": "yfinance", "fetch_time": "2026-01-09 22:43:01", "data": [{"timestamp": "2025-05-13", "open": 7. ... (34470 characters truncated) ... 520000457763672, "low": 8.520000457763672, "close": 8.510000228881836, "volume": 1000, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:43:01,756 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:01,757 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:01,758 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:01,758 INFO sqlalchemy.engine.Engine [cached since 102.5s ago] (37,)
+2026-01-09 22:43:01,758 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 37)
+✅ 成功保存 165 条记录
+
+[38/70] [STOCK] AAPL
+
+======================================================================
+下载 US:STOCK:AAPL (US) -> AAPL
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 11361 条记录
+📅 日期范围: 1980-12-12 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:06,635 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:06,635 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:06,635 INFO sqlalchemy.engine.Engine [cached since 107.4s ago] ('yfinance', 'US:STOCK:AAPL', 'US', '1d', '2026-01-09 22:43:06.635224', '{"symbol": "US:STOCK:AAPL", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:06", "data": [{"timestamp": "1980-12-12", "open": 0 ... (2283687 characters truncated) ... 259.07501220703125, "high": 260.0, "low": 257.70001220703125, "close": 258.0899963378906, "volume": 4086988, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:43:06,650 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:06,674 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:06,675 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:06,675 INFO sqlalchemy.engine.Engine [cached since 107.4s ago] (38,)
+2026-01-09 22:43:06,676 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 38)
+✅ 成功保存 11361 条记录
+
+[39/70] [STOCK] AMZN
+
+======================================================================
+下载 US:STOCK:AMZN (US) -> AMZN
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 7209 条记录
+📅 日期范围: 1997-05-15 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:10,758 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:10,758 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:10,758 INFO sqlalchemy.engine.Engine [cached since 111.5s ago] ('yfinance', 'US:STOCK:AMZN', 'US', '1d', '2026-01-09 22:43:10.758514', '{"symbol": "US:STOCK:AMZN", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:10", "data": [{"timestamp": "1997-05-15", "open": 0 ... (1414336 characters truncated) ... 1640625, "high": 245.4600067138672, "low": 243.0800018310547, "close": 244.3699951171875, "volume": 3858953, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:43:10,761 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:10,771 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:10,771 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:10,771 INFO sqlalchemy.engine.Engine [cached since 111.5s ago] (39,)
+2026-01-09 22:43:10,772 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 39)
+✅ 成功保存 7209 条记录
+
+[40/70] [STOCK] BAC
+
+======================================================================
+下载 US:STOCK:BAC (US) -> BAC
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 13335 条记录
+📅 日期范围: 1973-02-21 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:14,558 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:14,559 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:14,559 INFO sqlalchemy.engine.Engine [cached since 115.3s ago] ('yfinance', 'US:STOCK:BAC', 'US', '1d', '2026-01-09 22:43:14.558661', '{"symbol": "US:STOCK:BAC", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:14", "data": [{"timestamp": "1973-02-21", "open": 1. ... (2634044 characters truncated) ... 21094, "high": 56.61000061035156, "low": 56.119998931884766, "close": 56.345001220703125, "volume": 2288073, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:43:14,567 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:14,581 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:14,581 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:14,581 INFO sqlalchemy.engine.Engine [cached since 115.3s ago] (40,)
+2026-01-09 22:43:14,583 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 40)
+✅ 成功保存 13335 条记录
+
+[41/70] [STOCK] GOOG
+
+======================================================================
+下载 US:STOCK:GOOG (US) -> GOOG
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 5383 条记录
+📅 日期范围: 2004-08-19 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:18,281 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:18,281 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:18,281 INFO sqlalchemy.engine.Engine [cached since 119s ago] ('yfinance', 'US:STOCK:GOOG', 'US', '1d', '2026-01-09 22:43:18.281492', '{"symbol": "US:STOCK:GOOG", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:18", "data": [{"timestamp": "2004-08-19", "open": 2 ... (1066412 characters truncated) ... 327.59149169921875, "high": 330.8500061035156, "low": 326.25, "close": 329.5249938964844, "volume": 2616588, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:43:18,284 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:18,294 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:18,294 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:18,295 INFO sqlalchemy.engine.Engine [cached since 119s ago] (41,)
+2026-01-09 22:43:18,295 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 41)
+✅ 成功保存 5383 条记录
+
+[42/70] [STOCK] META
+
+======================================================================
+下载 US:STOCK:META (US) -> META
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 3431 条记录
+📅 日期范围: 2012-05-18 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:21,051 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:21,052 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:21,052 INFO sqlalchemy.engine.Engine [cached since 121.8s ago] ('yfinance', 'US:STOCK:META', 'US', '1d', '2026-01-09 22:43:21.051554', '{"symbol": "US:STOCK:META", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:21", "data": [{"timestamp": "2012-05-18", "open": 4 ... (677057 characters truncated) ... 01-09", "open": 645.5, "high": 651.0, "low": 643.6400146484375, "close": 648.10009765625, "volume": 1097445, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:43:21,054 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:21,063 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:21,063 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:21,063 INFO sqlalchemy.engine.Engine [cached since 121.8s ago] (42,)
+2026-01-09 22:43:21,063 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 42)
+✅ 成功保存 3431 条记录
+
+[43/70] [STOCK] MSFT
+
+======================================================================
+下载 US:STOCK:MSFT (US) -> MSFT
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 10034 条记录
+📅 日期范围: 1986-03-13 → 2026-01-08
+💾 保存到数据库...
+2026-01-09 22:43:24,404 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:24,404 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:24,404 INFO sqlalchemy.engine.Engine [cached since 125.2s ago] ('yfinance', 'US:STOCK:MSFT', 'US', '1d', '2026-01-09 22:43:24.404178', '{"symbol": "US:STOCK:MSFT", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:24", "data": [{"timestamp": "1986-03-13", "open": 0 ... (1992703 characters truncated) ... 234375, "high": 482.6600036621094, "low": 475.8599853515625, "close": 478.1099853515625, "volume": 18147300, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:43:24,410 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:24,423 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:24,423 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:24,423 INFO sqlalchemy.engine.Engine [cached since 125.2s ago] (43,)
+2026-01-09 22:43:24,424 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 43)
+✅ 成功保存 10034 条记录
+
+[44/70] [STOCK] NVDA
+
+======================================================================
+下载 US:STOCK:NVDA (US) -> NVDA
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6783 条记录
+📅 日期范围: 1999-01-22 → 2026-01-08
+💾 保存到数据库...
+2026-01-09 22:43:27,657 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:27,657 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:27,657 INFO sqlalchemy.engine.Engine [cached since 128.4s ago] ('yfinance', 'US:STOCK:NVDA', 'US', '1d', '2026-01-09 22:43:27.657069', '{"symbol": "US:STOCK:NVDA", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:27", "data": [{"timestamp": "1999-01-22", "open": 0 ... (1366457 characters truncated) ... 35156, "high": 189.5500030517578, "low": 183.7100067138672, "close": 185.0399932861328, "volume": 172073400, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:43:27,660 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:27,669 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:27,669 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:27,669 INFO sqlalchemy.engine.Engine [cached since 128.4s ago] (44,)
+2026-01-09 22:43:27,670 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 44)
+✅ 成功保存 6783 条记录
+
+[45/70] [STOCK] TSLA
+
+======================================================================
+下载 US:STOCK:TSLA (US) -> TSLA
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 3908 条记录
+📅 日期范围: 2010-06-29 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:30,641 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:30,641 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:30,641 INFO sqlalchemy.engine.Engine [cached since 131.4s ago] ('yfinance', 'US:STOCK:TSLA', 'US', '1d', '2026-01-09 22:43:30.641238', '{"symbol": "US:STOCK:TSLA", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:30", "data": [{"timestamp": "2010-06-29", "open": 1 ... (769059 characters truncated) ... 732421875, "high": 436.010009765625, "low": 430.3900146484375, "close": 434.739990234375, "volume": 6881134, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:43:30,643 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:30,646 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:30,646 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:30,646 INFO sqlalchemy.engine.Engine [cached since 131.4s ago] (45,)
+2026-01-09 22:43:30,647 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 45)
+✅ 成功保存 3908 条记录
+
+[46/70] [STOCK] TSM
+
+======================================================================
+下载 US:STOCK:TSM (US) -> TSM
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 7107 条记录
+📅 日期范围: 1997-10-09 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:34,033 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:34,033 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:34,033 INFO sqlalchemy.engine.Engine [cached since 134.8s ago] ('yfinance', 'US:STOCK:TSM', 'US', '1d', '2026-01-09 22:43:34.033037', '{"symbol": "US:STOCK:TSM", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:34", "data": [{"timestamp": "1997-10-09", "open": 2. ... (1396843 characters truncated) ... 484375, "high": 321.19500732421875, "low": 318.2500915527344, "close": 320.7449951171875, "volume": 1262702, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:43:34,036 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:34,043 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:34,043 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:34,043 INFO sqlalchemy.engine.Engine [cached since 134.8s ago] (46,)
+2026-01-09 22:43:34,044 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 46)
+✅ 成功保存 7107 条记录
+
+[47/70] [ETF] TLT
+
+======================================================================
+下载 US:ETF:TLT (US) -> TLT
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 5901 条记录
+📅 日期范围: 2002-07-30 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:37,272 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:37,273 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:37,273 INFO sqlalchemy.engine.Engine [cached since 138s ago] ('yfinance', 'US:ETF:TLT', 'US', '1d', '2026-01-09 22:43:37.272664', '{"symbol": "US:ETF:TLT", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:37", "data": [{"timestamp": "2002-07-30", "open": 36.7 ... (1285157 characters truncated) ... 999969482422, "low": 87.20010375976562, "close": 87.23999786376953, "volume": 4164690, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:43:37,275 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:37,288 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:37,288 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:37,288 INFO sqlalchemy.engine.Engine [cached since 138s ago] (47,)
+2026-01-09 22:43:37,289 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 47)
+✅ 成功保存 5901 条记录
+
+[48/70] [ETF] SPY
+
+======================================================================
+下载 US:ETF:SPY (US) -> SPY
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 8293 条记录
+📅 日期范围: 1993-01-29 → 2026-01-08
+💾 保存到数据库...
+2026-01-09 22:43:40,502 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:40,502 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:40,502 INFO sqlalchemy.engine.Engine [cached since 141.3s ago] ('yfinance', 'US:ETF:SPY', 'US', '1d', '2026-01-09 22:43:40.501958', '{"symbol": "US:ETF:SPY", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:40", "data": [{"timestamp": "1993-01-29", "open": 24.2 ... (1814684 characters truncated) ... 6199951171875, "low": 687.489990234375, "close": 689.510009765625, "volume": 63895800, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:43:40,506 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:40,512 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:40,513 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:40,513 INFO sqlalchemy.engine.Engine [cached since 141.2s ago] (48,)
+2026-01-09 22:43:40,514 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 48)
+✅ 成功保存 8293 条记录
+
+[49/70] [ETF] QQQ
+
+======================================================================
+下载 US:ETF:QQQ (US) -> QQQ
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6752 条记录
+📅 日期范围: 1999-03-10 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:44,497 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:44,497 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:44,497 INFO sqlalchemy.engine.Engine [cached since 145.3s ago] ('yfinance', 'US:ETF:QQQ', 'US', '1d', '2026-01-09 22:43:44.497399', '{"symbol": "US:ETF:QQQ", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:44", "data": [{"timestamp": "1999-03-10", "open": 43.1 ... (1481134 characters truncated) ... 260009765625, "low": 619.8400268554688, "close": 622.8400268554688, "volume": 6150666, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:43:44,500 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:44,508 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:44,508 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:44,508 INFO sqlalchemy.engine.Engine [cached since 145.2s ago] (49,)
+2026-01-09 22:43:44,509 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 49)
+✅ 成功保存 6752 条记录
+
+[50/70] [ETF] DIA
+
+======================================================================
+下载 US:ETF:DIA (US) -> DIA
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 7038 条记录
+📅 日期范围: 1998-01-20 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:47,874 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:47,874 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:47,874 INFO sqlalchemy.engine.Engine [cached since 148.6s ago] ('yfinance', 'US:ETF:DIA', 'US', '1d', '2026-01-09 22:43:47.874162', '{"symbol": "US:ETF:DIA", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:47", "data": [{"timestamp": "1998-01-20", "open": 43.2 ... (1534999 characters truncated) ... 299987792969, "low": 492.7900085449219, "close": 493.44000244140625, "volume": 945532, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:43:47,877 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:47,891 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:47,891 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:47,891 INFO sqlalchemy.engine.Engine [cached since 148.6s ago] (50,)
+2026-01-09 22:43:47,892 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 50)
+✅ 成功保存 7038 条记录
+
+[51/70] [ETF] GLD
+
+======================================================================
+下载 US:ETF:GLD (US) -> GLD
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 5319 条记录
+📅 日期范围: 2004-11-18 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:50,967 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:50,968 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:50,968 INFO sqlalchemy.engine.Engine [cached since 151.7s ago] ('yfinance', 'US:ETF:GLD', 'US', '1d', '2026-01-09 22:43:50.967684', '{"symbol": "US:ETF:GLD", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:50", "data": [{"timestamp": "2004-11-18", "open": 44.4 ... (1154813 characters truncated) ... 998779296875, "low": 412.0899963378906, "close": 412.6099853515625, "volume": 1095363, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:43:50,971 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:50,977 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:50,978 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:50,978 INFO sqlalchemy.engine.Engine [cached since 151.7s ago] (51,)
+2026-01-09 22:43:50,979 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 51)
+✅ 成功保存 5319 条记录
+
+[52/70] [ETF] IWM
+
+======================================================================
+下载 US:ETF:IWM (US) -> IWM
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6444 条记录
+📅 日期范围: 2000-05-26 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:53,954 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:53,954 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:53,954 INFO sqlalchemy.engine.Engine [cached since 154.7s ago] ('yfinance', 'US:ETF:IWM', 'US', '1d', '2026-01-09 22:43:53.954515', '{"symbol": "US:ETF:IWM", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:53", "data": [{"timestamp": "2000-05-26", "open": 32.5 ... (1412863 characters truncated) ... igh": 261.17999267578125, "low": 259.5, "close": 260.3550109863281, "volume": 3805787, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:43:53,957 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:53,969 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:53,970 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:53,970 INFO sqlalchemy.engine.Engine [cached since 154.7s ago] (52,)
+2026-01-09 22:43:53,971 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 52)
+✅ 成功保存 6444 条记录
+
+[53/70] [ETF] SGOV
+
+======================================================================
+下载 US:ETF:SGOV (US) -> SGOV
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 1411 条记录
+📅 日期范围: 2020-06-01 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:56,170 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:56,170 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:56,170 INFO sqlalchemy.engine.Engine [cached since 156.9s ago] ('yfinance', 'US:ETF:SGOV', 'US', '1d', '2026-01-09 22:43:56.169797', '{"symbol": "US:ETF:SGOV", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:56", "data": [{"timestamp": "2020-06-01", "open": 85. ... (304221 characters truncated) ... 800033569336, "low": 100.4800033569336, "close": 100.4800033569336, "volume": 2891716, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:43:56,171 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:56,174 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:56,174 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:56,174 INFO sqlalchemy.engine.Engine [cached since 156.9s ago] (53,)
+2026-01-09 22:43:56,175 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 53)
+✅ 成功保存 1411 条记录
+
+[54/70] [ETF] USMV
+
+======================================================================
+下载 US:ETF:USMV (US) -> USMV
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 3576 条记录
+📅 日期范围: 2011-10-20 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:43:59,015 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:59,015 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:43:59,015 INFO sqlalchemy.engine.Engine [cached since 159.8s ago] ('yfinance', 'US:ETF:USMV', 'US', '1d', '2026-01-09 22:43:59.015194', '{"symbol": "US:ETF:USMV", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:43:59", "data": [{"timestamp": "2011-10-20", "open": 19. ... (776835 characters truncated) ... 0999908447266, "low": 94.38610076904297, "close": 94.63999938964844, "volume": 101787, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:43:59,017 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:43:59,026 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:43:59,026 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:43:59,026 INFO sqlalchemy.engine.Engine [cached since 159.8s ago] (54,)
+2026-01-09 22:43:59,026 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 54)
+✅ 成功保存 3576 条记录
+
+[55/70] [ETF] VTV
+
+======================================================================
+下载 US:ETF:VTV (US) -> VTV
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 5522 条记录
+📅 日期范围: 2004-01-30 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:02,101 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:02,101 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:02,101 INFO sqlalchemy.engine.Engine [cached since 162.9s ago] ('yfinance', 'US:ETF:VTV', 'US', '1d', '2026-01-09 22:44:02.101036', '{"symbol": "US:ETF:VTV", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:02", "data": [{"timestamp": "2004-01-30", "open": 27.8 ... (1200700 characters truncated) ... igh": 196.67999267578125, "low": 196.0, "close": 196.32000732421875, "volume": 270401, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:02,104 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:02,113 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:02,113 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:02,113 INFO sqlalchemy.engine.Engine [cached since 162.8s ago] (55,)
+2026-01-09 22:44:02,114 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 55)
+✅ 成功保存 5522 条记录
+
+[56/70] [ETF] VUG
+
+======================================================================
+下载 US:ETF:VUG (US) -> VUG
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 5522 条记录
+📅 日期范围: 2004-01-30 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:05,415 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:05,415 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:05,415 INFO sqlalchemy.engine.Engine [cached since 166.2s ago] ('yfinance', 'US:ETF:VUG', 'US', '1d', '2026-01-09 22:44:05.415382', '{"symbol": "US:ETF:VUG", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:05", "data": [{"timestamp": "2004-01-30", "open": 39.3 ... (1199148 characters truncated) ... .9750061035156, "low": 487.7699890136719, "close": 489.4447021484375, "volume": 86577, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:05,418 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:05,435 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:05,435 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:05,435 INFO sqlalchemy.engine.Engine [cached since 166.2s ago] (56,)
+2026-01-09 22:44:05,436 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 56)
+✅ 成功保存 5522 条记录
+
+[57/70] [ETF] VYM
+
+======================================================================
+下载 US:ETF:VYM (US) -> VYM
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 4816 条记录
+📅 日期范围: 2006-11-16 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:08,260 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:08,260 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:08,260 INFO sqlalchemy.engine.Engine [cached since 169s ago] ('yfinance', 'US:ETF:VYM', 'US', '1d', '2026-01-09 22:44:08.260466', '{"symbol": "US:ETF:VYM", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:08", "data": [{"timestamp": "2006-11-16", "open": 28.0 ... (1046379 characters truncated) ... 0500030517578, "low": 146.6699981689453, "close": 146.8311004638672, "volume": 139866, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:08,263 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:08,273 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:08,273 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:08,273 INFO sqlalchemy.engine.Engine [cached since 169s ago] (57,)
+2026-01-09 22:44:08,274 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 57)
+✅ 成功保存 4816 条记录
+
+[58/70] [ETF] XLB
+
+======================================================================
+下载 US:ETF:XLB (US) -> XLB
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6803 条记录
+📅 日期范围: 1998-12-22 → 2026-01-08
+💾 保存到数据库...
+2026-01-09 22:44:11,705 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:11,705 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:11,705 INFO sqlalchemy.engine.Engine [cached since 172.5s ago] ('yfinance', 'US:ETF:XLB', 'US', '1d', '2026-01-09 22:44:11.704962', '{"symbol": "US:ETF:XLB", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:11", "data": [{"timestamp": "1998-12-22", "open": 5.73 ... (1488175 characters truncated) ... igh": 47.630001068115234, "low": 46.27000045776367, "close": 47.5, "volume": 14917000, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:11,708 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:11,721 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:11,721 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:11,721 INFO sqlalchemy.engine.Engine [cached since 172.5s ago] (58,)
+2026-01-09 22:44:11,722 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 58)
+✅ 成功保存 6803 条记录
+
+[59/70] [ETF] XLC
+
+======================================================================
+下载 US:ETF:XLC (US) -> XLC
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 1901 条记录
+📅 日期范围: 2018-06-19 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:14,422 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:14,423 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:14,423 INFO sqlalchemy.engine.Engine [cached since 175.2s ago] ('yfinance', 'US:ETF:XLC', 'US', '1d', '2026-01-09 22:44:14.422675', '{"symbol": "US:ETF:XLC", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:14", "data": [{"timestamp": "2018-06-19", "open": 46.2 ... (413155 characters truncated) ... gh": 117.95500183105469, "low": 117.50499725341797, "close": 117.75, "volume": 339762, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:14,425 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:14,428 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:14,428 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:14,428 INFO sqlalchemy.engine.Engine [cached since 175.2s ago] (59,)
+2026-01-09 22:44:14,429 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 59)
+✅ 成功保存 1901 条记录
+
+[60/70] [ETF] XLE
+
+======================================================================
+下载 US:ETF:XLE (US) -> XLE
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6804 条记录
+📅 日期范围: 1998-12-22 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:17,532 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:17,532 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:17,532 INFO sqlalchemy.engine.Engine [cached since 178.3s ago] ('yfinance', 'US:ETF:XLE', 'US', '1d', '2026-01-09 22:44:17.532347', '{"symbol": "US:ETF:XLE", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:17", "data": [{"timestamp": "1998-12-22", "open": 5.78 ... (1492429 characters truncated) ... 1068115234, "low": 46.595001220703125, "close": 46.709999084472656, "volume": 3948252, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:17,535 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:17,547 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:17,547 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:17,548 INFO sqlalchemy.engine.Engine [cached since 178.3s ago] (60,)
+2026-01-09 22:44:17,549 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 60)
+✅ 成功保存 6804 条记录
+
+[61/70] [ETF] XLF
+
+======================================================================
+下载 US:ETF:XLF (US) -> XLF
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6804 条记录
+📅 日期范围: 1998-12-22 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:20,808 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:20,808 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:20,808 INFO sqlalchemy.engine.Engine [cached since 181.6s ago] ('yfinance', 'US:ETF:XLF', 'US', '1d', '2026-01-09 22:44:20.807766', '{"symbol": "US:ETF:XLF", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:20", "data": [{"timestamp": "1998-12-22", "open": 11.2 ... (1495817 characters truncated) ... 5999984741211, "low": 55.8849983215332, "close": 55.89500045776367, "volume": 3039372, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:20,811 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:20,830 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:20,830 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:20,830 INFO sqlalchemy.engine.Engine [cached since 181.6s ago] (61,)
+2026-01-09 22:44:20,831 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 61)
+✅ 成功保存 6804 条记录
+
+[62/70] [ETF] XLI
+
+======================================================================
+下载 US:ETF:XLI (US) -> XLI
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6803 条记录
+📅 日期范围: 1998-12-22 → 2026-01-08
+💾 保存到数据库...
+2026-01-09 22:44:24,237 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:24,237 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:24,237 INFO sqlalchemy.engine.Engine [cached since 185s ago] ('yfinance', 'US:ETF:XLI', 'US', '1d', '2026-01-09 22:44:24.237030', '{"symbol": "US:ETF:XLI", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:24", "data": [{"timestamp": "1998-12-22", "open": 14.4 ... (1486894 characters truncated) ... 0061035156, "low": 159.75999450683594, "close": 160.1699981689453, "volume": 11553700, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:24,240 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:24,251 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:24,251 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:24,251 INFO sqlalchemy.engine.Engine [cached since 185s ago] (62,)
+2026-01-09 22:44:24,252 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 62)
+✅ 成功保存 6803 条记录
+
+[63/70] [ETF] XLK
+
+======================================================================
+下载 US:ETF:XLK (US) -> XLK
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6804 条记录
+📅 日期范围: 1998-12-22 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:27,448 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:27,448 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:27,448 INFO sqlalchemy.engine.Engine [cached since 188.2s ago] ('yfinance', 'US:ETF:XLK', 'US', '1d', '2026-01-09 22:44:27.447920', '{"symbol": "US:ETF:XLK", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:27", "data": [{"timestamp": "1998-12-22", "open": 12.0 ... (1487695 characters truncated) ... 50030517578, "low": 144.1199951171875, "close": 144.99000549316406, "volume": 1542005, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:27,451 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:27,463 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:27,463 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:27,463 INFO sqlalchemy.engine.Engine [cached since 188.2s ago] (63,)
+2026-01-09 22:44:27,464 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 63)
+✅ 成功保存 6804 条记录
+
+[64/70] [ETF] XLP
+
+======================================================================
+下载 US:ETF:XLP (US) -> XLP
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6803 条记录
+📅 日期范围: 1998-12-22 → 2026-01-08
+💾 保存到数据库...
+2026-01-09 22:44:30,621 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:30,621 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:30,621 INFO sqlalchemy.engine.Engine [cached since 191.4s ago] ('yfinance', 'US:ETF:XLP', 'US', '1d', '2026-01-09 22:44:30.621078', '{"symbol": "US:ETF:XLP", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:30", "data": [{"timestamp": "1998-12-22", "open": 13.7 ... (1487513 characters truncated) ... 00033569336, "low": 76.51000213623047, "close": 78.44000244140625, "volume": 26260100, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:30,624 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:30,635 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:30,635 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:30,635 INFO sqlalchemy.engine.Engine [cached since 191.4s ago] (64,)
+2026-01-09 22:44:30,636 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 64)
+✅ 成功保存 6803 条记录
+
+[65/70] [ETF] XLRE
+
+======================================================================
+下载 US:ETF:XLRE (US) -> XLRE
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 2579 条记录
+📅 日期范围: 2015-10-08 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:33,353 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:33,353 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:33,353 INFO sqlalchemy.engine.Engine [cached since 194.1s ago] ('yfinance', 'US:ETF:XLRE', 'US', '1d', '2026-01-09 22:44:33.353395', '{"symbol": "US:ETF:XLRE", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:33", "data": [{"timestamp": "2015-10-08", "open": 21. ... (563259 characters truncated) ... 00016784668, "low": 40.439998626708984, "close": 40.650001525878906, "volume": 772938, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:33,355 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:33,359 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:33,360 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:33,360 INFO sqlalchemy.engine.Engine [cached since 194.1s ago] (65,)
+2026-01-09 22:44:33,360 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 65)
+✅ 成功保存 2579 条记录
+
+[66/70] [ETF] XLU
+
+======================================================================
+下载 US:ETF:XLU (US) -> XLU
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6804 条记录
+📅 日期范围: 1998-12-22 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:36,249 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:36,249 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:36,249 INFO sqlalchemy.engine.Engine [cached since 197s ago] ('yfinance', 'US:ETF:XLU', 'US', '1d', '2026-01-09 22:44:36.249314', '{"symbol": "US:ETF:XLU", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:36", "data": [{"timestamp": "1998-12-22", "open": 5.95 ... (1488562 characters truncated) ... 00915527344, "low": 42.52000045776367, "close": 42.650001525878906, "volume": 3609637, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:36,252 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:36,263 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:36,263 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:36,263 INFO sqlalchemy.engine.Engine [cached since 197s ago] (66,)
+2026-01-09 22:44:36,264 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 66)
+✅ 成功保存 6804 条记录
+
+[67/70] [ETF] XLV
+
+======================================================================
+下载 US:ETF:XLV (US) -> XLV
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6804 条记录
+📅 日期范围: 1998-12-22 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:39,553 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:39,553 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:39,553 INFO sqlalchemy.engine.Engine [cached since 200.3s ago] ('yfinance', 'US:ETF:XLV', 'US', '1d', '2026-01-09 22:44:39.552810', '{"symbol": "US:ETF:XLV", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:39", "data": [{"timestamp": "1998-12-22", "open": 16.7 ... (1487188 characters truncated) ... 9981689453, "low": 158.22540283203125, "close": 158.57000732421875, "volume": 1122888, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:39,556 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:39,565 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:39,565 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:39,565 INFO sqlalchemy.engine.Engine [cached since 200.3s ago] (67,)
+2026-01-09 22:44:39,566 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 67)
+✅ 成功保存 6804 条记录
+
+[68/70] [ETF] XLY
+
+======================================================================
+下载 US:ETF:XLY (US) -> XLY
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 6804 条记录
+📅 日期范围: 1998-12-22 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:42,976 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:42,976 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:42,976 INFO sqlalchemy.engine.Engine [cached since 203.7s ago] ('yfinance', 'US:ETF:XLY', 'US', '1d', '2026-01-09 22:44:42.976001', '{"symbol": "US:ETF:XLY", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:42", "data": [{"timestamp": "1998-12-22", "open": 9.34 ... (1487390 characters truncated) ... 9938964844, "low": 122.83499908447266, "close": 122.88999938964844, "volume": 2177187, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:42,979 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:42,991 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:42,992 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:42,992 INFO sqlalchemy.engine.Engine [cached since 203.7s ago] (68,)
+2026-01-09 22:44:42,993 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 68)
+✅ 成功保存 6804 条记录
+
+[69/70] [ETF] IBIT
+
+======================================================================
+下载 US:ETF:IBIT (US) -> IBIT
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 501 条记录
+📅 日期范围: 2024-01-11 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:45,014 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:45,014 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:45,014 INFO sqlalchemy.engine.Engine [cached since 205.8s ago] ('yfinance', 'US:ETF:IBIT', 'US', '1d', '2026-01-09 22:44:45.013884', '{"symbol": "US:ETF:IBIT", "market": "US", "source": "yfinance", "fetch_time": "2026-01-09 22:44:45", "data": [{"timestamp": "2024-01-11", "open": 27. ... (108704 characters truncated) ... 01525878906, "low": 51.029998779296875, "close": 51.04460144042969, "volume": 4575494, "Dividends": 0.0, "Stock Splits": 0.0, "Capital Gains": 0.0}]}', 0, None)
+2026-01-09 22:44:45,016 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:45,018 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:45,018 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:45,018 INFO sqlalchemy.engine.Engine [cached since 205.8s ago] (69,)
+2026-01-09 22:44:45,019 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 69)
+✅ 成功保存 501 条记录
+
+[70/70] [CRYPTO] BTC
+
+======================================================================
+下载 WORLD:CRYPTO:BTC-USD (WORLD) -> BTC-USD
+======================================================================
+📥 Fetching period='max' ...
+✅ 获取 4133 条记录
+📅 日期范围: 2014-09-17 → 2026-01-09
+💾 保存到数据库...
+2026-01-09 22:44:47,954 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:47,954 INFO sqlalchemy.engine.Engine INSERT INTO rawmarketdata (source, symbol, market, period, fetch_time, payload, processed, error_log) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+2026-01-09 22:44:47,954 INFO sqlalchemy.engine.Engine [cached since 208.7s ago] ('yfinance', 'WORLD:CRYPTO:BTC-USD', 'WORLD', '1d', '2026-01-09 22:44:47.954364', '{"symbol": "WORLD:CRYPTO:BTC-USD", "market": "WORLD", "source": "yfinance", "fetch_time": "2026-01-09 22:44:47", "data": [{"timestamp": "2014-09-17", ... (778610 characters truncated) ... ": 91019.5859375, "high": 91412.484375, "low": 89628.5703125, "close": 90198.4765625, "volume": 37520818176, "Dividends": 0.0, "Stock Splits": 0.0}]}', 0, None)
+2026-01-09 22:44:47,956 INFO sqlalchemy.engine.Engine COMMIT
+2026-01-09 22:44:47,967 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-09 22:44:47,967 INFO sqlalchemy.engine.Engine SELECT rawmarketdata.id, rawmarketdata.source, rawmarketdata.symbol, rawmarketdata.market, rawmarketdata.period, rawmarketdata.fetch_time, rawmarketdata.payload, rawmarketdata.processed, rawmarketdata.error_log 
+FROM rawmarketdata 
+WHERE rawmarketdata.id = ?
+2026-01-09 22:44:47,967 INFO sqlalchemy.engine.Engine [cached since 208.7s ago] (70,)
+2026-01-09 22:44:47,968 INFO sqlalchemy.engine.Engine ROLLBACK
+      ✅ 已保存到 RawMarketData (ID: 70)
+✅ 成功保存 4133 条记录
+
+================================================================================
+📋 下载完成统计
+================================================================================
+✅ 成功: 70 个
+📊 总记录: 358,984 条
+❌ 失败: 0 个
+================================================================================
+
+🔄 建议运行ETL更新快照表:
+   python3 run_etl.py

@@ -1,0 +1,197 @@
+2026-01-06 23:58:16,255 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:16,259 INFO sqlalchemy.engine.Engine SELECT watchlist.id, watchlist.symbol, watchlist.name, watchlist.market, watchlist.added_at 
+FROM watchlist 
+WHERE watchlist.symbol LIKE ? ORDER BY watchlist.market, watchlist.symbol
+2026-01-06 23:58:16,259 INFO sqlalchemy.engine.Engine [generated in 0.00010s] ('%STOCK%',)
+2026-01-06 23:58:16,260 INFO sqlalchemy.engine.Engine ROLLBACK
+================================================================================
+PE 计算偏差验证报告 - 全量个股测试
+================================================================================
+生成时间: 2026-01-06 23:58:16
+测试股票数: 21 只
+2026-01-06 23:58:20,471 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:20,472 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:20,472 INFO sqlalchemy.engine.Engine [generated in 0.00010s] ('CN:STOCK:600030', 1, 0)
+2026-01-06 23:58:20,510 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:21,720 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:21,720 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:21,720 INFO sqlalchemy.engine.Engine [cached since 1.248s ago] ('CN:STOCK:600309', 1, 0)
+2026-01-06 23:58:21,770 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:22,992 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:22,992 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:22,993 INFO sqlalchemy.engine.Engine [cached since 2.52s ago] ('CN:STOCK:600536', 1, 0)
+2026-01-06 23:58:23,027 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:24,238 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:24,238 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:24,238 INFO sqlalchemy.engine.Engine [cached since 3.766s ago] ('CN:STOCK:601519', 1, 0)
+2026-01-06 23:58:24,264 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:25,547 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:25,547 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:25,547 INFO sqlalchemy.engine.Engine [cached since 5.074s ago] ('CN:STOCK:601919', 1, 0)
+2026-01-06 23:58:25,570 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:26,806 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:26,807 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:26,808 INFO sqlalchemy.engine.Engine [cached since 6.335s ago] ('CN:STOCK:601998', 1, 0)
+2026-01-06 23:58:26,837 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:28,067 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:28,067 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:28,067 INFO sqlalchemy.engine.Engine [cached since 7.595s ago] ('HK:STOCK:00005', 1, 0)
+2026-01-06 23:58:28,109 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:29,729 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:29,730 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:29,730 INFO sqlalchemy.engine.Engine [cached since 9.258s ago] ('HK:STOCK:00700', 1, 0)
+2026-01-06 23:58:29,760 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:31,060 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:31,061 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:31,061 INFO sqlalchemy.engine.Engine [cached since 10.59s ago] ('HK:STOCK:00998', 1, 0)
+2026-01-06 23:58:31,092 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:32,290 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:32,290 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:32,290 INFO sqlalchemy.engine.Engine [cached since 11.82s ago] ('HK:STOCK:01919', 1, 0)
+2026-01-06 23:58:32,321 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:33,532 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:33,533 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:33,533 INFO sqlalchemy.engine.Engine [cached since 13.06s ago] ('HK:STOCK:06099', 1, 0)
+2026-01-06 23:58:33,547 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:34,755 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:34,755 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:34,755 INFO sqlalchemy.engine.Engine [cached since 14.28s ago] ('HK:STOCK:09988', 1, 0)
+2026-01-06 23:58:34,764 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:36,047 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:36,048 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:36,048 INFO sqlalchemy.engine.Engine [cached since 15.58s ago] ('US:STOCK:AAPL', 1, 0)
+2026-01-06 23:58:36,117 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:37,485 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:37,485 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:37,485 INFO sqlalchemy.engine.Engine [cached since 17.01s ago] ('US:STOCK:AMZN', 1, 0)
+2026-01-06 23:58:37,521 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:38,753 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:38,753 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:38,753 INFO sqlalchemy.engine.Engine [cached since 18.28s ago] ('US:STOCK:BAC', 1, 0)
+2026-01-06 23:58:38,811 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:40,092 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:40,093 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:40,093 INFO sqlalchemy.engine.Engine [cached since 19.62s ago] ('US:STOCK:GOOG', 1, 0)
+2026-01-06 23:58:40,121 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:41,377 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:41,378 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:41,378 INFO sqlalchemy.engine.Engine [cached since 20.91s ago] ('US:STOCK:META', 1, 0)
+2026-01-06 23:58:41,397 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:42,789 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:42,789 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:42,789 INFO sqlalchemy.engine.Engine [cached since 22.32s ago] ('US:STOCK:MSFT', 1, 0)
+2026-01-06 23:58:42,837 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:44,071 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:44,071 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:44,071 INFO sqlalchemy.engine.Engine [cached since 23.6s ago] ('US:STOCK:NVDA', 1, 0)
+2026-01-06 23:58:44,102 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:45,375 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:45,376 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:45,376 INFO sqlalchemy.engine.Engine [cached since 24.9s ago] ('US:STOCK:TSLA', 1, 0)
+2026-01-06 23:58:45,402 INFO sqlalchemy.engine.Engine ROLLBACK
+2026-01-06 23:58:46,616 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:58:46,616 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:58:46,616 INFO sqlalchemy.engine.Engine [cached since 26.14s ago] ('US:STOCK:TSM', 1, 0)
+2026-01-06 23:58:46,653 INFO sqlalchemy.engine.Engine ROLLBACK
+
+================================================================================
+📊 验证结果汇总
+================================================================================
+
+✅ 完美 (偏差 < 1%): 4 只
+   CN:STOCK:600309                600309               0.14%
+   US:STOCK:AAPL                  AAPL                 0.02%
+   US:STOCK:GOOG                  GOOG                 0.84%
+   US:STOCK:MSFT                  MSFT                 0.42%
+
+✅ 优秀 (偏差 < 5%): 6 只
+   CN:STOCK:600030                中信证券                 3.36%
+   US:STOCK:AMZN                  AMZN                 3.08%
+   US:STOCK:META                  META                 2.39%
+   US:STOCK:NVDA                  NVDA                 1.40%
+   US:STOCK:TSLA                  TSLA                 4.91%
+   US:STOCK:TSM                   台积电                  1.90%
+
+⚠️ 良好 (偏差 < 10%): 3 只
+   CN:STOCK:601998                601998               7.18%
+   HK:STOCK:09988                 阿里巴巴-W               6.95%
+   US:STOCK:BAC                   BAC                  8.70%
+
+❌ 偏差较大 (偏差 >= 10%): 6 只
+   CN:STOCK:601919                601919               27.01%
+   HK:STOCK:00005                 00005                22.54%
+   HK:STOCK:00700                 00700                15.32%
+   HK:STOCK:00998                 00998                24.31%
+   HK:STOCK:01919                 01919                28.30%
+   HK:STOCK:06099                 06099                61.74%
+
+⚪️ 无数据: 2 只
+   CN:STOCK:600536                600536
+   CN:STOCK:601519                601519
+
+================================================================================
+总体准确率 (偏差 < 5%): 52.6%
+================================================================================

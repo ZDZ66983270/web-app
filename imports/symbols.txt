@@ -1,0 +1,107 @@
+# === A股指数 (CN Indices) ===
+000001
+000300
+000016
+000905
+000688
+
+# === 港股指数 (HK Indices) ===
+HSI
+HSTECH
+HSCC
+HSCE
+
+# === 美股指数 (US Indices) ===
+DJI
+NDX
+SPX
+
+# === A股 (CN Stocks) ===
+600030
+600309
+600536
+601519
+601919
+601998
+600036
+688008
+
+# === A股 ETF (CN ETFs) ===
+159662
+159751
+159851
+159852
+512800
+512880
+513190
+516020
+588000	
+
+# === 港股 (HK Stocks) ===
+00005
+00700
+00998
+01919
+06099
+09988
+03690
+03968
+
+# === 港股 ETF (HK ETFs) ===
+02800
+03033
+03110
+03437
+03447
+03427
+
+# === 美股 (US Stocks) ===
+AAPL
+AMZN
+BAC
+GOOG
+META
+MSFT
+NVDA
+TSLA
+TSM
+MU
+INTC
+
+
+# === 美股 ETF (US ETFs) ===
+TLT
+SGOV
+IBIT
+SPY
+QQQ
+DIA
+IWM
+USMV
+VTV
+VUG
+VYM
+XLB
+XLC
+XLE
+XLF
+XLI
+XLK
+XLP
+XLRE
+XLU
+XLV
+XLY
+
+# === 加密货币 (Crypto) ===
+BTC
+
+
+# === 信托基金 (Trusts) ===
+0P00014FO3
+0P00000B12
+0P0001T7E6
+ECAT
+BCAT
+CEFS
+

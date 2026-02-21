@@ -1,0 +1,170 @@
+2026-01-23 20:10:04,395 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-23 20:10:04,398 INFO sqlalchemy.engine.Engine SELECT watchlist.id, watchlist.symbol, watchlist.name, watchlist.market, watchlist.added_at 
+FROM watchlist
+2026-01-23 20:10:04,398 INFO sqlalchemy.engine.Engine [generated in 0.00009s] ()
+📉 Found 27 Individual Stocks in Watchlist.
+2026-01-23 20:10:04,401 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,401 INFO sqlalchemy.engine.Engine [generated in 0.00012s] ('CN:STOCK:600030', 1, 0)
+2026-01-23 20:10:04,424 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,424 INFO sqlalchemy.engine.Engine [cached since 0.02254s ago] ('CN:STOCK:600309', 1, 0)
+2026-01-23 20:10:04,438 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,438 INFO sqlalchemy.engine.Engine [cached since 0.03651s ago] ('CN:STOCK:600536', 1, 0)
+2026-01-23 20:10:04,451 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,451 INFO sqlalchemy.engine.Engine [cached since 0.0502s ago] ('CN:STOCK:601519', 1, 0)
+2026-01-23 20:10:04,461 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,461 INFO sqlalchemy.engine.Engine [cached since 0.05953s ago] ('CN:STOCK:601919', 1, 0)
+2026-01-23 20:10:04,473 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,473 INFO sqlalchemy.engine.Engine [cached since 0.07156s ago] ('CN:STOCK:601998', 1, 0)
+2026-01-23 20:10:04,489 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,489 INFO sqlalchemy.engine.Engine [cached since 0.08745s ago] ('CN:STOCK:688008', 1, 0)
+2026-01-23 20:10:04,496 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,496 INFO sqlalchemy.engine.Engine [cached since 0.09458s ago] ('HK:STOCK:00005', 1, 0)
+2026-01-23 20:10:04,514 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,514 INFO sqlalchemy.engine.Engine [cached since 0.1129s ago] ('HK:STOCK:00700', 1, 0)
+2026-01-23 20:10:04,529 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,529 INFO sqlalchemy.engine.Engine [cached since 0.128s ago] ('HK:STOCK:00998', 1, 0)
+2026-01-23 20:10:04,541 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,541 INFO sqlalchemy.engine.Engine [cached since 0.1398s ago] ('HK:STOCK:01919', 1, 0)
+2026-01-23 20:10:04,567 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,567 INFO sqlalchemy.engine.Engine [cached since 0.1661s ago] ('HK:STOCK:06099', 1, 0)
+2026-01-23 20:10:04,573 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,573 INFO sqlalchemy.engine.Engine [cached since 0.1721s ago] ('HK:STOCK:09988', 1, 0)
+2026-01-23 20:10:04,578 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,578 INFO sqlalchemy.engine.Engine [cached since 0.1765s ago] ('HK:STOCK:03690', 1, 0)
+2026-01-23 20:10:04,582 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,582 INFO sqlalchemy.engine.Engine [cached since 0.181s ago] ('US:STOCK:AAPL', 1, 0)
+2026-01-23 20:10:04,607 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,607 INFO sqlalchemy.engine.Engine [cached since 0.2056s ago] ('US:STOCK:AMZN', 1, 0)
+2026-01-23 20:10:04,619 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,619 INFO sqlalchemy.engine.Engine [cached since 0.2179s ago] ('US:STOCK:BAC', 1, 0)
+2026-01-23 20:10:04,645 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,645 INFO sqlalchemy.engine.Engine [cached since 0.2438s ago] ('US:STOCK:GOOG', 1, 0)
+2026-01-23 20:10:04,655 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,655 INFO sqlalchemy.engine.Engine [cached since 0.2538s ago] ('US:STOCK:META', 1, 0)
+2026-01-23 20:10:04,662 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,662 INFO sqlalchemy.engine.Engine [cached since 0.261s ago] ('US:STOCK:MSFT', 1, 0)
+2026-01-23 20:10:04,678 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,678 INFO sqlalchemy.engine.Engine [cached since 0.2768s ago] ('US:STOCK:NVDA', 1, 0)
+2026-01-23 20:10:04,690 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,690 INFO sqlalchemy.engine.Engine [cached since 0.289s ago] ('US:STOCK:TSLA', 1, 0)
+2026-01-23 20:10:04,697 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,697 INFO sqlalchemy.engine.Engine [cached since 0.2959s ago] ('US:STOCK:TSM', 1, 0)
+2026-01-23 20:10:04,708 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,708 INFO sqlalchemy.engine.Engine [cached since 0.3072s ago] ('US:STOCK:MU', 1, 0)
+2026-01-23 20:10:04,759 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,759 INFO sqlalchemy.engine.Engine [cached since 0.3581s ago] ('HK:STOCK:03968', 1, 0)
+2026-01-23 20:10:04,786 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,786 INFO sqlalchemy.engine.Engine [cached since 0.3847s ago] ('CN:STOCK:600036', 1, 0)
+2026-01-23 20:10:04,809 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pe_ttm, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-23 20:10:04,809 INFO sqlalchemy.engine.Engine [cached since 0.4074s ago] ('US:STOCK:INTC', 1, 0)
+Symbol               | Name            |      Close |   PE (TTM) |    PE (St) | Timestamp           
+----------------------------------------------------------------------------------------------------
+CN:STOCK:600030      | 600030          |      27.77 |      13.70 |      13.70 | 2026-01-23 15:00:00 
+CN:STOCK:600036      | 600036          |      37.50 |       6.35 |       6.37 | 2026-01-23 15:00:00 
+CN:STOCK:600309      | 600309          |      84.25 |      23.77 |      20.24 | 2026-01-23 15:00:00 
+CN:STOCK:600536      | 600536          |      49.91 |    -260.18 |    -112.94 | 2026-01-23 15:00:00 
+CN:STOCK:601519      | 601519          |      13.62 |    -912.95 |    -134.61 | 2026-01-23 15:00:00 
+CN:STOCK:601919      | 601919          |      14.42 |       5.85 |       4.53 | 2026-01-23 15:00:00 
+CN:STOCK:601998      | 601998          |       7.38 |       5.82 |       5.82 | 2026-01-23 15:00:00 
+CN:STOCK:688008      | 688008          |     160.02 |      88.80 |     129.94 | 2026-01-23 15:00:00 
+HK:STOCK:00005       | 00005           |     130.00 |      12.75 |      12.55 | 2026-01-23 16:00:00 
+HK:STOCK:00700       | 00700           |     595.00 |      26.04 |      25.90 | 2026-01-23 16:00:00 
+HK:STOCK:00998       | 00998           |       6.93 |       6.10 |       5.21 | 2026-01-23 16:00:00 
+HK:STOCK:01919       | 01919           |      13.30 |       4.47 |       3.87 | 2026-01-23 16:00:00 
+HK:STOCK:03690       | 03690           |      97.55 |      15.31 |      15.42 | 2026-01-23 16:00:00 
+HK:STOCK:03968       | 03968           |      46.40 |       7.26 |       7.30 | 2026-01-23 16:00:00 
+HK:STOCK:06099       | 06099           |      14.66 |      14.74 |      11.36 | 2026-01-23 16:00:00 
+HK:STOCK:09988       | 09988           |     168.50 |      22.95 |      22.94 | 2026-01-23 16:00:00 
+US:STOCK:AAPL        | AAPL            |     248.35 |      33.27 |          - | 2026-01-22 16:00:00 
+US:STOCK:AMZN        | AMZN            |     234.34 |      35.39 |          - | 2026-01-22 16:00:00 
+US:STOCK:BAC         | BAC             |      52.45 |          - |          - | 2026-01-22 16:00:00 
+US:STOCK:GOOG        | GOOG            |     330.84 |      32.55 |          - | 2026-01-22 16:00:00 
+US:STOCK:INTC        | INTC            |      54.32 |      60.58 |          - | 2026-01-22 16:00:00 
+US:STOCK:META        | META            |     647.63 |      31.21 |          - | 2026-01-22 16:00:00 
+US:STOCK:MSFT        | MSFT            |     451.14 |      32.91 |          - | 2026-01-22 16:00:00 
+US:STOCK:MU          | MU              |     397.58 |      42.77 |          - | 2026-01-22 16:00:00 
+US:STOCK:NVDA        | NVDA            |     184.84 |      46.94 |          - | 2026-01-22 16:00:00 
+US:STOCK:TSLA        | TSLA            |     449.36 |     309.04 |          - | 2026-01-22 16:00:00 
+US:STOCK:TSM         | TSM             |     327.37 |      47.63 |          - | 2026-01-22 16:00:00 
+2026-01-23 20:10:04,823 INFO sqlalchemy.engine.Engine ROLLBACK

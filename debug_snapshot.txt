@@ -1,0 +1,164 @@
+2026-02-10 23:07:49,731 | 59814 | 8353292864 | [open_context_base.py:409] _init_connect_sync: New connect ready: conn=7427005380211947367(1) context=<futu.quote.open_quote_context.OpenQuoteContext object at 0x10053ef90>
+
+--- Market Snapshot for HK.02800 ---
+DEBUG_RECORD: 02800
+basic {
+  security {
+    market: 1
+    code: "02800"
+  }
+  type: 4
+  isSuspend: false
+  listTime: "1999-11-12"
+  lotSize: 500
+  priceSpread: 0.02
+  updateTime: "2026-02-10 16:08:42"
+  highPrice: 27.64
+  openPrice: 27.4
+  lowPrice: 27.32
+  lastClosePrice: 27.22
+  curPrice: 27.38
+  volume: 339490618
+  turnover: 9315094198.0
+  turnoverRate: 6.237
+  listTimestamp: 942336000.0
+  updateTimestamp: 1770710922.0
+  askPrice: 27.38
+  bidPrice: 27.36
+  askVol: 102500
+  bidVol: 68000
+  amplitude: 1.176
+  avgPrice: 27.438
+  bidAskRatio: -44.43
+  volumeRatio: 0.427
+  highest52WeeksPrice: 28.32
+  lowest52WeeksPrice: 18.69
+  highestHistoryPrice: 28.32
+  lowestHistoryPrice: -5.179999999
+  secStatus: 1
+  closePrice5Minute: 27.36
+  name: "\347\233\210\345\257\214\345\237\272\351\207\221"
+}
+trustExData {
+  dividendYield: 2.812
+  aum: 148342776731.21
+  outstandingUnits: 5442992500
+  netAssetValue: 27.254
+  premium: -0.11
+  assetClass: 1
+}
+
+DEBUG_RECORD: 00700
+basic {
+  security {
+    market: 1
+    code: "00700"
+  }
+  type: 3
+  isSuspend: false
+  listTime: "2004-06-16"
+  lotSize: 100
+  priceSpread: 0.5
+  updateTime: "2026-02-10 16:08:16"
+  highPrice: 566.0
+  openPrice: 563.0
+  lowPrice: 547.0
+  lastClosePrice: 560.0
+  curPrice: 551.0
+  volume: 29211865
+  turnover: 16193933207.0
+  turnoverRate: 0.321
+  listTimestamp: 1087315200.0
+  updateTimestamp: 1770710896.0
+  askPrice: 551.0
+  bidPrice: 550.5
+  askVol: 64600
+  bidVol: 69700
+  amplitude: 3.393
+  avgPrice: 554.361
+  bidAskRatio: -15.76
+  volumeRatio: 0.547
+  highest52WeeksPrice: 683.0
+  lowest52WeeksPrice: 414.5
+  highestHistoryPrice: 701.60424862
+  lowestHistoryPrice: -17.701796322
+  secStatus: 1
+  closePrice5Minute: 549.5
+  name: "\350\205\276\350\256\257\346\216\247\350\202\241"
+}
+equityExData {
+  issuedShares: 9106356125
+  issuedMarketVal: 5017602224875.0
+  netAsset: 1283795873790.25
+  netProfit: 209573679860.75
+  earningsPershare: 23.014
+  outstandingShares: 9106356125
+  outstandingMarketVal: 5017602224875.0
+  netAssetPershare: 140.978
+  eyRate: 0.185
+  peRate: 23.941
+  pbRate: 3.908
+  peTTMRate: 21.022
+  dividendTTM: 4.541
+  dividendRatioTTM: 0.82
+  dividendLFY: 4.541
+  dividendLFYRatio: 0.824
+}
+
+
+Stock: HK.02800 (盈富基金)
+  open_price: 27.4
+  suspension: False
+  mortgage_ratio: nan
+  long_margin_initial_ratio: nan
+  short_margin_initial_ratio: nan
+  bid_ask_ratio: -44.43
+  volume_ratio: 0.427
+  earning_per_share: nan
+  net_asset_per_share: nan
+  ey_ratio: nan
+  pe_ratio: nan
+  pb_ratio: nan
+  pe_ttm_ratio: nan
+  dividend_ratio_ttm: nan
+  dividend_lfy_ratio: nan
+  wrt_conversion_ratio: nan
+  wrt_type: N/A
+  wrt_street_ratio: nan
+  wrt_price_recovery_ratio: nan
+  wrt_upper_strike_price: nan
+  option_type: N/A
+  option_open_interest: nan
+  option_net_open_interest: nan
+  option_area_type: N/A
+  index_option_type: N/A
+  trust_dividend_yield: 2.812
+
+Stock: HK.00700 (腾讯控股)
+  open_price: 563.0
+  suspension: False
+  mortgage_ratio: nan
+  long_margin_initial_ratio: nan
+  short_margin_initial_ratio: nan
+  bid_ask_ratio: -15.76
+  volume_ratio: 0.547
+  earning_per_share: 23.014
+  net_asset_per_share: 140.978
+  ey_ratio: 0.185
+  pe_ratio: 23.941
+  pb_ratio: 3.908
+  pe_ttm_ratio: 21.022
+  dividend_ratio_ttm: 0.82
+  dividend_lfy_ratio: 0.824
+  wrt_conversion_ratio: nan
+  wrt_type: N/A
+  wrt_street_ratio: nan
+  wrt_price_recovery_ratio: nan
+  wrt_upper_strike_price: nan
+  option_type: N/A
+  option_open_interest: nan
+  option_net_open_interest: nan
+  option_area_type: N/A
+  index_option_type: N/A
+  trust_dividend_yield: nan
+2026-02-10 23:07:50,219 | 59814 | 6201864192 | [open_context_base.py:516] on_disconnect: Disconnected: conn=0(1) reason=CallClose

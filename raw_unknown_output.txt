@@ -1,0 +1,5 @@
+2026-02-10 23:24:09,211 | 76082 | 8353292864 | [open_context_base.py:409] _init_connect_sync: New connect ready: conn=7427009488453851858(1) context=<futu.quote.open_quote_context.OpenQuoteContext object at 0x104d330e0>
+DEBUG_RAW_FIELDS for 02800:
+  Field: basic, Value Type: <class 'Qot_GetSecuritySnapshot_pb2.SnapshotBasicData'>
+  Field: trustExData, Value Type: <class 'Qot_GetSecuritySnapshot_pb2.TrustSnapshotExData'>
+2026-02-10 23:24:09,703 | 76082 | 6126415872 | [open_context_base.py:516] on_disconnect: Disconnected: conn=0(1) reason=CallClose

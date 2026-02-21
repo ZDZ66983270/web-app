@@ -1,0 +1,428 @@
+
+📊 最新 PE 数据概览 (Generated at 2026-01-04 15:02:37)
+====================================================================================================
+Symbol               | Name            | Market | Date       |      Close |         PE |   DivYield
+----------------------------------------------------------------------------------------------------
+2026-01-04 15:02:37,732 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-04 15:02:37,737 INFO sqlalchemy.engine.Engine SELECT watchlist.id, watchlist.symbol, watchlist.name, watchlist.market, watchlist.added_at 
+FROM watchlist
+2026-01-04 15:02:37,738 INFO sqlalchemy.engine.Engine [generated in 0.00011s] ()
+2026-01-04 15:02:37,739 INFO sqlalchemy.engine.Engine SELECT "index".id, "index".symbol, "index".name, "index".market, "index".added_at 
+FROM "index"
+2026-01-04 15:02:37,739 INFO sqlalchemy.engine.Engine [generated in 0.00006s] ()
+2026-01-04 15:02:37,740 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,740 INFO sqlalchemy.engine.Engine [generated in 0.00007s] ('CN:ETF:159662', 1, 0)
+CN:ETF:159662        | 航运ETF           | CN     | 2025-12-31 |       1.05 |        N/A |        N/A
+2026-01-04 15:02:37,743 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,743 INFO sqlalchemy.engine.Engine [cached since 0.002828s ago] ('CN:ETF:159751', 1, 0)
+CN:ETF:159751        | 港股通科技ETF        | CN     | 2025-12-31 |       1.03 |        N/A |        N/A
+2026-01-04 15:02:37,745 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,745 INFO sqlalchemy.engine.Engine [cached since 0.004315s ago] ('CN:ETF:159851', 1, 0)
+CN:ETF:159851        | 金融科技ETF         | CN     | 2025-12-31 |       0.85 |        N/A |        N/A
+2026-01-04 15:02:37,746 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,746 INFO sqlalchemy.engine.Engine [cached since 0.005959s ago] ('CN:ETF:159852', 1, 0)
+CN:ETF:159852        | 软件ETF           | CN     | 2025-12-31 |       0.86 |        N/A |        N/A
+2026-01-04 15:02:37,749 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,749 INFO sqlalchemy.engine.Engine [cached since 0.008288s ago] ('CN:ETF:512800', 1, 0)
+CN:ETF:512800        | 银行ETF           | CN     | 2025-12-31 |       0.82 |        N/A |        N/A
+2026-01-04 15:02:37,749 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,749 INFO sqlalchemy.engine.Engine [cached since 0.008539s ago] ('CN:ETF:512880', 1, 0)
+CN:ETF:512880        | 证券ETF           | CN     | 2025-12-31 |       1.21 |        N/A |        N/A
+2026-01-04 15:02:37,753 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,753 INFO sqlalchemy.engine.Engine [cached since 0.01268s ago] ('CN:ETF:513190', 1, 0)
+CN:ETF:513190        | 港股通金融ETF        | CN     | 2025-12-31 |       1.76 |        N/A |        N/A
+2026-01-04 15:02:37,754 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,754 INFO sqlalchemy.engine.Engine [cached since 0.01381s ago] ('CN:ETF:516020', 1, 0)
+CN:ETF:516020        | 化工ETF           | CN     | 2025-12-31 |       0.88 |        N/A |        N/A
+2026-01-04 15:02:37,756 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,756 INFO sqlalchemy.engine.Engine [cached since 0.01604s ago] ('CN:STOCK:000001', 1, 0)
+CN:STOCK:000001      | 上证指数            | CN     | 2025-12-31 |      11.41 |       4.33 |      5.24%
+2026-01-04 15:02:37,787 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,787 INFO sqlalchemy.engine.Engine [cached since 0.04679s ago] ('CN:STOCK:000016', 1, 0)
+CN:STOCK:000016      | 上证50            | CN     | 2025-12-31 |       4.97 |      -9.14 |        N/A
+2026-01-04 15:02:37,821 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,821 INFO sqlalchemy.engine.Engine [cached since 0.08094s ago] ('CN:STOCK:000300', 1, 0)
+CN:STOCK:000300      | 沪深300           | CN     | No Data    |          - |          - |          -
+2026-01-04 15:02:37,821 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,821 INFO sqlalchemy.engine.Engine [cached since 0.08115s ago] ('CN:STOCK:000905', 1, 0)
+CN:STOCK:000905      | 中证500           | CN     | 2025-12-31 |      13.07 |      37.14 |      0.84%
+2026-01-04 15:02:37,845 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,845 INFO sqlalchemy.engine.Engine [cached since 0.1044s ago] ('CN:STOCK:600030', 1, 0)
+CN:STOCK:600030      | 中信证券            | CN     | 2025-12-31 |      28.71 |      13.78 |      0.98%
+2026-01-04 15:02:37,854 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,854 INFO sqlalchemy.engine.Engine [cached since 0.1137s ago] ('CN:STOCK:600309', 1, 0)
+CN:STOCK:600309      | 万华化学            | CN     | 2025-12-31 |      76.68 |      19.66 |      0.95%
+2026-01-04 15:02:37,862 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,862 INFO sqlalchemy.engine.Engine [cached since 0.1218s ago] ('CN:STOCK:600536', 1, 0)
+CN:STOCK:600536      | 中国软件            | CN     | 2025-12-31 |      46.30 |    -311.67 |        N/A
+2026-01-04 15:02:37,872 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,872 INFO sqlalchemy.engine.Engine [cached since 0.1319s ago] ('CN:STOCK:601519', 1, 0)
+CN:STOCK:601519      | 大智慧             | CN     | 2025-12-31 |      12.87 |    -649.49 |        N/A
+2026-01-04 15:02:37,878 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,878 INFO sqlalchemy.engine.Engine [cached since 0.1381s ago] ('CN:STOCK:601919', 1, 0)
+CN:STOCK:601919      | 中远海控            | CN     | 2025-12-31 |      15.18 |       6.51 |     10.47%
+2026-01-04 15:02:37,885 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,885 INFO sqlalchemy.engine.Engine [cached since 0.1448s ago] ('CN:STOCK:601998', 1, 0)
+CN:STOCK:601998      | 中信银行            | CN     | 2025-12-31 |       7.70 |       6.02 |        N/A
+2026-01-04 15:02:37,893 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,893 INFO sqlalchemy.engine.Engine [cached since 0.1522s ago] ('CRYPTO:STOCK:BTC', 1, 0)
+CRYPTO:STOCK:BTC     | 比特币             | CRYPTO | 2026-01-04 |   91476.16 |        N/A |      0.00%
+2026-01-04 15:02:37,901 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,901 INFO sqlalchemy.engine.Engine [cached since 0.1606s ago] ('HK:ETF:02800', 1, 0)
+HK:ETF:02800         | 盈富基金            | HK     | 2026-01-02 |      26.54 |        N/A |    296.00%
+2026-01-04 15:02:37,916 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,916 INFO sqlalchemy.engine.Engine [cached since 0.1761s ago] ('HK:ETF:03033', 1, 0)
+HK:ETF:03033         | 南方恒生科技          | HK     | 2026-01-02 |       5.61 |      21.21 |      0.00%
+2026-01-04 15:02:37,924 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,924 INFO sqlalchemy.engine.Engine [cached since 0.1833s ago] ('HK:ETF:03110', 1, 0)
+HK:ETF:03110         | 3110            | HK     | 2026-01-02 |      30.76 |       7.27 |    614.00%
+2026-01-04 15:02:37,937 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,937 INFO sqlalchemy.engine.Engine [cached since 0.1962s ago] ('HK:ETF:03437', 1, 0)
+HK:ETF:03437         | 博时央企红利          | HK     | 2026-01-02 |      10.09 |        N/A |      6.94%
+2026-01-04 15:02:37,938 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,938 INFO sqlalchemy.engine.Engine [cached since 0.1974s ago] ('HK:ETF:03447', 1, 0)
+HK:ETF:03447         | 南方亚太房托          | HK     | 2026-01-02 |       8.41 |        N/A |        N/A
+2026-01-04 15:02:37,938 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,938 INFO sqlalchemy.engine.Engine [cached since 0.1981s ago] ('HK:INDEX:HSI', 1, 0)
+HK:INDEX:HSI         | 恒生指数            | HK     | 2026-01-02 |   26338.47 |        N/A |        N/A
+2026-01-04 15:02:37,950 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,950 INFO sqlalchemy.engine.Engine [cached since 0.2095s ago] ('HK:INDEX:HSTECH', 1, 0)
+HK:INDEX:HSTECH      | 恒生科技指数          | HK     | 2026-01-02 |    5736.44 |        N/A |        N/A
+2026-01-04 15:02:37,953 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,953 INFO sqlalchemy.engine.Engine [cached since 0.2131s ago] ('HK:STOCK:00005', 1, 0)
+HK:STOCK:00005       | 汇丰控股            | HK     | 2026-01-02 |     124.30 |      16.80 |    413.00%
+2026-01-04 15:02:37,963 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,963 INFO sqlalchemy.engine.Engine [cached since 0.2229s ago] ('HK:STOCK:00700', 1, 0)
+HK:STOCK:00700       | 腾讯控股            | HK     | 2026-01-02 |     623.00 |      25.19 |     72.00%
+2026-01-04 15:02:37,976 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,976 INFO sqlalchemy.engine.Engine [cached since 0.2354s ago] ('HK:STOCK:00998', 1, 0)
+HK:STOCK:00998       | 中信银行            | HK     | 2026-01-02 |       7.05 |       5.42 |    559.00%
+2026-01-04 15:02:37,990 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:37,990 INFO sqlalchemy.engine.Engine [cached since 0.2495s ago] ('HK:STOCK:01919', 1, 0)
+HK:STOCK:01919       | 中远海控            | HK     | 2026-01-02 |      13.90 |       3.97 |   1249.00%
+2026-01-04 15:02:38,004 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,004 INFO sqlalchemy.engine.Engine [cached since 0.2633s ago] ('HK:STOCK:06099', 1, 0)
+HK:STOCK:06099       | 招商证券            | HK     | 2026-01-02 |      14.30 |       9.66 |      3.80%
+2026-01-04 15:02:38,013 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,013 INFO sqlalchemy.engine.Engine [cached since 0.2727s ago] ('HK:STOCK:09988', 1, 0)
+HK:STOCK:09988       | 阿里巴巴-W          | HK     | 2026-01-02 |     149.00 |      20.50 |     69.00%
+2026-01-04 15:02:38,020 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,020 INFO sqlalchemy.engine.Engine [cached since 0.2794s ago] ('HK:STOCK:0HSCC', 1, 0)
+HK:STOCK:0HSCC       | 红筹指数            | HK     | No Data    |          - |          - |          -
+2026-01-04 15:02:38,020 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,020 INFO sqlalchemy.engine.Engine [cached since 0.2795s ago] ('HK:STOCK:0HSCE', 1, 0)
+HK:STOCK:0HSCE       | 国企指数            | HK     | No Data    |          - |          - |          -
+2026-01-04 15:02:38,020 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,020 INFO sqlalchemy.engine.Engine [cached since 0.2797s ago] ('US:ETF:DIA', 1, 0)
+US:ETF:DIA           | 道琼斯指数ETF        | US     | 2026-01-02 |     483.63 |      23.53 |    148.00%
+2026-01-04 15:02:38,031 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,031 INFO sqlalchemy.engine.Engine [cached since 0.2903s ago] ('US:ETF:GLD', 1, 0)
+US:ETF:GLD           | 黄金现货SPDR        | US     | 2026-01-02 |     398.28 |        N/A |      0.00%
+2026-01-04 15:02:38,037 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,037 INFO sqlalchemy.engine.Engine [cached since 0.2966s ago] ('US:ETF:IBIT', 1, 0)
+US:ETF:IBIT          | iShares比特币信托    | US     | 2026-01-02 |      50.94 |        N/A |      0.00%
+2026-01-04 15:02:38,039 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,039 INFO sqlalchemy.engine.Engine [cached since 0.2983s ago] ('US:ETF:IWM', 1, 0)
+US:ETF:IWM           | 罗素2000指数ETF     | US     | 2026-01-02 |     248.78 |      18.26 |     97.00%
+2026-01-04 15:02:38,048 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,048 INFO sqlalchemy.engine.Engine [cached since 0.3081s ago] ('US:ETF:QQQ', 1, 0)
+US:ETF:QQQ           | 纳指100ETF        | US     | 2026-01-02 |     613.12 |      33.76 |     46.00%
+2026-01-04 15:02:38,056 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,056 INFO sqlalchemy.engine.Engine [cached since 0.316s ago] ('US:ETF:SGOV', 1, 0)
+US:ETF:SGOV          | 0-3月美国国债ETF     | US     | 2026-01-02 |     100.41 |        N/A |      4.10%
+2026-01-04 15:02:38,058 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,058 INFO sqlalchemy.engine.Engine [cached since 0.3179s ago] ('US:ETF:SPY', 1, 0)
+US:ETF:SPY           | 标普500指数ETF      | US     | 2026-01-02 |     683.17 |      27.55 |      1.07%
+2026-01-04 15:02:38,069 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,069 INFO sqlalchemy.engine.Engine [cached since 0.3282s ago] ('US:ETF:USMV', 1, 0)
+US:ETF:USMV          | 美国最小波动率ETF      | US     | 2026-01-02 |      93.65 |      23.17 |    150.00%
+2026-01-04 15:02:38,073 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,073 INFO sqlalchemy.engine.Engine [cached since 0.333s ago] ('US:ETF:VTV', 1, 0)
+US:ETF:VTV           | 价值股ETF          | US     | 2026-01-02 |     192.81 |      21.18 |      2.03%
+2026-01-04 15:02:38,079 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,079 INFO sqlalchemy.engine.Engine [cached since 0.3388s ago] ('US:ETF:VUG', 1, 0)
+US:ETF:VUG           | 成长股ETF          | US     | 2026-01-02 |     486.20 |      39.10 |      0.41%
+2026-01-04 15:02:38,085 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,085 INFO sqlalchemy.engine.Engine [cached since 0.3448s ago] ('US:ETF:VYM', 1, 0)
+US:ETF:VYM           | 红利股ETF          | US     | 2026-01-02 |     144.76 |      20.79 |      2.42%
+2026-01-04 15:02:38,091 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,091 INFO sqlalchemy.engine.Engine [cached since 0.351s ago] ('US:ETF:XLB', 1, 0)
+US:ETF:XLB           | 基础材料ETF         | US     | 2026-01-02 |      46.12 |      23.78 |    192.00%
+2026-01-04 15:02:38,100 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,100 INFO sqlalchemy.engine.Engine [cached since 0.3601s ago] ('US:ETF:XLC', 1, 0)
+US:ETF:XLC           | 通讯服务ETF         | US     | 2026-01-02 |     116.90 |      18.26 |      1.14%
+2026-01-04 15:02:38,103 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,103 INFO sqlalchemy.engine.Engine [cached since 0.3631s ago] ('US:ETF:XLE', 1, 0)
+US:ETF:XLE           | 能源指数ETF         | US     | 2026-01-02 |      45.65 |      17.95 |    319.00%
+2026-01-04 15:02:38,112 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,112 INFO sqlalchemy.engine.Engine [cached since 0.3715s ago] ('US:ETF:XLF', 1, 0)
+US:ETF:XLF           | 金融行业ETF         | US     | 2026-01-02 |      54.93 |      18.78 |      1.31%
+2026-01-04 15:02:38,120 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,120 INFO sqlalchemy.engine.Engine [cached since 0.3792s ago] ('US:ETF:XLI', 1, 0)
+US:ETF:XLI           | 工业行业ETF         | US     | 2026-01-02 |     157.98 |      27.13 |      1.27%
+2026-01-04 15:02:38,129 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,129 INFO sqlalchemy.engine.Engine [cached since 0.3888s ago] ('US:ETF:XLK', 1, 0)
+US:ETF:XLK           | 科技行业ETF         | US     | 2026-01-02 |     144.30 |      38.78 |      0.54%
+2026-01-04 15:02:38,139 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,139 INFO sqlalchemy.engine.Engine [cached since 0.3989s ago] ('US:ETF:XLP', 1, 0)
+US:ETF:XLP           | 消费品指数ETF        | US     | 2026-01-02 |      77.69 |      22.09 |      2.75%
+2026-01-04 15:02:38,150 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,150 INFO sqlalchemy.engine.Engine [cached since 0.4095s ago] ('US:ETF:XLRE', 1, 0)
+US:ETF:XLRE          | 房地产行业ETF        | US     | 2026-01-02 |      40.38 |      32.62 |    334.00%
+2026-01-04 15:02:38,154 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,154 INFO sqlalchemy.engine.Engine [cached since 0.4134s ago] ('US:ETF:XLU', 1, 0)
+US:ETF:XLU           | 公共事业指数ETF       | US     | 2026-01-02 |      43.18 |      21.23 |      2.68%
+2026-01-04 15:02:38,164 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,164 INFO sqlalchemy.engine.Engine [cached since 0.4239s ago] ('US:ETF:XLV', 1, 0)
+US:ETF:XLV           | 医疗保健行业ETF       | US     | 2026-01-02 |     155.51 |      26.14 |    155.00%
+2026-01-04 15:02:38,174 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,174 INFO sqlalchemy.engine.Engine [cached since 0.4337s ago] ('US:ETF:XLY', 1, 0)
+US:ETF:XLY           | 消费品指数SPDR       | US     | 2026-01-02 |     118.35 |      29.69 |     78.00%
+2026-01-04 15:02:38,183 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,183 INFO sqlalchemy.engine.Engine [cached since 0.443s ago] ('US:STOCK:AAPL', 1, 0)
+US:STOCK:AAPL        | 苹果              | US     | 2026-01-02 |     271.01 |      36.38 |      0.38%
+2026-01-04 15:02:38,198 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,198 INFO sqlalchemy.engine.Engine [cached since 0.458s ago] ('US:STOCK:AMZN', 1, 0)
+US:STOCK:AMZN        | 亚马逊             | US     | 2026-01-02 |     226.50 |      31.95 |        N/A
+2026-01-04 15:02:38,206 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,206 INFO sqlalchemy.engine.Engine [cached since 0.4656s ago] ('US:STOCK:BAC', 1, 0)
+US:STOCK:BAC         | 美国银行            | US     | 2026-01-02 |      55.95 |      15.29 |    200.00%
+2026-01-04 15:02:38,218 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,218 INFO sqlalchemy.engine.Engine [cached since 0.4781s ago] ('US:STOCK:DJI', 1, 0)
+US:STOCK:DJI         | 道琼斯工业指数         | US     | 2022-03-02 |   33891.30 |        N/A |        N/A
+2026-01-04 15:02:38,229 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,229 INFO sqlalchemy.engine.Engine [cached since 0.4889s ago] ('US:STOCK:GOOG', 1, 0)
+US:STOCK:GOOG        | 谷歌-C            | US     | 2026-01-02 |     315.32 |      31.16 |     27.00%
+2026-01-04 15:02:38,233 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,233 INFO sqlalchemy.engine.Engine [cached since 0.4927s ago] ('US:STOCK:META', 1, 0)
+US:STOCK:META        | Meta Platfor... | US     | 2026-01-02 |     650.41 |      28.82 |     32.00%
+2026-01-04 15:02:38,236 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,236 INFO sqlalchemy.engine.Engine [cached since 0.496s ago] ('US:STOCK:MSFT', 1, 0)
+US:STOCK:MSFT        | 微软              | US     | 2026-01-02 |     472.94 |      33.66 |     77.00%
+2026-01-04 15:02:38,245 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,245 INFO sqlalchemy.engine.Engine [cached since 0.5047s ago] ('US:STOCK:NDX', 1, 0)
+US:STOCK:NDX         | 纳斯达克100指数       | US     | 2026-01-02 |   25206.17 |        N/A |        N/A
+2026-01-04 15:02:38,246 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,246 INFO sqlalchemy.engine.Engine [cached since 0.506s ago] ('US:STOCK:NVDA', 1, 0)
+US:STOCK:NVDA        | 英伟达             | US     | 2026-01-02 |     188.85 |      46.75 |      2.00%
+2026-01-04 15:02:38,253 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,254 INFO sqlalchemy.engine.Engine [cached since 0.5132s ago] ('US:STOCK:SPX', 1, 0)
+US:STOCK:SPX         | 标普500指数         | US     | No Data    |          - |          - |          -
+2026-01-04 15:02:38,254 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,254 INFO sqlalchemy.engine.Engine [cached since 0.5134s ago] ('US:STOCK:TLT', 1, 0)
+US:STOCK:TLT         | 20年期以上国债ETF     | US     | 2026-01-02 |      87.03 |   -4351.50 |    430.00%
+2026-01-04 15:02:38,259 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,259 INFO sqlalchemy.engine.Engine [cached since 0.5182s ago] ('US:STOCK:TSLA', 1, 0)
+US:STOCK:TSLA        | 特斯拉             | US     | 2026-01-02 |     438.07 |     302.12 |        N/A
+2026-01-04 15:02:38,261 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-04 15:02:38,262 INFO sqlalchemy.engine.Engine [cached since 0.5212s ago] ('US:STOCK:TSM', 1, 0)
+US:STOCK:TSM         | 台积电             | US     | 2026-01-02 |     319.61 |      33.02 |      0.98%
+2026-01-04 15:02:38,268 INFO sqlalchemy.engine.Engine ROLLBACK
+====================================================================================================

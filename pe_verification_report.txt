@@ -1,0 +1,231 @@
+================================================================================
+PE 计算偏差验证报告
+================================================================================
+生成时间: 2026-01-06 23:25:10
+
+================================================================================
+验证股票: TSLA (US:STOCK:TSLA)
+================================================================================
+
+📊 Yahoo Finance 数据:
+  当前价格: 438.89
+  Trailing PE (官方): 302.68277
+  Trailing EPS: 1.45
+
+🔢 用 Yahoo EPS 重算:
+  PE = 438.89 / 1.45 = 302.68
+  与官方 PE 差异: 0.00%
+2026-01-06 23:25:15,604 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:25:15,615 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:25:15,615 INFO sqlalchemy.engine.Engine [generated in 0.00040s] ('US:STOCK:TSLA', 1, 0)
+2026-01-06 23:25:15,649 INFO sqlalchemy.engine.Engine SELECT financialfundamentals.id, financialfundamentals.symbol, financialfundamentals.as_of_date, financialfundamentals.report_type, financialfundamentals.revenue_ttm, financialfundamentals.net_income_ttm, financialfundamentals.eps_ttm, financialfundamentals.operating_cashflow_ttm, financialfundamentals.free_cashflow_ttm, financialfundamentals.total_assets, financialfundamentals.total_liabilities, financialfundamentals.total_debt, financialfundamentals.cash_and_equivalents, financialfundamentals.net_debt, financialfundamentals.debt_to_equity, financialfundamentals.interest_coverage, financialfundamentals.current_ratio, financialfundamentals.dividend_yield, financialfundamentals.payout_ratio, financialfundamentals.buyback_ratio, financialfundamentals.data_source, financialfundamentals.currency, financialfundamentals.created_at 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? ORDER BY financialfundamentals.as_of_date DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:25:15,649 INFO sqlalchemy.engine.Engine [generated in 0.00018s] ('US:STOCK:TSLA', 1, 0)
+
+💾 VERA 数据库:
+  最新收盘价: 451.6700134277344 (2026-01-05 16:00:00)
+  数据库中的 PE: 285.15050338386834
+  数据库中的 EPS: 1.5839705982201906
+
+  最新财报 (2025-09-30):
+    Net Income TTM: 1373000000.0
+    EPS TTM: 0.39
+    Data Source: yahoo-quarterly
+
+🔢 用 VERA EPS 重算:
+  PE = 451.6700134277344 / 1.5839705982201906 = 285.15
+  与 Yahoo 官方 PE 差异: 5.79%
+2026-01-06 23:25:15,650 INFO sqlalchemy.engine.Engine ROLLBACK
+
+================================================================================
+📈 对比总结:
+================================================================================
+
+❌ 验证 特斯拉 时出错: Invalid format specifier '.2f if trailing_pe_yahoo else 'N/A'' for object of type 'float'
+
+================================================================================
+验证股票: 0700.HK (HK:STOCK:00700)
+================================================================================
+
+📊 Yahoo Finance 数据:
+  当前价格: 632.5
+  Trailing PE (官方): 25.514318
+  Trailing EPS: 24.79
+
+🔢 用 Yahoo EPS 重算:
+  PE = 632.5 / 24.79 = 25.51
+  与官方 PE 差异: 0.00%
+2026-01-06 23:25:17,652 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:25:17,653 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:25:17,653 INFO sqlalchemy.engine.Engine [cached since 2.038s ago] ('HK:STOCK:00700', 1, 0)
+2026-01-06 23:25:17,693 INFO sqlalchemy.engine.Engine SELECT financialfundamentals.id, financialfundamentals.symbol, financialfundamentals.as_of_date, financialfundamentals.report_type, financialfundamentals.revenue_ttm, financialfundamentals.net_income_ttm, financialfundamentals.eps_ttm, financialfundamentals.operating_cashflow_ttm, financialfundamentals.free_cashflow_ttm, financialfundamentals.total_assets, financialfundamentals.total_liabilities, financialfundamentals.total_debt, financialfundamentals.cash_and_equivalents, financialfundamentals.net_debt, financialfundamentals.debt_to_equity, financialfundamentals.interest_coverage, financialfundamentals.current_ratio, financialfundamentals.dividend_yield, financialfundamentals.payout_ratio, financialfundamentals.buyback_ratio, financialfundamentals.data_source, financialfundamentals.currency, financialfundamentals.created_at 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? ORDER BY financialfundamentals.as_of_date DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:25:17,693 INFO sqlalchemy.engine.Engine [cached since 2.043s ago] ('HK:STOCK:00700', 1, 0)
+
+💾 VERA 数据库:
+  最新收盘价: 632.5 (2026-01-06 16:00:00)
+  数据库中的 PE: 29.422083484951536
+  数据库中的 EPS: 21.497457864379445
+
+  最新财报 (2024-12-31):
+    Net Income TTM: 194073000000.0
+    EPS TTM: 20.938
+    Data Source: akshare-hk-annual
+
+🔢 用 VERA EPS 重算:
+  PE = 632.5 / 21.497457864379445 = 29.42
+  与 Yahoo 官方 PE 差异: 15.32%
+2026-01-06 23:25:17,693 INFO sqlalchemy.engine.Engine ROLLBACK
+HTTP Error 404: {"quoteSummary":{"result":null,"error":{"code":"Not Found","description":"Quote not found for symbol: 09988.HK"}}}
+
+================================================================================
+📈 对比总结:
+================================================================================
+
+❌ 验证 腾讯控股 时出错: Invalid format specifier '.2f if trailing_pe_yahoo else 'N/A'' for object of type 'float'
+
+================================================================================
+验证股票: 09988.HK (HK:STOCK:09988)
+================================================================================
+
+📊 Yahoo Finance 数据:
+  当前价格: None
+  Trailing PE (官方): None
+  Trailing EPS: None
+
+⚠️ 无法用 Yahoo EPS 重算（缺少价格或 EPS）
+2026-01-06 23:25:19,820 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:25:19,820 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:25:19,820 INFO sqlalchemy.engine.Engine [cached since 4.205s ago] ('HK:STOCK:09988', 1, 0)
+2026-01-06 23:25:19,835 INFO sqlalchemy.engine.Engine SELECT financialfundamentals.id, financialfundamentals.symbol, financialfundamentals.as_of_date, financialfundamentals.report_type, financialfundamentals.revenue_ttm, financialfundamentals.net_income_ttm, financialfundamentals.eps_ttm, financialfundamentals.operating_cashflow_ttm, financialfundamentals.free_cashflow_ttm, financialfundamentals.total_assets, financialfundamentals.total_liabilities, financialfundamentals.total_debt, financialfundamentals.cash_and_equivalents, financialfundamentals.net_debt, financialfundamentals.debt_to_equity, financialfundamentals.interest_coverage, financialfundamentals.current_ratio, financialfundamentals.dividend_yield, financialfundamentals.payout_ratio, financialfundamentals.buyback_ratio, financialfundamentals.data_source, financialfundamentals.currency, financialfundamentals.created_at 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? ORDER BY financialfundamentals.as_of_date DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:25:19,835 INFO sqlalchemy.engine.Engine [cached since 4.185s ago] ('HK:STOCK:09988', 1, 0)
+
+💾 VERA 数据库:
+  最新收盘价: 150.8000030517578 (2026-01-06 16:00:00)
+  数据库中的 PE: 22.123866983870744
+  数据库中的 EPS: 6.816168401378364
+
+  最新财报 (2024-12-31):
+    Net Income TTM: 130109000000.0
+    EPS TTM: 6.89
+    Data Source: akshare-hk-annual
+
+🔢 用 VERA EPS 重算:
+  PE = 150.8000030517578 / 6.816168401378364 = 22.12
+2026-01-06 23:25:19,835 INFO sqlalchemy.engine.Engine ROLLBACK
+
+================================================================================
+📈 对比总结:
+================================================================================
+
+❌ 验证 阿里巴巴-W 时出错: unsupported format string passed to NoneType.__format__
+
+================================================================================
+验证股票: AAPL (US:STOCK:AAPL)
+================================================================================
+
+📊 Yahoo Finance 数据:
+  当前价格: 264.395
+  Trailing PE (官方): 35.44169
+  Trailing EPS: 7.46
+
+🔢 用 Yahoo EPS 重算:
+  PE = 264.395 / 7.46 = 35.44
+  与官方 PE 差异: 0.00%
+2026-01-06 23:25:21,319 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:25:21,319 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:25:21,319 INFO sqlalchemy.engine.Engine [cached since 5.704s ago] ('US:STOCK:AAPL', 1, 0)
+2026-01-06 23:25:21,389 INFO sqlalchemy.engine.Engine SELECT financialfundamentals.id, financialfundamentals.symbol, financialfundamentals.as_of_date, financialfundamentals.report_type, financialfundamentals.revenue_ttm, financialfundamentals.net_income_ttm, financialfundamentals.eps_ttm, financialfundamentals.operating_cashflow_ttm, financialfundamentals.free_cashflow_ttm, financialfundamentals.total_assets, financialfundamentals.total_liabilities, financialfundamentals.total_debt, financialfundamentals.cash_and_equivalents, financialfundamentals.net_debt, financialfundamentals.debt_to_equity, financialfundamentals.interest_coverage, financialfundamentals.current_ratio, financialfundamentals.dividend_yield, financialfundamentals.payout_ratio, financialfundamentals.buyback_ratio, financialfundamentals.data_source, financialfundamentals.currency, financialfundamentals.created_at 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? ORDER BY financialfundamentals.as_of_date DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:25:21,389 INFO sqlalchemy.engine.Engine [cached since 5.74s ago] ('US:STOCK:AAPL', 1, 0)
+
+💾 VERA 数据库:
+  最新收盘价: 267.260009765625 (2026-01-05 16:00:00)
+  数据库中的 PE: 35.40972053464587
+  数据库中的 EPS: 7.547645271702448
+
+  最新财报 (2025-09-30):
+    Net Income TTM: 27466000000.0
+    EPS TTM: 1.85
+    Data Source: yahoo-quarterly
+
+🔢 用 VERA EPS 重算:
+  PE = 267.260009765625 / 7.547645271702448 = 35.41
+  与 Yahoo 官方 PE 差异: 0.09%
+2026-01-06 23:25:21,390 INFO sqlalchemy.engine.Engine ROLLBACK
+
+================================================================================
+📈 对比总结:
+================================================================================
+
+❌ 验证 苹果 时出错: Invalid format specifier '.2f if trailing_pe_yahoo else 'N/A'' for object of type 'float'
+
+================================================================================
+验证股票: 600030.SS (CN:STOCK:600030)
+================================================================================
+
+📊 Yahoo Finance 数据:
+  当前价格: 30.19
+  Trailing PE (官方): 16.497267
+  Trailing EPS: 1.83
+
+🔢 用 Yahoo EPS 重算:
+  PE = 30.19 / 1.83 = 16.50
+  与官方 PE 差异: 0.00%
+2026-01-06 23:25:23,427 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 23:25:23,427 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:25:23,427 INFO sqlalchemy.engine.Engine [cached since 7.812s ago] ('CN:STOCK:600030', 1, 0)
+2026-01-06 23:25:23,461 INFO sqlalchemy.engine.Engine SELECT financialfundamentals.id, financialfundamentals.symbol, financialfundamentals.as_of_date, financialfundamentals.report_type, financialfundamentals.revenue_ttm, financialfundamentals.net_income_ttm, financialfundamentals.eps_ttm, financialfundamentals.operating_cashflow_ttm, financialfundamentals.free_cashflow_ttm, financialfundamentals.total_assets, financialfundamentals.total_liabilities, financialfundamentals.total_debt, financialfundamentals.cash_and_equivalents, financialfundamentals.net_debt, financialfundamentals.debt_to_equity, financialfundamentals.interest_coverage, financialfundamentals.current_ratio, financialfundamentals.dividend_yield, financialfundamentals.payout_ratio, financialfundamentals.buyback_ratio, financialfundamentals.data_source, financialfundamentals.currency, financialfundamentals.created_at 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? ORDER BY financialfundamentals.as_of_date DESC
+ LIMIT ? OFFSET ?
+2026-01-06 23:25:23,461 INFO sqlalchemy.engine.Engine [cached since 7.812s ago] ('CN:STOCK:600030', 1, 0)
+
+💾 VERA 数据库:
+  最新收盘价: 30.19 (2026-01-06 15:00:00)
+  数据库中的 PE: 15.942839040423474
+  数据库中的 EPS: 1.8936401429790823
+
+  最新财报 (2025-09-30):
+    Net Income TTM: 23158914572.54
+    EPS TTM: 1.51
+    Data Source: akshare-abstract-quarterly
+
+🔢 用 VERA EPS 重算:
+  PE = 30.19 / 1.8936401429790823 = 15.94
+  与 Yahoo 官方 PE 差异: 3.36%
+2026-01-06 23:25:23,461 INFO sqlalchemy.engine.Engine ROLLBACK
+
+================================================================================
+📈 对比总结:
+================================================================================
+
+❌ 验证 中信证券 时出错: Invalid format specifier '.2f if trailing_pe_yahoo else 'N/A'' for object of type 'float'
+
+================================================================================
+验证完成
+================================================================================

@@ -1,0 +1,181 @@
+# fundamentals_bank.yaml
+# 银行财报核心字段模板 v1.0
+
+version: 1.0
+updated_at: "2026-01-31"
+
+meta:
+  scope: "bank_generic"
+  comment: >
+    该模板用于 VERA 银行类企业基本面事实表。
+    银行拥有特殊的会计准则，因此与 generic 模板分离。
+
+fields:
+
+  #######################################################
+  # 1. 资产负债表 (Scale)
+  #######################################################
+
+  - name: total_assets
+    label_zh: "资产总额"
+    description: "期末资产总额"
+    category: "balance_sheet"
+    required: true
+
+  - name: total_liabilities
+    label_zh: "负债总额"
+    description: "期末负债总额"
+    category: "balance_sheet"
+    required: true
+
+  - name: common_equity_begin
+    label_zh: "期初股东权益"
+    description: "期初（年初）归属于普通股股东的权益"
+    category: "balance_sheet"
+    required: false
+
+  - name: common_equity_end
+    label_zh: "期末股东权益"
+    description: "期末归属于普通股股东的权益"
+    category: "balance_sheet"
+    required: true
+
+
+  #######################################################
+  # 2. 利润表 (Income)
+  #######################################################
+
+  - name: revenue
+    label_zh: "营业收入"
+    description: "营业收入（利息净收入 + 手续费及佣金净收入 + 其他）"
+    category: "income_statement"
+    required: true
+
+  - name: net_profit
+    label_zh: "净利润"
+    description: "归属于母公司股东的净利润"
+    category: "income_statement"
+    required: true
+
+  - name: net_interest_income
+    label_zh: "利息净收入"
+    description: "利息收入减去利息支出"
+    category: "income_statement"
+    required: true
+
+  - name: net_fee_income
+    label_zh: "手续费及佣金净收入"
+    description: "中间业务收入"
+    category: "income_statement"
+    required: true
+
+  - name: provision_expense
+    label_zh: "信用减值损失"
+    description: "计提的贷款及其他资产减值准备"
+    category: "income_statement"
+    required: false
+
+
+  #######################################################
+  # 3. 资产质量 (Asset Quality)
+  #######################################################
+
+  - name: total_loans
+    label_zh: "贷款总额"
+    description: "发放贷款和垫款总额"
+    category: "asset_quality"
+    required: true
+
+  - name: loan_loss_allowance
+    label_zh: "贷款减值准备"
+    description: "贷款损失准备金余额"
+    category: "asset_quality"
+    required: true
+
+  - name: npl_balance
+    label_zh: "不良贷款余额"
+    description: "不良贷款（次级、可疑、损失类）总额"
+    category: "asset_quality"
+    required: true
+
+  - name: npl_ratio
+    label_zh: "不良贷款率"
+    description: "不良贷款余额 / 贷款总额"
+    category: "asset_quality"
+    required: true
+
+  - name: provision_coverage
+    label_zh: "拨备覆盖率"
+    description: "贷款减值准备 / 不良贷款余额"
+    category: "asset_quality"
+    required: true
+
+  - name: core_tier1_ratio
+    label_zh: "核心一级资本充足率"
+    description: "CET1 Ratio"
+    category: "capital"
+    required: true
+
+
+  #######################################################
+  # 4. 股票数据 (Per Share)
+  #######################################################
+
+  - name: eps
+    label_zh: "每股收益"
+    description: "基本每股收益"
+    category: "per_share"
+    required: true
+
+  - name: shares_outstanding
+    label_zh: "期末总股本"
+    description: "期末总股本数"
+    category: "per_share"
+    required: true
+
+  - name: dividends_paid
+    label_zh: "已支付股利"
+    description: "现金分红总额"
+    category: "per_share"
+    required: true
+
+  - name: dividend_per_share
+    label_zh: "每股股利"
+    description: "每股派息金额"
+    category: "per_share"
+    required: true
+
+
+  #######################################################
+  # 5. 现金流与债务 (Cashflow & Debt)
+  #######################################################
+
+  - name: operating_cashflow
+    label_zh: "经营活动现金流净额"
+    description: "经营活动产生的现金流量净额"
+    category: "cashflow"
+    required: true
+
+  - name: cash_and_equivalents
+    label_zh: "现金及现金等价物"
+    description: "期末现金及等价物余额"
+    category: "cashflow"
+    required: true
+
+  - name: total_debt
+    label_zh: "有息负债"
+    description: "银行拆入资金 + 对央行负债 + 发行债券等"
+    category: "balance_sheet"
+    required: false
+
+  - name: short_term_debt
+    label_zh: "短期借款"
+    description: "短期有息负债"
+    category: "balance_sheet"
+    required: false
+
+  - name: long_term_debt
+    label_zh: "长期借款"
+    description: "长期有息负债"
+    category: "balance_sheet"
+    required: false

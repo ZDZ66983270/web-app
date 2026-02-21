@@ -1,0 +1,44 @@
+# Security & Backup Exclusions for web-app
+
+# Node & Frontend
+node_modules/
+dist/
+dist-electron/
+.npm/
+
+# Database files & logs
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Running Logs
+*.log
+etl_log.txt
+etl_optimized_log.txt
+
+# Large Text/Data Dumps
+sec-edgar-filings/
+download_log.txt
+
+# Source Data & Documents
+*.csv
+*.pdf
+data/reports/
+
+# Historical Backups
+backups/
+*.bak*
+*.backup*
+*.tar.gz
+*.zip
+
+# Environment & Caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# System & Others
+.DS_Store

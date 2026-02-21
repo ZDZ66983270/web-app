@@ -1,0 +1,1101 @@
+
+🔍 1. Data Coverage Scan (History & Financials)
+--------------------------------------------------------------------------------------------------------------
+Symbol             | Mkt  | History Range          | Days   | Fin(Ann) | Fin(Qtr) | Status
+--------------------------------------------------------------------------------------------------------------
+2026-01-06 14:53:15,969 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 14:53:15,973 INFO sqlalchemy.engine.Engine SELECT watchlist.id, watchlist.symbol, watchlist.name, watchlist.market, watchlist.added_at 
+FROM watchlist ORDER BY watchlist.market, watchlist.symbol
+2026-01-06 14:53:15,974 INFO sqlalchemy.engine.Engine [generated in 0.00012s] ()
+2026-01-06 14:53:15,976 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:15,976 INFO sqlalchemy.engine.Engine [generated in 0.00010s] ('CN:ETF:159662',)
+2026-01-06 14:53:15,978 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,978 INFO sqlalchemy.engine.Engine [generated in 0.00009s] ('CN:ETF:159662', 'annual')
+2026-01-06 14:53:15,978 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,978 INFO sqlalchemy.engine.Engine [cached since 0.0005643s ago] ('CN:ETF:159662', 'quarterly')
+CN:ETF:159662      | CN   | 2022-12 -> 2026-01     | 749    | 0        | 0        | ✅
+2026-01-06 14:53:15,979 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:15,979 INFO sqlalchemy.engine.Engine [cached since 0.002851s ago] ('CN:ETF:159751',)
+2026-01-06 14:53:15,980 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,980 INFO sqlalchemy.engine.Engine [cached since 0.002133s ago] ('CN:ETF:159751', 'annual')
+2026-01-06 14:53:15,980 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,980 INFO sqlalchemy.engine.Engine [cached since 0.002335s ago] ('CN:ETF:159751', 'quarterly')
+CN:ETF:159751      | CN   | 2021-12 -> 2026-01     | 974    | 0        | 0        | ✅
+2026-01-06 14:53:15,980 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:15,980 INFO sqlalchemy.engine.Engine [cached since 0.004507s ago] ('CN:ETF:159851',)
+2026-01-06 14:53:15,982 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,982 INFO sqlalchemy.engine.Engine [cached since 0.003957s ago] ('CN:ETF:159851', 'annual')
+2026-01-06 14:53:15,982 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,982 INFO sqlalchemy.engine.Engine [cached since 0.004117s ago] ('CN:ETF:159851', 'quarterly')
+CN:ETF:159851      | CN   | 2021-03 -> 2026-01     | 1164   | 0        | 0        | ✅
+2026-01-06 14:53:15,982 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:15,982 INFO sqlalchemy.engine.Engine [cached since 0.00627s ago] ('CN:ETF:159852',)
+2026-01-06 14:53:15,984 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,984 INFO sqlalchemy.engine.Engine [cached since 0.005881s ago] ('CN:ETF:159852', 'annual')
+2026-01-06 14:53:15,984 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,984 INFO sqlalchemy.engine.Engine [cached since 0.006086s ago] ('CN:ETF:159852', 'quarterly')
+CN:ETF:159852      | CN   | 2021-02 -> 2026-01     | 1187   | 0        | 0        | ✅
+2026-01-06 14:53:15,984 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:15,984 INFO sqlalchemy.engine.Engine [cached since 0.00826s ago] ('CN:ETF:512800',)
+2026-01-06 14:53:15,987 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,987 INFO sqlalchemy.engine.Engine [cached since 0.009059s ago] ('CN:ETF:512800', 'annual')
+2026-01-06 14:53:15,987 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,987 INFO sqlalchemy.engine.Engine [cached since 0.009252s ago] ('CN:ETF:512800', 'quarterly')
+CN:ETF:512800      | CN   | 2017-08 -> 2026-01     | 2045   | 0        | 0        | ✅
+2026-01-06 14:53:15,987 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:15,987 INFO sqlalchemy.engine.Engine [cached since 0.01141s ago] ('CN:ETF:512880',)
+2026-01-06 14:53:15,991 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,991 INFO sqlalchemy.engine.Engine [cached since 0.01333s ago] ('CN:ETF:512880', 'annual')
+2026-01-06 14:53:15,991 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,991 INFO sqlalchemy.engine.Engine [cached since 0.01364s ago] ('CN:ETF:512880', 'quarterly')
+CN:ETF:512880      | CN   | 2016-08 -> 2026-01     | 2285   | 0        | 0        | ✅
+2026-01-06 14:53:15,992 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:15,992 INFO sqlalchemy.engine.Engine [cached since 0.01586s ago] ('CN:ETF:513190',)
+2026-01-06 14:53:15,993 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,993 INFO sqlalchemy.engine.Engine [cached since 0.01489s ago] ('CN:ETF:513190', 'annual')
+2026-01-06 14:53:15,993 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,993 INFO sqlalchemy.engine.Engine [cached since 0.01509s ago] ('CN:ETF:513190', 'quarterly')
+CN:ETF:513190      | CN   | 2023-10 -> 2026-01     | 544    | 0        | 0        | ✅
+2026-01-06 14:53:15,993 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:15,993 INFO sqlalchemy.engine.Engine [cached since 0.01727s ago] ('CN:ETF:516020',)
+2026-01-06 14:53:15,994 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,994 INFO sqlalchemy.engine.Engine [cached since 0.01665s ago] ('CN:ETF:516020', 'annual')
+2026-01-06 14:53:15,995 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:15,995 INFO sqlalchemy.engine.Engine [cached since 0.01681s ago] ('CN:ETF:516020', 'quarterly')
+CN:ETF:516020      | CN   | 2021-03 -> 2026-01     | 1173   | 0        | 0        | ✅
+2026-01-06 14:53:15,995 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:15,995 INFO sqlalchemy.engine.Engine [cached since 0.01895s ago] ('CN:STOCK:600030',)
+2026-01-06 14:53:16,000 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,001 INFO sqlalchemy.engine.Engine [cached since 0.02274s ago] ('CN:STOCK:600030', 'annual')
+2026-01-06 14:53:16,001 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,001 INFO sqlalchemy.engine.Engine [cached since 0.02293s ago] ('CN:STOCK:600030', 'quarterly')
+CN:STOCK:600030    | CN   | 2003-01 -> 2026-01     | 5641   | 4        | 12       | ✅
+2026-01-06 14:53:16,001 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,001 INFO sqlalchemy.engine.Engine [cached since 0.0251s ago] ('CN:STOCK:600309',)
+2026-01-06 14:53:16,008 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,008 INFO sqlalchemy.engine.Engine [cached since 0.02975s ago] ('CN:STOCK:600309', 'annual')
+2026-01-06 14:53:16,008 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,008 INFO sqlalchemy.engine.Engine [cached since 0.03s ago] ('CN:STOCK:600309', 'quarterly')
+CN:STOCK:600309    | CN   | 2001-01 -> 2026-01     | 6162   | 4        | 12       | ✅
+2026-01-06 14:53:16,008 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,008 INFO sqlalchemy.engine.Engine [cached since 0.03216s ago] ('CN:STOCK:600536',)
+2026-01-06 14:53:16,015 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,015 INFO sqlalchemy.engine.Engine [cached since 0.03677s ago] ('CN:STOCK:600536', 'annual')
+2026-01-06 14:53:16,015 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,015 INFO sqlalchemy.engine.Engine [cached since 0.03694s ago] ('CN:STOCK:600536', 'quarterly')
+CN:STOCK:600536    | CN   | 2002-05 -> 2026-01     | 5807   | 4        | 12       | ✅
+2026-01-06 14:53:16,015 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,015 INFO sqlalchemy.engine.Engine [cached since 0.03909s ago] ('CN:STOCK:601519',)
+2026-01-06 14:53:16,020 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,020 INFO sqlalchemy.engine.Engine [cached since 0.0419s ago] ('CN:STOCK:601519', 'annual')
+2026-01-06 14:53:16,020 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,020 INFO sqlalchemy.engine.Engine [cached since 0.04208s ago] ('CN:STOCK:601519', 'quarterly')
+CN:STOCK:601519    | CN   | 2011-01 -> 2026-01     | 3624   | 4        | 12       | ✅
+2026-01-06 14:53:16,020 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,020 INFO sqlalchemy.engine.Engine [cached since 0.04425s ago] ('CN:STOCK:601919',)
+2026-01-06 14:53:16,028 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,029 INFO sqlalchemy.engine.Engine [cached since 0.05082s ago] ('CN:STOCK:601919', 'annual')
+2026-01-06 14:53:16,029 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,029 INFO sqlalchemy.engine.Engine [cached since 0.05169s ago] ('CN:STOCK:601919', 'quarterly')
+CN:STOCK:601919    | CN   | 2007-06 -> 2026-01     | 4505   | 4        | 12       | ✅
+2026-01-06 14:53:16,030 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,030 INFO sqlalchemy.engine.Engine [cached since 0.05407s ago] ('CN:STOCK:601998',)
+2026-01-06 14:53:16,036 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,036 INFO sqlalchemy.engine.Engine [cached since 0.05848s ago] ('CN:STOCK:601998', 'annual')
+2026-01-06 14:53:16,036 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,036 INFO sqlalchemy.engine.Engine [cached since 0.05868s ago] ('CN:STOCK:601998', 'quarterly')
+CN:STOCK:601998    | CN   | 2007-04 -> 2026-01     | 4544   | 4        | 12       | ✅
+2026-01-06 14:53:16,037 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,037 INFO sqlalchemy.engine.Engine [cached since 0.06085s ago] ('CRYPTO:BTC-USD',)
+2026-01-06 14:53:16,042 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,042 INFO sqlalchemy.engine.Engine [cached since 0.0641s ago] ('CRYPTO:BTC-USD', 'annual')
+2026-01-06 14:53:16,042 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,042 INFO sqlalchemy.engine.Engine [cached since 0.06428s ago] ('CRYPTO:BTC-USD', 'quarterly')
+CRYPTO:BTC-USD     | CRYPTO | 2014-09 -> 2026-01     | 4129   | 0        | 0        | ✅
+2026-01-06 14:53:16,042 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,042 INFO sqlalchemy.engine.Engine [cached since 0.06642s ago] ('HK:ETF:02800',)
+2026-01-06 14:53:16,047 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,047 INFO sqlalchemy.engine.Engine [cached since 0.06925s ago] ('HK:ETF:02800', 'annual')
+2026-01-06 14:53:16,047 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,047 INFO sqlalchemy.engine.Engine [cached since 0.06943s ago] ('HK:ETF:02800', 'quarterly')
+HK:ETF:02800       | HK   | 2008-01 -> 2026-01     | 4418   | 0        | 0        | ✅
+2026-01-06 14:53:16,047 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,047 INFO sqlalchemy.engine.Engine [cached since 0.07158s ago] ('HK:ETF:03033',)
+2026-01-06 14:53:16,049 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,049 INFO sqlalchemy.engine.Engine [cached since 0.07101s ago] ('HK:ETF:03033', 'annual')
+2026-01-06 14:53:16,049 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,049 INFO sqlalchemy.engine.Engine [cached since 0.07123s ago] ('HK:ETF:03033', 'quarterly')
+HK:ETF:03033       | HK   | 2020-08 -> 2026-01     | 1315   | 0        | 0        | ✅
+2026-01-06 14:53:16,049 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,049 INFO sqlalchemy.engine.Engine [cached since 0.07342s ago] ('HK:ETF:03110',)
+2026-01-06 14:53:16,053 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,053 INFO sqlalchemy.engine.Engine [cached since 0.07488s ago] ('HK:ETF:03110', 'annual')
+2026-01-06 14:53:16,053 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,053 INFO sqlalchemy.engine.Engine [cached since 0.07505s ago] ('HK:ETF:03110', 'quarterly')
+HK:ETF:03110       | HK   | 2013-06 -> 2026-01     | 3097   | 0        | 0        | ✅
+2026-01-06 14:53:16,053 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,053 INFO sqlalchemy.engine.Engine [cached since 0.07726s ago] ('HK:ETF:03437',)
+2026-01-06 14:53:16,054 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,054 INFO sqlalchemy.engine.Engine [cached since 0.07583s ago] ('HK:ETF:03437', 'annual')
+2026-01-06 14:53:16,054 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,054 INFO sqlalchemy.engine.Engine [cached since 0.07599s ago] ('HK:ETF:03437', 'quarterly')
+HK:ETF:03437       | HK   | 2024-07 -> 2026-01     | 363    | 0        | 0        | ✅
+2026-01-06 14:53:16,054 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,054 INFO sqlalchemy.engine.Engine [cached since 0.07814s ago] ('HK:ETF:03447',)
+2026-01-06 14:53:16,054 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,054 INFO sqlalchemy.engine.Engine [cached since 0.0767s ago] ('HK:ETF:03447', 'annual')
+2026-01-06 14:53:16,055 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,055 INFO sqlalchemy.engine.Engine [cached since 0.07688s ago] ('HK:ETF:03447', 'quarterly')
+HK:ETF:03447       | HK   | 2025-05 -> 2026-01     | 162    | 0        | 0        | ✅
+2026-01-06 14:53:16,055 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,055 INFO sqlalchemy.engine.Engine [cached since 0.07901s ago] ('HK:STOCK:00005',)
+2026-01-06 14:53:16,062 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,062 INFO sqlalchemy.engine.Engine [cached since 0.0841s ago] ('HK:STOCK:00005', 'annual')
+2026-01-06 14:53:16,062 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,062 INFO sqlalchemy.engine.Engine [cached since 0.08431s ago] ('HK:STOCK:00005', 'quarterly')
+HK:STOCK:00005     | HK   | 2000-01 -> 2026-01     | 6485   | 9        | 9        | ✅
+2026-01-06 14:53:16,062 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,062 INFO sqlalchemy.engine.Engine [cached since 0.08647s ago] ('HK:STOCK:00700',)
+2026-01-06 14:53:16,070 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,070 INFO sqlalchemy.engine.Engine [cached since 0.09203s ago] ('HK:STOCK:00700', 'annual')
+2026-01-06 14:53:16,070 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,070 INFO sqlalchemy.engine.Engine [cached since 0.09223s ago] ('HK:STOCK:00700', 'quarterly')
+HK:STOCK:00700     | HK   | 2004-06 -> 2026-01     | 5323   | 9        | 9        | ✅
+2026-01-06 14:53:16,070 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,070 INFO sqlalchemy.engine.Engine [cached since 0.09438s ago] ('HK:STOCK:00998',)
+2026-01-06 14:53:16,078 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,079 INFO sqlalchemy.engine.Engine [cached since 0.1008s ago] ('HK:STOCK:00998', 'annual')
+2026-01-06 14:53:16,079 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,079 INFO sqlalchemy.engine.Engine [cached since 0.1016s ago] ('HK:STOCK:00998', 'quarterly')
+HK:STOCK:00998     | HK   | 2007-04 -> 2026-01     | 4608   | 9        | 9        | ✅
+2026-01-06 14:53:16,081 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,081 INFO sqlalchemy.engine.Engine [cached since 0.1049s ago] ('HK:STOCK:01919',)
+2026-01-06 14:53:16,088 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,088 INFO sqlalchemy.engine.Engine [cached since 0.1099s ago] ('HK:STOCK:01919', 'annual')
+2026-01-06 14:53:16,088 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,088 INFO sqlalchemy.engine.Engine [cached since 0.1101s ago] ('HK:STOCK:01919', 'quarterly')
+HK:STOCK:01919     | HK   | 2005-06 -> 2026-01     | 5060   | 9        | 9        | ✅
+2026-01-06 14:53:16,088 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,088 INFO sqlalchemy.engine.Engine [cached since 0.1123s ago] ('HK:STOCK:06099',)
+2026-01-06 14:53:16,091 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,091 INFO sqlalchemy.engine.Engine [cached since 0.1134s ago] ('HK:STOCK:06099', 'annual')
+2026-01-06 14:53:16,091 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,091 INFO sqlalchemy.engine.Engine [cached since 0.1137s ago] ('HK:STOCK:06099', 'quarterly')
+HK:STOCK:06099     | HK   | 2016-10 -> 2026-01     | 2275   | 9        | 9        | ✅
+2026-01-06 14:53:16,092 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,092 INFO sqlalchemy.engine.Engine [cached since 0.1159s ago] ('HK:STOCK:09988',)
+2026-01-06 14:53:16,093 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,093 INFO sqlalchemy.engine.Engine [cached since 0.1155s ago] ('HK:STOCK:09988', 'annual')
+2026-01-06 14:53:16,094 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,094 INFO sqlalchemy.engine.Engine [cached since 0.1158s ago] ('HK:STOCK:09988', 'quarterly')
+HK:STOCK:09988     | HK   | 2019-11 -> 2026-01     | 1502   | 5        | 6        | ✅
+2026-01-06 14:53:16,094 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,094 INFO sqlalchemy.engine.Engine [cached since 0.118s ago] ('US:ETF:DIA',)
+2026-01-06 14:53:16,100 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,100 INFO sqlalchemy.engine.Engine [cached since 0.1219s ago] ('US:ETF:DIA', 'annual')
+2026-01-06 14:53:16,100 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,100 INFO sqlalchemy.engine.Engine [cached since 0.1221s ago] ('US:ETF:DIA', 'quarterly')
+US:ETF:DIA         | US   | 1998-01 -> 2026-01     | 7033   | 0        | 0        | ✅
+2026-01-06 14:53:16,100 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,100 INFO sqlalchemy.engine.Engine [cached since 0.1242s ago] ('US:ETF:GLD',)
+2026-01-06 14:53:16,105 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,105 INFO sqlalchemy.engine.Engine [cached since 0.127s ago] ('US:ETF:GLD', 'annual')
+2026-01-06 14:53:16,105 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,105 INFO sqlalchemy.engine.Engine [cached since 0.1272s ago] ('US:ETF:GLD', 'quarterly')
+US:ETF:GLD         | US   | 2004-11 -> 2026-01     | 5314   | 0        | 0        | ✅
+2026-01-06 14:53:16,105 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,105 INFO sqlalchemy.engine.Engine [cached since 0.1293s ago] ('US:ETF:IBIT',)
+2026-01-06 14:53:16,106 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,106 INFO sqlalchemy.engine.Engine [cached since 0.1282s ago] ('US:ETF:IBIT', 'annual')
+2026-01-06 14:53:16,106 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,106 INFO sqlalchemy.engine.Engine [cached since 0.1285s ago] ('US:ETF:IBIT', 'quarterly')
+US:ETF:IBIT        | US   | 2024-01 -> 2026-01     | 496    | 0        | 0        | ✅
+2026-01-06 14:53:16,106 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,106 INFO sqlalchemy.engine.Engine [cached since 0.1306s ago] ('US:ETF:IWM',)
+2026-01-06 14:53:16,113 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,113 INFO sqlalchemy.engine.Engine [cached since 0.1354s ago] ('US:ETF:IWM', 'annual')
+2026-01-06 14:53:16,113 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,113 INFO sqlalchemy.engine.Engine [cached since 0.1357s ago] ('US:ETF:IWM', 'quarterly')
+US:ETF:IWM         | US   | 2000-05 -> 2026-01     | 6439   | 0        | 0        | ✅
+2026-01-06 14:53:16,114 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,114 INFO sqlalchemy.engine.Engine [cached since 0.1379s ago] ('US:ETF:QQQ',)
+2026-01-06 14:53:16,121 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,122 INFO sqlalchemy.engine.Engine [cached since 0.1437s ago] ('US:ETF:QQQ', 'annual')
+2026-01-06 14:53:16,122 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,122 INFO sqlalchemy.engine.Engine [cached since 0.144s ago] ('US:ETF:QQQ', 'quarterly')
+US:ETF:QQQ         | US   | 1999-03 -> 2026-01     | 6747   | 0        | 0        | ✅
+2026-01-06 14:53:16,122 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,122 INFO sqlalchemy.engine.Engine [cached since 0.1462s ago] ('US:ETF:SGOV',)
+2026-01-06 14:53:16,124 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,124 INFO sqlalchemy.engine.Engine [cached since 0.1458s ago] ('US:ETF:SGOV', 'annual')
+2026-01-06 14:53:16,124 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,124 INFO sqlalchemy.engine.Engine [cached since 0.1461s ago] ('US:ETF:SGOV', 'quarterly')
+US:ETF:SGOV        | US   | 2020-06 -> 2026-01     | 1406   | 0        | 0        | ✅
+2026-01-06 14:53:16,124 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,124 INFO sqlalchemy.engine.Engine [cached since 0.1483s ago] ('US:ETF:SPY',)
+2026-01-06 14:53:16,133 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,133 INFO sqlalchemy.engine.Engine [cached since 0.155s ago] ('US:ETF:SPY', 'annual')
+2026-01-06 14:53:16,133 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,133 INFO sqlalchemy.engine.Engine [cached since 0.1552s ago] ('US:ETF:SPY', 'quarterly')
+US:ETF:SPY         | US   | 1993-01 -> 2026-01     | 8289   | 0        | 0        | ✅
+2026-01-06 14:53:16,133 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,133 INFO sqlalchemy.engine.Engine [cached since 0.1574s ago] ('US:ETF:TLT',)
+2026-01-06 14:53:16,139 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,139 INFO sqlalchemy.engine.Engine [cached since 0.1614s ago] ('US:ETF:TLT', 'annual')
+2026-01-06 14:53:16,139 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,139 INFO sqlalchemy.engine.Engine [cached since 0.1616s ago] ('US:ETF:TLT', 'quarterly')
+US:ETF:TLT         | US   | 2002-07 -> 2026-01     | 5896   | 0        | 0        | ✅
+2026-01-06 14:53:16,140 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,140 INFO sqlalchemy.engine.Engine [cached since 0.1638s ago] ('US:ETF:USMV',)
+2026-01-06 14:53:16,143 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,143 INFO sqlalchemy.engine.Engine [cached since 0.1655s ago] ('US:ETF:USMV', 'annual')
+2026-01-06 14:53:16,143 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,144 INFO sqlalchemy.engine.Engine [cached since 0.1657s ago] ('US:ETF:USMV', 'quarterly')
+US:ETF:USMV        | US   | 2011-10 -> 2026-01     | 3571   | 0        | 0        | ✅
+2026-01-06 14:53:16,144 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,144 INFO sqlalchemy.engine.Engine [cached since 0.1679s ago] ('US:ETF:VTV',)
+2026-01-06 14:53:16,149 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,149 INFO sqlalchemy.engine.Engine [cached since 0.1714s ago] ('US:ETF:VTV', 'annual')
+2026-01-06 14:53:16,149 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,149 INFO sqlalchemy.engine.Engine [cached since 0.1716s ago] ('US:ETF:VTV', 'quarterly')
+US:ETF:VTV         | US   | 2004-01 -> 2026-01     | 5517   | 0        | 0        | ✅
+2026-01-06 14:53:16,150 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,150 INFO sqlalchemy.engine.Engine [cached since 0.1738s ago] ('US:ETF:VUG',)
+2026-01-06 14:53:16,156 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,156 INFO sqlalchemy.engine.Engine [cached since 0.178s ago] ('US:ETF:VUG', 'annual')
+2026-01-06 14:53:16,156 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,156 INFO sqlalchemy.engine.Engine [cached since 0.1782s ago] ('US:ETF:VUG', 'quarterly')
+US:ETF:VUG         | US   | 2004-01 -> 2026-01     | 5517   | 0        | 0        | ✅
+2026-01-06 14:53:16,156 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,156 INFO sqlalchemy.engine.Engine [cached since 0.1804s ago] ('US:ETF:VYM',)
+2026-01-06 14:53:16,161 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,161 INFO sqlalchemy.engine.Engine [cached since 0.183s ago] ('US:ETF:VYM', 'annual')
+2026-01-06 14:53:16,161 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,161 INFO sqlalchemy.engine.Engine [cached since 0.1832s ago] ('US:ETF:VYM', 'quarterly')
+US:ETF:VYM         | US   | 2006-11 -> 2026-01     | 4811   | 0        | 0        | ✅
+2026-01-06 14:53:16,161 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,161 INFO sqlalchemy.engine.Engine [cached since 0.1854s ago] ('US:ETF:XLB',)
+2026-01-06 14:53:16,169 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,169 INFO sqlalchemy.engine.Engine [cached since 0.1912s ago] ('US:ETF:XLB', 'annual')
+2026-01-06 14:53:16,169 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,169 INFO sqlalchemy.engine.Engine [cached since 0.1914s ago] ('US:ETF:XLB', 'quarterly')
+US:ETF:XLB         | US   | 1998-12 -> 2026-01     | 6799   | 0        | 0        | ✅
+2026-01-06 14:53:16,169 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,169 INFO sqlalchemy.engine.Engine [cached since 0.1935s ago] ('US:ETF:XLC',)
+2026-01-06 14:53:16,171 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,172 INFO sqlalchemy.engine.Engine [cached since 0.1937s ago] ('US:ETF:XLC', 'annual')
+2026-01-06 14:53:16,172 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,172 INFO sqlalchemy.engine.Engine [cached since 0.1939s ago] ('US:ETF:XLC', 'quarterly')
+US:ETF:XLC         | US   | 2018-06 -> 2026-01     | 1896   | 0        | 0        | ✅
+2026-01-06 14:53:16,172 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,172 INFO sqlalchemy.engine.Engine [cached since 0.1961s ago] ('US:ETF:XLE',)
+2026-01-06 14:53:16,176 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,176 INFO sqlalchemy.engine.Engine [cached since 0.1987s ago] ('US:ETF:XLE', 'annual')
+2026-01-06 14:53:16,177 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,177 INFO sqlalchemy.engine.Engine [cached since 0.1989s ago] ('US:ETF:XLE', 'quarterly')
+US:ETF:XLE         | US   | 1998-12 -> 2026-01     | 6799   | 0        | 0        | ✅
+2026-01-06 14:53:16,177 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,177 INFO sqlalchemy.engine.Engine [cached since 0.201s ago] ('US:ETF:XLF',)
+2026-01-06 14:53:16,183 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,183 INFO sqlalchemy.engine.Engine [cached since 0.2049s ago] ('US:ETF:XLF', 'annual')
+2026-01-06 14:53:16,183 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,183 INFO sqlalchemy.engine.Engine [cached since 0.2051s ago] ('US:ETF:XLF', 'quarterly')
+US:ETF:XLF         | US   | 1998-12 -> 2026-01     | 6799   | 0        | 0        | ✅
+2026-01-06 14:53:16,183 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,183 INFO sqlalchemy.engine.Engine [cached since 0.2072s ago] ('US:ETF:XLI',)
+2026-01-06 14:53:16,189 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,189 INFO sqlalchemy.engine.Engine [cached since 0.2112s ago] ('US:ETF:XLI', 'annual')
+2026-01-06 14:53:16,189 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,189 INFO sqlalchemy.engine.Engine [cached since 0.2114s ago] ('US:ETF:XLI', 'quarterly')
+US:ETF:XLI         | US   | 1998-12 -> 2026-01     | 6799   | 0        | 0        | ✅
+2026-01-06 14:53:16,189 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,189 INFO sqlalchemy.engine.Engine [cached since 0.2135s ago] ('US:ETF:XLK',)
+2026-01-06 14:53:16,195 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,195 INFO sqlalchemy.engine.Engine [cached since 0.217s ago] ('US:ETF:XLK', 'annual')
+2026-01-06 14:53:16,195 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,195 INFO sqlalchemy.engine.Engine [cached since 0.2171s ago] ('US:ETF:XLK', 'quarterly')
+US:ETF:XLK         | US   | 1998-12 -> 2026-01     | 6799   | 0        | 0        | ✅
+2026-01-06 14:53:16,195 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,195 INFO sqlalchemy.engine.Engine [cached since 0.2194s ago] ('US:ETF:XLP',)
+2026-01-06 14:53:16,205 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,205 INFO sqlalchemy.engine.Engine [cached since 0.2276s ago] ('US:ETF:XLP', 'annual')
+2026-01-06 14:53:16,206 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,206 INFO sqlalchemy.engine.Engine [cached since 0.2279s ago] ('US:ETF:XLP', 'quarterly')
+US:ETF:XLP         | US   | 1998-12 -> 2026-01     | 6799   | 0        | 0        | ✅
+2026-01-06 14:53:16,206 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,206 INFO sqlalchemy.engine.Engine [cached since 0.2303s ago] ('US:ETF:XLRE',)
+2026-01-06 14:53:16,210 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,210 INFO sqlalchemy.engine.Engine [cached since 0.2324s ago] ('US:ETF:XLRE', 'annual')
+2026-01-06 14:53:16,210 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,210 INFO sqlalchemy.engine.Engine [cached since 0.2326s ago] ('US:ETF:XLRE', 'quarterly')
+US:ETF:XLRE        | US   | 2015-10 -> 2026-01     | 2574   | 0        | 0        | ✅
+2026-01-06 14:53:16,211 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,211 INFO sqlalchemy.engine.Engine [cached since 0.2348s ago] ('US:ETF:XLU',)
+2026-01-06 14:53:16,223 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,223 INFO sqlalchemy.engine.Engine [cached since 0.2456s ago] ('US:ETF:XLU', 'annual')
+2026-01-06 14:53:16,225 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,225 INFO sqlalchemy.engine.Engine [cached since 0.2474s ago] ('US:ETF:XLU', 'quarterly')
+US:ETF:XLU         | US   | 1998-12 -> 2026-01     | 6799   | 0        | 0        | ✅
+2026-01-06 14:53:16,226 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,226 INFO sqlalchemy.engine.Engine [cached since 0.2501s ago] ('US:ETF:XLV',)
+2026-01-06 14:53:16,234 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,234 INFO sqlalchemy.engine.Engine [cached since 0.256s ago] ('US:ETF:XLV', 'annual')
+2026-01-06 14:53:16,235 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,235 INFO sqlalchemy.engine.Engine [cached since 0.2572s ago] ('US:ETF:XLV', 'quarterly')
+US:ETF:XLV         | US   | 1998-12 -> 2026-01     | 6799   | 0        | 0        | ✅
+2026-01-06 14:53:16,236 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,236 INFO sqlalchemy.engine.Engine [cached since 0.2599s ago] ('US:ETF:XLY',)
+2026-01-06 14:53:16,246 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,246 INFO sqlalchemy.engine.Engine [cached since 0.2686s ago] ('US:ETF:XLY', 'annual')
+2026-01-06 14:53:16,247 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,247 INFO sqlalchemy.engine.Engine [cached since 0.2688s ago] ('US:ETF:XLY', 'quarterly')
+US:ETF:XLY         | US   | 1998-12 -> 2026-01     | 6799   | 0        | 0        | ✅
+2026-01-06 14:53:16,247 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,247 INFO sqlalchemy.engine.Engine [cached since 0.271s ago] ('US:STOCK:AAPL',)
+2026-01-06 14:53:16,256 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,256 INFO sqlalchemy.engine.Engine [cached since 0.2786s ago] ('US:STOCK:AAPL', 'annual')
+2026-01-06 14:53:16,257 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,257 INFO sqlalchemy.engine.Engine [cached since 0.2788s ago] ('US:STOCK:AAPL', 'quarterly')
+US:STOCK:AAPL      | US   | 1980-12 -> 2026-01     | 11356  | 5        | 5        | ✅
+2026-01-06 14:53:16,257 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,257 INFO sqlalchemy.engine.Engine [cached since 0.281s ago] ('US:STOCK:AMZN',)
+2026-01-06 14:53:16,265 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,265 INFO sqlalchemy.engine.Engine [cached since 0.287s ago] ('US:STOCK:AMZN', 'annual')
+2026-01-06 14:53:16,265 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,265 INFO sqlalchemy.engine.Engine [cached since 0.2872s ago] ('US:STOCK:AMZN', 'quarterly')
+US:STOCK:AMZN      | US   | 1997-05 -> 2026-01     | 7204   | 4        | 5        | ✅
+2026-01-06 14:53:16,265 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,265 INFO sqlalchemy.engine.Engine [cached since 0.2893s ago] ('US:STOCK:BAC',)
+2026-01-06 14:53:16,277 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,277 INFO sqlalchemy.engine.Engine [cached since 0.299s ago] ('US:STOCK:BAC', 'annual')
+2026-01-06 14:53:16,277 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,277 INFO sqlalchemy.engine.Engine [cached since 0.2992s ago] ('US:STOCK:BAC', 'quarterly')
+US:STOCK:BAC       | US   | 1973-02 -> 2026-01     | 13330  | 4        | 5        | ✅
+2026-01-06 14:53:16,277 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,277 INFO sqlalchemy.engine.Engine [cached since 0.3014s ago] ('US:STOCK:GOOG',)
+2026-01-06 14:53:16,283 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,283 INFO sqlalchemy.engine.Engine [cached since 0.3049s ago] ('US:STOCK:GOOG', 'annual')
+2026-01-06 14:53:16,283 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,283 INFO sqlalchemy.engine.Engine [cached since 0.3051s ago] ('US:STOCK:GOOG', 'quarterly')
+US:STOCK:GOOG      | US   | 2004-08 -> 2026-01     | 5378   | 4        | 6        | ✅
+2026-01-06 14:53:16,283 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,283 INFO sqlalchemy.engine.Engine [cached since 0.3073s ago] ('US:STOCK:META',)
+2026-01-06 14:53:16,285 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,285 INFO sqlalchemy.engine.Engine [cached since 0.3075s ago] ('US:STOCK:META', 'annual')
+2026-01-06 14:53:16,285 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,285 INFO sqlalchemy.engine.Engine [cached since 0.3076s ago] ('US:STOCK:META', 'quarterly')
+US:STOCK:META      | US   | 2012-05 -> 2026-01     | 3426   | 4        | 5        | ✅
+2026-01-06 14:53:16,286 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,286 INFO sqlalchemy.engine.Engine [cached since 0.3098s ago] ('US:STOCK:MSFT',)
+2026-01-06 14:53:16,294 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,294 INFO sqlalchemy.engine.Engine [cached since 0.3158s ago] ('US:STOCK:MSFT', 'annual')
+2026-01-06 14:53:16,294 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,294 INFO sqlalchemy.engine.Engine [cached since 0.3161s ago] ('US:STOCK:MSFT', 'quarterly')
+US:STOCK:MSFT      | US   | 1986-03 -> 2026-01     | 10030  | 4        | 5        | ✅
+2026-01-06 14:53:16,294 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,294 INFO sqlalchemy.engine.Engine [cached since 0.3184s ago] ('US:STOCK:NVDA',)
+2026-01-06 14:53:16,303 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,303 INFO sqlalchemy.engine.Engine [cached since 0.325s ago] ('US:STOCK:NVDA', 'annual')
+2026-01-06 14:53:16,303 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,303 INFO sqlalchemy.engine.Engine [cached since 0.3254s ago] ('US:STOCK:NVDA', 'quarterly')
+US:STOCK:NVDA      | US   | 1999-01 -> 2026-01     | 6779   | 4        | 5        | ✅
+2026-01-06 14:53:16,303 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,303 INFO sqlalchemy.engine.Engine [cached since 0.3276s ago] ('US:STOCK:TSLA',)
+2026-01-06 14:53:16,308 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,308 INFO sqlalchemy.engine.Engine [cached since 0.3304s ago] ('US:STOCK:TSLA', 'annual')
+2026-01-06 14:53:16,308 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,308 INFO sqlalchemy.engine.Engine [cached since 0.3306s ago] ('US:STOCK:TSLA', 'quarterly')
+US:STOCK:TSLA      | US   | 2010-06 -> 2026-01     | 3903   | 4        | 6        | ✅
+2026-01-06 14:53:16,309 INFO sqlalchemy.engine.Engine SELECT min(marketdatadaily.timestamp) AS min_1, max(marketdatadaily.timestamp) AS max_1, count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,309 INFO sqlalchemy.engine.Engine [cached since 0.3329s ago] ('US:STOCK:TSM',)
+2026-01-06 14:53:16,317 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,317 INFO sqlalchemy.engine.Engine [cached since 0.3389s ago] ('US:STOCK:TSM', 'annual')
+2026-01-06 14:53:16,317 INFO sqlalchemy.engine.Engine SELECT count(financialfundamentals.id) AS count_1 
+FROM financialfundamentals 
+WHERE financialfundamentals.symbol = ? AND financialfundamentals.report_type = ?
+2026-01-06 14:53:16,317 INFO sqlalchemy.engine.Engine [cached since 0.3393s ago] ('US:STOCK:TSM', 'quarterly')
+US:STOCK:TSM       | US   | 1997-10 -> 2026-01     | 7102   | 4        | 6        | ✅
+2026-01-06 14:53:16,317 INFO sqlalchemy.engine.Engine ROLLBACK
+
+🔍 2. PE Fill Check (Stocks Only)
+--------------------------------------------------------------------------------
+Symbol             | Mkt  | Total Days | PE Covered | Missing %  | Status
+--------------------------------------------------------------------------------
+2026-01-06 14:53:16,317 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 14:53:16,318 INFO sqlalchemy.engine.Engine SELECT watchlist.id, watchlist.symbol, watchlist.name, watchlist.market, watchlist.added_at 
+FROM watchlist ORDER BY watchlist.market, watchlist.symbol
+2026-01-06 14:53:16,318 INFO sqlalchemy.engine.Engine [cached since 0.3441s ago] ()
+2026-01-06 14:53:16,318 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,318 INFO sqlalchemy.engine.Engine [generated in 0.00005s] ('CN:STOCK:600030',)
+2026-01-06 14:53:16,321 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,321 INFO sqlalchemy.engine.Engine [generated in 0.00010s] ('CN:STOCK:600030',)
+CN:STOCK:600030    | CN   | 5641       | 971        |      82.8% | ❌ Critical
+2026-01-06 14:53:16,333 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,334 INFO sqlalchemy.engine.Engine [cached since 0.01532s ago] ('CN:STOCK:600309',)
+2026-01-06 14:53:16,337 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,337 INFO sqlalchemy.engine.Engine [cached since 0.01545s ago] ('CN:STOCK:600309',)
+CN:STOCK:600309    | CN   | 6162       | 971        |      84.2% | ❌ Critical
+2026-01-06 14:53:16,350 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,350 INFO sqlalchemy.engine.Engine [cached since 0.03143s ago] ('CN:STOCK:600536',)
+2026-01-06 14:53:16,352 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,352 INFO sqlalchemy.engine.Engine [cached since 0.03111s ago] ('CN:STOCK:600536',)
+CN:STOCK:600536    | CN   | 5807       | 488        |      91.6% | ❌ Critical
+2026-01-06 14:53:16,363 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,363 INFO sqlalchemy.engine.Engine [cached since 0.04434s ago] ('CN:STOCK:601519',)
+2026-01-06 14:53:16,364 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,364 INFO sqlalchemy.engine.Engine [cached since 0.04285s ago] ('CN:STOCK:601519',)
+CN:STOCK:601519    | CN   | 3624       | 420        |      88.4% | ❌ Critical
+2026-01-06 14:53:16,374 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,374 INFO sqlalchemy.engine.Engine [cached since 0.0554s ago] ('CN:STOCK:601919',)
+2026-01-06 14:53:16,375 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,375 INFO sqlalchemy.engine.Engine [cached since 0.05356s ago] ('CN:STOCK:601919',)
+CN:STOCK:601919    | CN   | 4505       | 971        |      78.4% | ❌ Critical
+2026-01-06 14:53:16,386 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,386 INFO sqlalchemy.engine.Engine [cached since 0.06758s ago] ('CN:STOCK:601998',)
+2026-01-06 14:53:16,388 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,388 INFO sqlalchemy.engine.Engine [cached since 0.06676s ago] ('CN:STOCK:601998',)
+CN:STOCK:601998    | CN   | 4544       | 971        |      78.6% | ❌ Critical
+2026-01-06 14:53:16,396 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,396 INFO sqlalchemy.engine.Engine [cached since 0.07735s ago] ('HK:STOCK:00005',)
+2026-01-06 14:53:16,398 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,398 INFO sqlalchemy.engine.Engine [cached since 0.07671s ago] ('HK:STOCK:00005',)
+HK:STOCK:00005     | HK   | 6485       | 2217       |      65.8% | ❌ Critical
+2026-01-06 14:53:16,410 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,410 INFO sqlalchemy.engine.Engine [cached since 0.09186s ago] ('HK:STOCK:00700',)
+2026-01-06 14:53:16,412 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,413 INFO sqlalchemy.engine.Engine [cached since 0.09127s ago] ('HK:STOCK:00700',)
+HK:STOCK:00700     | HK   | 5323       | 2217       |      58.4% | ❌ Critical
+2026-01-06 14:53:16,426 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,426 INFO sqlalchemy.engine.Engine [cached since 0.1077s ago] ('HK:STOCK:00998',)
+2026-01-06 14:53:16,428 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,428 INFO sqlalchemy.engine.Engine [cached since 0.1065s ago] ('HK:STOCK:00998',)
+HK:STOCK:00998     | HK   | 4608       | 2217       |      51.9% | ❌ Critical
+2026-01-06 14:53:16,438 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,438 INFO sqlalchemy.engine.Engine [cached since 0.1198s ago] ('HK:STOCK:01919',)
+2026-01-06 14:53:16,440 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,440 INFO sqlalchemy.engine.Engine [cached since 0.1192s ago] ('HK:STOCK:01919',)
+HK:STOCK:01919     | HK   | 5060       | 1970       |      61.1% | ❌ Critical
+2026-01-06 14:53:16,451 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,451 INFO sqlalchemy.engine.Engine [cached since 0.1327s ago] ('HK:STOCK:06099',)
+2026-01-06 14:53:16,452 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,452 INFO sqlalchemy.engine.Engine [cached since 0.1306s ago] ('HK:STOCK:06099',)
+HK:STOCK:06099     | HK   | 2275       | 2217       |       2.5% | ✅
+2026-01-06 14:53:16,457 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,457 INFO sqlalchemy.engine.Engine [cached since 0.1389s ago] ('HK:STOCK:09988',)
+2026-01-06 14:53:16,458 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,458 INFO sqlalchemy.engine.Engine [cached since 0.1367s ago] ('HK:STOCK:09988',)
+HK:STOCK:09988     | HK   | 1502       | 923        |      38.5% | ⚠️ Low Fill
+2026-01-06 14:53:16,461 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,461 INFO sqlalchemy.engine.Engine [cached since 0.1429s ago] ('US:STOCK:AAPL',)
+2026-01-06 14:53:16,465 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,465 INFO sqlalchemy.engine.Engine [cached since 0.1434s ago] ('US:STOCK:AAPL',)
+US:STOCK:AAPL      | US   | 11356      | 817        |      92.8% | ❌ Critical
+2026-01-06 14:53:16,485 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,485 INFO sqlalchemy.engine.Engine [cached since 0.1664s ago] ('US:STOCK:AMZN',)
+2026-01-06 14:53:16,486 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,486 INFO sqlalchemy.engine.Engine [cached since 0.1651s ago] ('US:STOCK:AMZN',)
+US:STOCK:AMZN      | US   | 7204       | 755        |      89.5% | ❌ Critical
+2026-01-06 14:53:16,499 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,499 INFO sqlalchemy.engine.Engine [cached since 0.1804s ago] ('US:STOCK:BAC',)
+2026-01-06 14:53:16,502 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,503 INFO sqlalchemy.engine.Engine [cached since 0.1813s ago] ('US:STOCK:BAC',)
+US:STOCK:BAC       | US   | 13330      | 1005       |      92.5% | ❌ Critical
+2026-01-06 14:53:16,525 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,525 INFO sqlalchemy.engine.Engine [cached since 0.2064s ago] ('US:STOCK:GOOG',)
+2026-01-06 14:53:16,526 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,526 INFO sqlalchemy.engine.Engine [cached since 0.2052s ago] ('US:STOCK:GOOG',)
+US:STOCK:GOOG      | US   | 5378       | 1005       |      81.3% | ❌ Critical
+2026-01-06 14:53:16,536 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,536 INFO sqlalchemy.engine.Engine [cached since 0.2174s ago] ('US:STOCK:META',)
+2026-01-06 14:53:16,536 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,536 INFO sqlalchemy.engine.Engine [cached since 0.2153s ago] ('US:STOCK:META',)
+US:STOCK:META      | US   | 3426       | 1005       |      70.7% | ❌ Critical
+2026-01-06 14:53:16,542 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,542 INFO sqlalchemy.engine.Engine [cached since 0.2234s ago] ('US:STOCK:MSFT',)
+2026-01-06 14:53:16,546 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,546 INFO sqlalchemy.engine.Engine [cached since 0.2246s ago] ('US:STOCK:MSFT',)
+US:STOCK:MSFT      | US   | 10030      | 881        |      91.2% | ❌ Critical
+2026-01-06 14:53:16,561 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,561 INFO sqlalchemy.engine.Engine [cached since 0.2429s ago] ('US:STOCK:NVDA',)
+2026-01-06 14:53:16,563 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,563 INFO sqlalchemy.engine.Engine [cached since 0.2422s ago] ('US:STOCK:NVDA',)
+US:STOCK:NVDA      | US   | 6779       | 985        |      85.5% | ❌ Critical
+2026-01-06 14:53:16,574 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,574 INFO sqlalchemy.engine.Engine [cached since 0.2558s ago] ('US:STOCK:TSLA',)
+2026-01-06 14:53:16,575 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,575 INFO sqlalchemy.engine.Engine [cached since 0.2535s ago] ('US:STOCK:TSLA',)
+US:STOCK:TSLA      | US   | 3903       | 1005       |      74.3% | ❌ Critical
+2026-01-06 14:53:16,580 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ?
+2026-01-06 14:53:16,580 INFO sqlalchemy.engine.Engine [cached since 0.2619s ago] ('US:STOCK:TSM',)
+2026-01-06 14:53:16,582 INFO sqlalchemy.engine.Engine SELECT count(marketdatadaily.id) AS count_1 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? AND marketdatadaily.pe IS NOT NULL
+2026-01-06 14:53:16,582 INFO sqlalchemy.engine.Engine [cached since 0.2605s ago] ('US:STOCK:TSM',)
+US:STOCK:TSM       | US   | 7102       | 1005       |      85.8% | ❌ Critical
+2026-01-06 14:53:16,590 INFO sqlalchemy.engine.Engine ROLLBACK
+
+⚖️  3. PE Verification (vs Yahoo Finance - Live)
+--------------------------------------------------------------------------------
+Symbol             | Mkt  | Sys PE   | YF PE    | Diff %   | Status
+--------------------------------------------------------------------------------
+2026-01-06 14:53:16,590 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-01-06 14:53:16,590 INFO sqlalchemy.engine.Engine SELECT watchlist.id, watchlist.symbol, watchlist.name, watchlist.market, watchlist.added_at 
+FROM watchlist ORDER BY watchlist.market, watchlist.symbol
+2026-01-06 14:53:16,590 INFO sqlalchemy.engine.Engine [cached since 0.6163s ago] ()
+2026-01-06 14:53:16,591 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:16,591 INFO sqlalchemy.engine.Engine [generated in 0.00007s] ('CN:STOCK:600030', 1, 0)
+CN:STOCK:600030    | CN   | 15.49    | 16.50    | 6.1%     | ✅
+2026-01-06 14:53:23,604 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:23,604 INFO sqlalchemy.engine.Engine [cached since 7.013s ago] ('CN:STOCK:600309', 1, 0)
+CN:STOCK:600309    | CN   | 21.82    | 23.46    | 7.0%     | ✅
+2026-01-06 14:53:25,712 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:25,712 INFO sqlalchemy.engine.Engine [cached since 9.121s ago] ('CN:STOCK:600536', 1, 0)
+CN:STOCK:600536    | CN   | None     | None     | N/A      | ⚪️ Both Null
+2026-01-06 14:53:27,974 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:27,974 INFO sqlalchemy.engine.Engine [cached since 11.38s ago] ('CN:STOCK:601519', 1, 0)
+CN:STOCK:601519    | CN   | None     | None     | N/A      | ⚪️ Both Null
+2026-01-06 14:53:30,553 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:30,553 INFO sqlalchemy.engine.Engine [cached since 13.96s ago] ('CN:STOCK:601919', 1, 0)
+CN:STOCK:601919    | CN   | 6.01     | 4.74     | 26.7%    | ❌
+2026-01-06 14:53:32,420 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:32,420 INFO sqlalchemy.engine.Engine [cached since 15.83s ago] ('CN:STOCK:601998', 1, 0)
+CN:STOCK:601998    | CN   | 6.00     | 6.38     | 5.9%     | ✅
+2026-01-06 14:53:35,253 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:35,253 INFO sqlalchemy.engine.Engine [cached since 18.66s ago] ('HK:STOCK:00005', 1, 0)
+HK:STOCK:00005     | HK   | 13.64    | 17.33    | 21.3%    | ❌
+2026-01-06 14:53:38,376 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:38,377 INFO sqlalchemy.engine.Engine [cached since 21.79s ago] ('HK:STOCK:00700', 1, 0)
+HK:STOCK:00700     | HK   | 27.64    | 25.55    | 8.2%     | ✅
+2026-01-06 14:53:40,855 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:40,855 INFO sqlalchemy.engine.Engine [cached since 24.26s ago] ('HK:STOCK:00998', 1, 0)
+HK:STOCK:00998     | HK   | 6.58     | 5.35     | 22.9%    | ❌
+2026-01-06 14:53:43,615 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:43,615 INFO sqlalchemy.engine.Engine [cached since 27.02s ago] ('HK:STOCK:01919', 1, 0)
+HK:STOCK:01919     | HK   | 6.60     | 3.91     | 68.8%    | ❌
+2026-01-06 14:53:45,697 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:45,698 INFO sqlalchemy.engine.Engine [cached since 29.11s ago] ('HK:STOCK:06099', 1, 0)
+HK:STOCK:06099     | HK   | 14.06    | 10.95    | 28.5%    | ❌
+2026-01-06 14:53:48,365 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:48,365 INFO sqlalchemy.engine.Engine [cached since 31.77s ago] ('HK:STOCK:09988', 1, 0)
+HK:STOCK:09988     | HK   | 21.75    | 20.78    | 4.7%     | ✅
+2026-01-06 14:53:50,399 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:50,399 INFO sqlalchemy.engine.Engine [cached since 33.81s ago] ('US:STOCK:AAPL', 1, 0)
+US:STOCK:AAPL      | US   | 35.91    | 35.83    | 0.2%     | ✅
+2026-01-06 14:53:53,036 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:53,037 INFO sqlalchemy.engine.Engine [cached since 36.45s ago] ('US:STOCK:AMZN', 1, 0)
+US:STOCK:AMZN      | US   | 31.66    | 32.87    | 3.7%     | ✅
+2026-01-06 14:53:55,105 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:55,105 INFO sqlalchemy.engine.Engine [cached since 38.51s ago] ('US:STOCK:BAC', 1, 0)
+US:STOCK:BAC       | US   | 13.98    | 15.54    | 10.1%    | ⚠️
+2026-01-06 14:53:57,735 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:57,736 INFO sqlalchemy.engine.Engine [cached since 41.14s ago] ('US:STOCK:GOOG', 1, 0)
+US:STOCK:GOOG      | US   | 30.64    | 31.36    | 2.3%     | ✅
+2026-01-06 14:53:59,737 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:53:59,737 INFO sqlalchemy.engine.Engine [cached since 43.15s ago] ('US:STOCK:META', 1, 0)
+US:STOCK:META      | US   | 28.01    | 29.15    | 3.9%     | ✅
+2026-01-06 14:54:02,640 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:54:02,640 INFO sqlalchemy.engine.Engine [cached since 46.05s ago] ('US:STOCK:MSFT', 1, 0)
+US:STOCK:MSFT      | US   | 33.51    | 33.68    | 0.5%     | ✅
+2026-01-06 14:54:04,671 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:54:04,671 INFO sqlalchemy.engine.Engine [cached since 48.08s ago] ('US:STOCK:NVDA', 1, 0)
+US:STOCK:NVDA      | US   | 46.35    | 46.56    | 0.5%     | ✅
+2026-01-06 14:54:06,597 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:54:06,597 INFO sqlalchemy.engine.Engine [cached since 50.01s ago] ('US:STOCK:TSLA', 1, 0)
+US:STOCK:TSLA      | US   | 276.56   | 311.50   | 11.2%    | ⚠️
+2026-01-06 14:54:08,491 INFO sqlalchemy.engine.Engine SELECT marketdatadaily.id, marketdatadaily.symbol, marketdatadaily.market, marketdatadaily.timestamp, marketdatadaily.open, marketdatadaily.high, marketdatadaily.low, marketdatadaily.close, marketdatadaily.volume, marketdatadaily.turnover, marketdatadaily.change, marketdatadaily.pct_change, marketdatadaily.prev_close, marketdatadaily.pe, marketdatadaily.pb, marketdatadaily.ps, marketdatadaily.dividend_yield, marketdatadaily.eps, marketdatadaily.market_cap, marketdatadaily.updated_at 
+FROM marketdatadaily 
+WHERE marketdatadaily.symbol = ? ORDER BY marketdatadaily.timestamp DESC
+ LIMIT ? OFFSET ?
+2026-01-06 14:54:08,491 INFO sqlalchemy.engine.Engine [cached since 51.9s ago] ('US:STOCK:TSM', 1, 0)
+US:STOCK:TSM       | US   | 34.29    | 33.32    | 2.9%     | ✅
+2026-01-06 14:54:10,870 INFO sqlalchemy.engine.Engine ROLLBACK
+
+✅ Quality Assurance Complete.

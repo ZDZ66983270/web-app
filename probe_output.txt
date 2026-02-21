@@ -1,0 +1,66 @@
+2026-02-10 21:32:07,611 | 49280 | 8353292864 | [open_context_base.py:409] _init_connect_sync: New connect ready: conn=7426981296021907879(1) context=<futu.quote.open_quote_context.OpenQuoteContext object at 0x1050d2f90>
+
+--- Probing Snapshot for HK.02800 ---
+Columns available: ['code', 'name', 'update_time', 'last_price', 'open_price', 'high_price', 'low_price', 'prev_close_price', 'volume', 'turnover', 'turnover_rate', 'suspension', 'listing_date', 'lot_size', 'price_spread', 'stock_owner', 'ask_price', 'bid_price', 'ask_vol', 'bid_vol', 'enable_margin', 'mortgage_ratio', 'long_margin_initial_ratio', 'enable_short_sell', 'short_sell_rate', 'short_available_volume', 'short_margin_initial_ratio', 'amplitude', 'avg_price', 'bid_ask_ratio', 'volume_ratio', 'highest52weeks_price', 'lowest52weeks_price', 'highest_history_price', 'lowest_history_price', 'close_price_5min', 'after_volume', 'after_turnover', 'sec_status', 'equity_valid', 'issued_shares', 'total_market_val', 'net_asset', 'net_profit', 'earning_per_share', 'outstanding_shares', 'circular_market_val', 'net_asset_per_share', 'ey_ratio', 'pe_ratio', 'pb_ratio', 'pe_ttm_ratio', 'dividend_ttm', 'dividend_ratio_ttm', 'dividend_lfy', 'dividend_lfy_ratio', 'wrt_valid', 'wrt_conversion_ratio', 'wrt_type', 'wrt_strike_price', 'wrt_maturity_date', 'wrt_end_trade', 'wrt_recovery_price', 'wrt_street_vol', 'wrt_issue_vol', 'wrt_street_ratio', 'wrt_delta', 'wrt_implied_volatility', 'wrt_premium', 'wrt_leverage', 'wrt_ipop', 'wrt_break_even_point', 'wrt_conversion_price', 'wrt_price_recovery_ratio', 'wrt_score', 'wrt_upper_strike_price', 'wrt_lower_strike_price', 'wrt_inline_price_status', 'wrt_issuer_code', 'option_valid', 'option_type', 'strike_time', 'option_strike_price', 'option_contract_size', 'option_open_interest', 'option_implied_volatility', 'option_premium', 'option_delta', 'option_gamma', 'option_vega', 'option_theta', 'option_rho', 'option_net_open_interest', 'option_expiry_date_distance', 'option_contract_nominal_value', 'option_owner_lot_multiplier', 'option_area_type', 'option_contract_multiplier', 'index_option_type', 'index_valid', 'index_raise_count', 'index_fall_count', 'index_equal_count', 'plate_valid', 'plate_raise_count', 'plate_fall_count', 'plate_equal_count', 'future_valid', 'future_last_settle_price', 'future_position', 'future_position_change', 'future_main_contract', 'future_last_trade_time', 'trust_valid', 'trust_dividend_yield', 'trust_aum', 'trust_outstanding_units', 'trust_netAssetValue', 'trust_premium', 'trust_assetClass', 'pre_price', 'pre_high_price', 'pre_low_price', 'pre_volume', 'pre_turnover', 'pre_change_val', 'pre_change_rate', 'pre_amplitude', 'after_price', 'after_high_price', 'after_low_price', 'after_change_val', 'after_change_rate', 'after_amplitude', 'overnight_price', 'overnight_high_price', 'overnight_low_price', 'overnight_volume', 'overnight_turnover', 'overnight_change_val', 'overnight_change_rate', 'overnight_amplitude']
+Non-NaN columns: ['code', 'name', 'update_time', 'last_price', 'open_price', 'high_price', 'low_price', 'prev_close_price', 'volume', 'turnover', 'turnover_rate', 'suspension', 'listing_date', 'lot_size', 'price_spread', 'ask_price', 'bid_price', 'ask_vol', 'bid_vol', 'amplitude', 'avg_price', 'bid_ask_ratio', 'volume_ratio', 'highest52weeks_price', 'lowest52weeks_price', 'highest_history_price', 'lowest_history_price', 'close_price_5min', 'after_volume', 'after_turnover', 'sec_status', 'equity_valid', 'wrt_valid', 'wrt_type', 'wrt_inline_price_status', 'option_valid', 'option_type', 'option_area_type', 'index_option_type', 'index_valid', 'plate_valid', 'future_valid', 'trust_valid', 'trust_dividend_yield', 'trust_aum', 'trust_outstanding_units', 'trust_netAssetValue', 'trust_premium', 'trust_assetClass', 'pre_price', 'pre_high_price', 'pre_low_price', 'pre_volume', 'pre_turnover', 'pre_change_val', 'pre_change_rate', 'pre_amplitude', 'after_price', 'after_high_price', 'after_low_price', 'after_change_val', 'after_change_rate', 'after_amplitude', 'overnight_price', 'overnight_high_price', 'overnight_low_price', 'overnight_volume', 'overnight_turnover', 'overnight_change_val', 'overnight_change_rate', 'overnight_amplitude']
+  open_price: 27.4
+  suspension: False
+  mortgage_ratio: nan
+  long_margin_initial_ratio: nan
+  short_margin_initial_ratio: nan
+  bid_ask_ratio: -44.43
+  volume_ratio: 0.427
+  earning_per_share: nan
+  net_asset_per_share: nan
+  ey_ratio: nan
+  pe_ratio: nan
+  pb_ratio: nan
+  pe_ttm_ratio: nan
+  dividend_ttm: nan
+  dividend_ratio_ttm: nan
+  dividend_lfy_ratio: nan
+  wrt_conversion_ratio: nan
+  wrt_type: N/A
+  wrt_street_ratio: nan
+  wrt_price_recovery_ratio: nan
+  wrt_upper_strike_price: nan
+  option_type: N/A
+  option_open_interest: nan
+  option_net_open_interest: nan
+  option_area_type: N/A
+  index_option_type: N/A
+  trust_dividend_yield: 2.812
+2026-02-10 21:32:08,104 | 49280 | 6123712512 | [open_context_base.py:516] on_disconnect: Disconnected: conn=0(1) reason=CallClose
+2026-02-10 21:32:08,105 | 49280 | 8353292864 | [open_context_base.py:409] _init_connect_sync: New connect ready: conn=7426981298088295207(2) context=<futu.quote.open_quote_context.OpenQuoteContext object at 0x12138e710>
+
+--- Probing Snapshot for HK.00700 ---
+Columns available: ['code', 'name', 'update_time', 'last_price', 'open_price', 'high_price', 'low_price', 'prev_close_price', 'volume', 'turnover', 'turnover_rate', 'suspension', 'listing_date', 'lot_size', 'price_spread', 'stock_owner', 'ask_price', 'bid_price', 'ask_vol', 'bid_vol', 'enable_margin', 'mortgage_ratio', 'long_margin_initial_ratio', 'enable_short_sell', 'short_sell_rate', 'short_available_volume', 'short_margin_initial_ratio', 'amplitude', 'avg_price', 'bid_ask_ratio', 'volume_ratio', 'highest52weeks_price', 'lowest52weeks_price', 'highest_history_price', 'lowest_history_price', 'close_price_5min', 'after_volume', 'after_turnover', 'sec_status', 'equity_valid', 'issued_shares', 'total_market_val', 'net_asset', 'net_profit', 'earning_per_share', 'outstanding_shares', 'circular_market_val', 'net_asset_per_share', 'ey_ratio', 'pe_ratio', 'pb_ratio', 'pe_ttm_ratio', 'dividend_ttm', 'dividend_ratio_ttm', 'dividend_lfy', 'dividend_lfy_ratio', 'wrt_valid', 'wrt_conversion_ratio', 'wrt_type', 'wrt_strike_price', 'wrt_maturity_date', 'wrt_end_trade', 'wrt_recovery_price', 'wrt_street_vol', 'wrt_issue_vol', 'wrt_street_ratio', 'wrt_delta', 'wrt_implied_volatility', 'wrt_premium', 'wrt_leverage', 'wrt_ipop', 'wrt_break_even_point', 'wrt_conversion_price', 'wrt_price_recovery_ratio', 'wrt_score', 'wrt_upper_strike_price', 'wrt_lower_strike_price', 'wrt_inline_price_status', 'wrt_issuer_code', 'option_valid', 'option_type', 'strike_time', 'option_strike_price', 'option_contract_size', 'option_open_interest', 'option_implied_volatility', 'option_premium', 'option_delta', 'option_gamma', 'option_vega', 'option_theta', 'option_rho', 'option_net_open_interest', 'option_expiry_date_distance', 'option_contract_nominal_value', 'option_owner_lot_multiplier', 'option_area_type', 'option_contract_multiplier', 'index_option_type', 'index_valid', 'index_raise_count', 'index_fall_count', 'index_equal_count', 'plate_valid', 'plate_raise_count', 'plate_fall_count', 'plate_equal_count', 'future_valid', 'future_last_settle_price', 'future_position', 'future_position_change', 'future_main_contract', 'future_last_trade_time', 'trust_valid', 'trust_dividend_yield', 'trust_aum', 'trust_outstanding_units', 'trust_netAssetValue', 'trust_premium', 'trust_assetClass', 'pre_price', 'pre_high_price', 'pre_low_price', 'pre_volume', 'pre_turnover', 'pre_change_val', 'pre_change_rate', 'pre_amplitude', 'after_price', 'after_high_price', 'after_low_price', 'after_change_val', 'after_change_rate', 'after_amplitude', 'overnight_price', 'overnight_high_price', 'overnight_low_price', 'overnight_volume', 'overnight_turnover', 'overnight_change_val', 'overnight_change_rate', 'overnight_amplitude']
+Non-NaN columns: ['code', 'name', 'update_time', 'last_price', 'open_price', 'high_price', 'low_price', 'prev_close_price', 'volume', 'turnover', 'turnover_rate', 'suspension', 'listing_date', 'lot_size', 'price_spread', 'ask_price', 'bid_price', 'ask_vol', 'bid_vol', 'amplitude', 'avg_price', 'bid_ask_ratio', 'volume_ratio', 'highest52weeks_price', 'lowest52weeks_price', 'highest_history_price', 'lowest_history_price', 'close_price_5min', 'after_volume', 'after_turnover', 'sec_status', 'equity_valid', 'issued_shares', 'total_market_val', 'net_asset', 'net_profit', 'earning_per_share', 'outstanding_shares', 'circular_market_val', 'net_asset_per_share', 'ey_ratio', 'pe_ratio', 'pb_ratio', 'pe_ttm_ratio', 'dividend_ttm', 'dividend_ratio_ttm', 'dividend_lfy', 'dividend_lfy_ratio', 'wrt_valid', 'wrt_type', 'wrt_inline_price_status', 'option_valid', 'option_type', 'option_area_type', 'index_option_type', 'index_valid', 'plate_valid', 'future_valid', 'trust_valid', 'trust_assetClass', 'pre_price', 'pre_high_price', 'pre_low_price', 'pre_volume', 'pre_turnover', 'pre_change_val', 'pre_change_rate', 'pre_amplitude', 'after_price', 'after_high_price', 'after_low_price', 'after_change_val', 'after_change_rate', 'after_amplitude', 'overnight_price', 'overnight_high_price', 'overnight_low_price', 'overnight_volume', 'overnight_turnover', 'overnight_change_val', 'overnight_change_rate', 'overnight_amplitude']
+  open_price: 563.0
+  suspension: False
+  mortgage_ratio: nan
+  long_margin_initial_ratio: nan
+  short_margin_initial_ratio: nan
+  bid_ask_ratio: -15.76
+  volume_ratio: 0.547
+  earning_per_share: 23.014
+  net_asset_per_share: 140.978
+  ey_ratio: 0.185
+  pe_ratio: 23.941
+  pb_ratio: 3.908
+  pe_ttm_ratio: 21.022
+  dividend_ttm: 4.541
+  dividend_ratio_ttm: 0.82
+  dividend_lfy_ratio: 0.824
+  wrt_conversion_ratio: nan
+  wrt_type: N/A
+  wrt_street_ratio: nan
+  wrt_price_recovery_ratio: nan
+  wrt_upper_strike_price: nan
+  option_type: N/A
+  option_open_interest: nan
+  option_net_open_interest: nan
+  option_area_type: N/A
+  index_option_type: N/A
+  trust_dividend_yield: nan
+2026-02-10 21:32:08,594 | 49280 | 6123712512 | [open_context_base.py:516] on_disconnect: Disconnected: conn=0(2) reason=CallClose

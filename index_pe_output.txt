@@ -1,0 +1,67 @@
+2026-02-10 23:02:59,713 | 54087 | 8353292864 | [open_context_base.py:409] _init_connect_sync: New connect ready: conn=7427004163793676483(1) context=<futu.quote.open_quote_context.OpenQuoteContext object at 0x102a6af90>
+🔗 Subscribing to HK.800000...
+✅ Subscription Successful!
+
+📥 Requesting Snapshot...
+  code: HK.800000
+  name: 恒生指数
+  update_time: 2026-02-10 16:00:00
+  last_price: 27183.15
+  open_price: 27202.96
+  high_price: 27397.65
+  low_price: 27104.82
+  prev_close_price: 27027.16
+  turnover: 234039585144.406
+  listing_date: 1970-01-01
+  lot_size: 1
+  price_spread: 0.01
+  amplitude: 1.083
+  avg_price: 27251.235
+  highest52weeks_price: 28056.1
+  lowest52weeks_price: 19260.21
+  highest_history_price: 33484.08
+  lowest_history_price: 150.11
+  close_price_5min: 27145.9
+  sec_status: NORMAL
+  wrt_type: N/A
+  wrt_inline_price_status: N/A
+  option_type: N/A
+  option_area_type: N/A
+  index_option_type: N/A
+  index_valid: True
+  index_raise_count: 55
+  index_fall_count: 33
+  trust_assetClass: N/A
+  pre_price: N/A
+  pre_high_price: N/A
+  pre_low_price: N/A
+  pre_volume: N/A
+  pre_turnover: N/A
+  pre_change_val: N/A
+  pre_change_rate: N/A
+  pre_amplitude: N/A
+  after_price: N/A
+  after_high_price: N/A
+  after_low_price: N/A
+  after_change_val: N/A
+  after_change_rate: N/A
+  after_amplitude: N/A
+  overnight_price: N/A
+  overnight_high_price: N/A
+  overnight_low_price: N/A
+  overnight_volume: N/A
+  overnight_turnover: N/A
+  overnight_change_val: N/A
+  overnight_change_rate: N/A
+  overnight_amplitude: N/A
+
+📥 Requesting History K-Line...
+        code  name             time_key  ...      turnover  change_rate  last_close
+0  HK.800000  恒生指数  2024-01-02 00:00:00  ...  7.664126e+10    -1.518356    17047.39
+1  HK.800000  恒生指数  2024-01-03 00:00:00  ...  7.926971e+10    -0.846648    16788.55
+2  HK.800000  恒生指数  2024-01-04 00:00:00  ...  7.039004e+10    -0.002583    16646.41
+3  HK.800000  恒生指数  2024-01-05 00:00:00  ...  8.183000e+10    -0.664725    16645.98
+4  HK.800000  恒生指数  2024-01-08 00:00:00  ...  8.444206e+10    -1.880096    16535.33
+
+[5 rows x 13 columns]
+2026-02-10 23:03:00,710 | 54087 | 6162886656 | [open_context_base.py:516] on_disconnect: Disconnected: conn=0(1) reason=CallClose

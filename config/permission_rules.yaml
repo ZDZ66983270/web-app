@@ -1,0 +1,12 @@
+csp_contract_prefs:
+  tenor_days:
+    preferred_min: 60
+    preferred_max: 90
+    hard_min: 45
+    hard_max: 90
+
+  # discount_pct = (spot - strike) / spot
+  moneyness:
+    target_discount_pct: 0.05
+    min_discount_pct: 0.03
+    max_discount_pct: 0.07

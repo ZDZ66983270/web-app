@@ -1,0 +1,30 @@
+================================================================================
+高性能 ETL 处理 (组合优化版)
+================================================================================
+执行时间: 2026-01-09 23:04:04.826155
+
+📋 待处理记录: 70 条
+
+[1/70] 处理 CN:INDEX:000001...   ❌ 处理失败: Session.exec() takes 2 positional arguments but 3 were given
+✅ 0条 (1.8秒)
+[2/70] 处理 CN:INDEX:000300...   ❌ 处理失败: Session.exec() takes 2 positional arguments but 3 were given
+✅ 0条 (0.2秒)
+[3/70] 处理 CN:INDEX:000016...   ❌ 处理失败: Session.exec() takes 2 positional arguments but 3 were given
+✅ 0条 (1.2秒)
+[4/70] 处理 CN:INDEX:000905...   ❌ 处理失败: Session.exec() takes 2 positional arguments but 3 were given
+✅ 0条 (1.2秒)
+[5/70] 处理 HK:INDEX:HSI...   ❌ 处理失败: Session.exec() takes 2 positional arguments but 3 were given
+✅ 0条 (2.8秒)
+[6/70] 处理 HK:INDEX:HSTECH...   ❌ 处理失败: Session.exec() takes 2 positional arguments but 3 were given
+✅ 0条 (0.2秒)
+[7/70] 处理 HK:INDEX:HSCC...   ❌ 处理失败: Session.exec() takes 2 positional arguments but 3 were given
+✅ 0条 (0.7秒)
+[8/70] 处理 HK:INDEX:HSCE...   ❌ 处理失败: Session.exec() takes 2 positional arguments but 3 were given
+✅ 0条 (2.2秒)
+[9/70] 处理 US:INDEX:DJI...   ❌ 处理失败: Session.exec() takes 2 positional arguments but 3 were given
+✅ 0条 (2.3秒)
+[10/70] 处理 US:INDEX:NDX...   ❌ 处理失败: Session.exec() takes 2 positional arguments but 3 were given
+✅ 0条 (2.9秒)
+[11/70] 处理 US:INDEX:SPX...   ❌ 处理失败: Session.exec() takes 2 positional arguments but 3 were given
+✅ 0条 (12.4秒)
+[12/70] 处理 CN:STOCK:600030... 

@@ -1,0 +1,118 @@
+Parsing data/reports/CN/600536/2025-10-30_中国软件2025年第三季度报告.pdf...
+[PDF_DEBUG] Detected GENERIC ENTERPRISE (non-bank)
+[PDF_DEBUG] Scanning first 14 pages for key content...
+[PDF_DEBUG]   Hot page detected: Page 1. Using layout-enhanced extraction.
+[PDF_DEBUG]   Hot page detected: Page 2. Using layout-enhanced extraction.
+[PDF_DEBUG]   Hot page detected: Page 8. Using layout-enhanced extraction.
+[PDF_DEBUG]   Hot page detected: Page 10. Using layout-enhanced extraction.
+[PDF_DEBUG] Extraction complete: 31352 chars.
+[PDF_DEBUG] --- Starting Financial Parsing ---
+[PDF_DEBUG] [DEBUG] A-Share (CN) Market Detected. Using conservative unit detection.
+[PDF_DEBUG] A-Share Global Unit Default: 1.0 (Reason: No explicit '单位:' header found)
+[PDF_DEBUG] Initial Detected Report Type: quarterly (Is Summary: False)
+[PDF_DEBUG] Detected period-end date (Arabic): 2025-09-30
+[PDF_DEBUG] Attempting table-based extraction...
+[PDF_DEBUG] [DEBUG] _parse_tables: PDFPLUMBER_AVAILABLE=True, pdf_path=True
+[PDF_DEBUG] [DEBUG] _parse_tables: Opened 2025-10-30_中国软件2025年第三季度报告.pdf, scan depth: 14/14 pages
+[PDF_DEBUG]   [DEBUG] Processing Table with 9 rows. Top row: ['项目', '本报告期', '本报告期比\n上年同期增\n减变动幅度\n(%)', '年初至报告期末', '年初至报告期末\n比上年同期增减\n变动幅度(%)']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 3 (Score: 60)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 1...
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['营业收入', '955,941,246.58', '2.06', '3,197,807,096.81', '9.50']
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['营业收入', '955,941,246.58', '2.06', '3,197,807,096.81', '9.50']
+[PDF_DEBUG]   [DEBUG] Extracted Value: 3197807096.81 (Raw: 3,197,807,096.81) from Col 3
+[PDF_DEBUG]   [SmartUpdate] Try updating revenue: 3197807096.81 (Label: 营业收入, P-Score: 0, Scale: 1.0)
+[PDF_DEBUG]   [Table Match] revenue_ttm = 3,197,807,097 (Period: 0m, Label: '营业收入')
+[PDF_DEBUG]   [Table Match] net_income_ttm = -104,039,384 (Period: 0m, Label: '归属于上市公司股东的净利润')
+[PDF_DEBUG]   [DEBUG] Processing Table with 4 rows. Top row: ['', '', '百分点', '', '分点']
+[PDF_DEBUG]   [Table Header] Selected Row 1, Column 2 (Score: 80)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 2...
+[PDF_DEBUG]   [DEBUG] Processing Table with 10 rows. Top row: ['非经常性损益项目', '本期金额', '年初至报告期末金额']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 2 (Score: 60)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 1...
+[PDF_DEBUG]   [DEBUG] Processing Table with 4 rows. Top row: ['项目', '涉及金额', '原因']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 2 rows. Top row: ['项目名称', '变动比例（%）', '主要原因']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 2 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 32 rows. Top row: ['应收票据_本报告期末', '-67.41', '主要是期初应收票据到期结算所致。']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 15 rows. Top row: ['所得税费用_年初至报告期末', '259.62', '主要是按税法规定计算当期所得税费用计提较多，且上期处\n置非流动金融资产中电聚信冲回原公允价值变动计提的递\n延所得税负债所致。']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [SmartUpdate] Rejected: Value too small (97.49) for net_income_ttm
+[PDF_DEBUG]   [SmartUpdate] Rejected: Value too small (69.18) for net_income_ttm
+[PDF_DEBUG]   [SmartUpdate] Rejected: Value too small (69.72) for net_income_ttm
+[PDF_DEBUG]   [SmartUpdate] Rejected: Value too small (54.53) for net_income_ttm
+[PDF_DEBUG]   [DEBUG] Processing Table with 5 rows. Top row: ['非经常性损益的净利润_本报\n告期', '', '付力度；同时加强成本费用管控，持续推进降本增效，利润\n同比增加。']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 15 rows. Top row: ['报告期末普通股股东总数', '160,230', '报告期末表决权恢复的优先股股东总数（如有）', None, None, '0', None]
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 15 rows. Top row: ['股东名称', '持有无限售条件流通股的数量', '股份种类及数量', None]
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 23 rows. Top row: ['三、其他提醒事项']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: -100)
+[PDF_DEBUG]   [DEBUG] Processing Table with 32 rows. Top row: ['项目', '2025年9月30日', '2024年12月31日']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 42 rows. Top row: ['其他非流动金融资产', '175,185,312.66', '175,185,312.66']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 31 rows. Top row: ['非流动负债：', None, None]
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 4 rows. Top row: ['项目', '2025年前三季度\n（1-9月）', '2024年前三季度\n（1-9月）']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 60)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 1...
+[PDF_DEBUG]   [SmartUpdate] Try updating revenue: 3197807096.81 (Label: 一、营业总收入, P-Score: 0, Scale: 1.0)
+[PDF_DEBUG]   [SmartUpdate] Rejected: Better value exists (3197807096.81 P: 0)
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['其中：营业收入', '3,197,807,096.81', '2,920,485,935.39']
+[PDF_DEBUG]   [DEBUG] Found '营业收入' row: ['其中：营业收入', '3,197,807,096.81', '2,920,485,935.39']
+[PDF_DEBUG]   [DEBUG] Extracted Value: 3197807096.81 (Raw: 3,197,807,096.81) from Col 1
+[PDF_DEBUG]   [SmartUpdate] Try updating revenue: 3197807096.81 (Label: 其中：营业收入, P-Score: 0, Scale: 1.0)
+[PDF_DEBUG]   [SmartUpdate] Rejected: Better value exists (3197807096.81 P: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 39 rows. Top row: ['已赚保费', '', '']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 24 rows. Top row: ['“-”号填列）', '', '']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [DEBUG] Processing Table with 8 rows. Top row: ['项目', '2025年前三季度\n（1-9月）', '2024年前三季度\n（1-9月）']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 60)
+[PDF_DEBUG]   [DEBUG] Valid Header Found. Scanning rows starting from 1...
+[PDF_DEBUG]   [DEBUG] Processing Table with 40 rows. Top row: ['保户储金及投资款净增加额', '', '']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [Table Match] capex_ttm = 11,700,235 (Period: 0m, Label: '购建固定资产、无形资产和其他长期资产支付的现金')
+[PDF_DEBUG]   [DEBUG] Processing Table with 10 rows. Top row: ['偿还债务支付的现金', '1,741,000,000.00', '1,794,070,291.46']
+[PDF_DEBUG]   [Table Header] Selected Row 0, Column 1 (Score: 0)
+[PDF_DEBUG]   [Table Match] dividends_paid_cashflow = 150,369,485 (Period: 0m, Label: '分配股利、利润或偿付利息支付的现金')
+[PDF_DEBUG] [DEBUG] _parse_tables: Returning data with 12 fields
+[PDF_DEBUG] [DEBUG] table_data keys: ['revenue_ttm', 'revenue_ttm_period', 'revenue_ttm_label', 'net_income_ttm', 'net_income_ttm_period', 'net_income_ttm_label', 'capex_ttm', 'capex_ttm_period', 'capex_ttm_label', 'dividends_paid_cashflow', 'dividends_paid_cashflow_period', 'dividends_paid_cashflow_label']
+[PDF_DEBUG] [DEBUG] table_data revenue: None
+[PDF_DEBUG] ✅ Table extraction successful: 12 fields found
+[PDF_DEBUG] [DEBUG] AFTER Table Extraction: revenue=None
+[PDF_DEBUG]   [total_assets] Found 2 candidates:
+[PDF_DEBUG]     1. 10,071,259,201 (Dist: -280, Scale: 1.0, KW: 总资产, Period: 12m)
+[PDF_DEBUG]     2. 10,071,259,201 (Dist: 200, Scale: 1.0, KW: 资产总计, Period: 0m)
+[PDF_DEBUG]   [total_assets] Selected Best Match: 10071259201.4 (Dist: -280)
+[PDF_DEBUG]   [rd_expense] Found 2 candidates:
+[PDF_DEBUG]     1. -38 (Dist: -151, Scale: 1.0, KW: 研发费用, Period: 9m)
+[PDF_DEBUG]     2. 561,245,084 (Dist: 200, Scale: 1.0, KW: 研发费用, Period: 0m)
+[PDF_DEBUG]   [rd_expense] Selected Best Match: -37.6 (Dist: -151)
+[PDF_DEBUG]   [cash_and_equivalents] Found 29 candidates:
+[PDF_DEBUG]     1. 3,453,048,593 (Dist: -160, Scale: 1.0, KW: 现金, Period: 9m)
+[PDF_DEBUG]     2. 3,453,048,593 (Dist: -142, Scale: 1.0, KW: 现金, Period: 9m)
+[PDF_DEBUG]     3. 4,752,219,484 (Dist: 200, Scale: 1.0, KW: 货币资金, Period: 0m)
+[PDF_DEBUG]     4. 2,040,922,290 (Dist: 200, Scale: 1.0, KW: 现金, Period: 0m)
+[PDF_DEBUG]     5. 1,875,217,852 (Dist: 200, Scale: 1.0, KW: 现金, Period: 0m)
+[PDF_DEBUG]   [cash_and_equivalents] Selected Best Match: 3453048593.35 (Dist: -160)
+[PDF_DEBUG]   [short_term_debt] Found 2 candidates:
+[PDF_DEBUG]     1. 69 (Dist: 86, Scale: 1.0, KW: 短期借款, Period: 3m)
+[PDF_DEBUG]     2. 1,605,909,528 (Dist: 200, Scale: 1.0, KW: 短期借款, Period: 0m)
+[PDF_DEBUG]   [short_term_debt] Selected Best Match: 68.69 (Dist: 86)
+[PDF_DEBUG]   [long_term_debt] Found 4 candidates:
+[PDF_DEBUG]     1. -100 (Dist: 87, Scale: 1.0, KW: 长期借款, Period: 3m)
+[PDF_DEBUG]     2. 46 (Dist: 101, Scale: 1.0, KW: 长期借款, Period: 3m)
+[PDF_DEBUG]     3. 55,000,000 (Dist: 200, Scale: 1.0, KW: 长期借款, Period: 0m)
+[PDF_DEBUG]     4. 27,600,000 (Dist: 200, Scale: 1.0, KW: 长期应付款, Period: 0m)
+[PDF_DEBUG]   [long_term_debt] Selected Best Match: -100.0 (Dist: 87)
+[PDF_DEBUG] [DEBUG] BEFORE Validation: rev=3197807096.81, np=-104039383.74
+[PDF_DEBUG] [DEBUG] AFTER Validation: rev=3197807096.81
+----------------------------------------
+Report Date: 2025-09-30
+Revenue: 3197807096.81 (Raw: 3197807096.81)
+Net Income: None (Raw: -104039383.74)
+Total Assets: 10071259201.4
+----------------------------------------
