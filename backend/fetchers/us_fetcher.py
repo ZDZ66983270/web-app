@@ -9,7 +9,7 @@ try:
 except ImportError:
     SEC_AVAILABLE = False
 
-def fetch_us_xbrl_data(symbol: str, base_dir: str = "sec-edgar-filings"):
+def fetch_us_xbrl_data(symbol: str, base_dir: str = "sec-edgar-filings", mode: str = 'inc'):
     """
     Download and parse US 10-K and 10-Q filings for a symbol.
     Returns: List[Dict] matching FinancialFundamentals schema.
@@ -25,9 +25,13 @@ def fetch_us_xbrl_data(symbol: str, base_dir: str = "sec-edgar-filings"):
     try:
         # Use a generic user agent as required by SEC
         dl = Downloader("VERA-AI", "admin@vera.com", base_dir)
-        # Download last 10 10-Ks and 20 10-Qs to get decent history
-        dl.get("10-K", ticker, limit=10)
-        dl.get("10-Q", ticker, limit=20)
+        # Determine limits based on mode
+        limit_k = 1 if mode == 'inc' else 10
+        limit_q = 2 if mode == 'inc' else 20
+        
+        # Download 10-Ks and 10-Qs
+        dl.get("10-K", ticker, limit=limit_k)
+        dl.get("10-Q", ticker, limit=limit_q)
     except Exception as e:
         print(f"   [US] Download failed: {e}")
         return []

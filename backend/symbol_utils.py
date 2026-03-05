@@ -205,6 +205,13 @@ def get_canonical_id(symbol: str, market: str, asset_type: str = 'STOCK') -> tup
         ('BTC', 'CRYPTO', 'CRYPTO') -> ('US:CRYPTO:BTC-USD', 'US')
     """
     symbol = symbol.strip().upper()
+    
+    # Check if already a Canonical ID to avoid double-prefixing
+    if ":" in symbol:
+        parts = symbol.split(':')
+        if len(parts) >= 3:
+            return symbol, parts[0] # Return as-is and detected market
+            
     market = market.upper()
     asset_type = asset_type.upper() if asset_type else 'STOCK'
 
@@ -214,7 +221,6 @@ def get_canonical_id(symbol: str, market: str, asset_type: str = 'STOCK') -> tup
         asset_type = 'CRYPTO'
         # Ensure -USD suffix for consistency
         if not symbol.endswith('-USD'):
-            # Remove any existing -BTC or similar if it's there? No, just add -USD if missing
             symbol = f"{symbol}-USD"
         canonical_id = f"{market}:{asset_type}:{symbol}"
         return canonical_id, market
@@ -226,7 +232,6 @@ def get_canonical_id(symbol: str, market: str, asset_type: str = 'STOCK') -> tup
         symbol = symbol.replace('.HK', '')
     
     # Strip '^' from indices to ensure DJI and ^DJI map to the same ID
-    # This also handles cases where user provides ^HSI instead of HSI
     symbol = symbol.replace('^', '')
     
     # Standardize numeric symbols

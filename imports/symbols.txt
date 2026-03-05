@@ -46,9 +46,11 @@ SPX
 09988
 03690
 03968
+06030
 
 # === 港股 ETF (HK ETFs) ===
 02800
+02828
 03033
 03110
 03437
@@ -67,7 +69,7 @@ TSLA
 TSM
 MU
 INTC
-
+PLTR
 
 # === 美股 ETF (US ETFs) ===
 TLT
@@ -92,6 +94,13 @@ XLRE
 XLU
 XLV
 XLY
+ACWV
+AIQ
+GLD
+JEPI
+NLR
+PAVE
+XME
 
 # === 加密货币 (Crypto) ===
 BTC

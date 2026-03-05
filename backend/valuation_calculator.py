@@ -72,6 +72,8 @@ from datetime import datetime, timedelta
 logger = logging.getLogger("ValuationCalculator")
 
 
+_FX_SERIES_CACHE = {} # { (from, to): [(date, rate), ...] }
+
 def get_dynamic_fx_rate(
     session: Session,
     from_curr: str,
@@ -83,38 +85,56 @@ def get_dynamic_fx_rate(
     """
     if from_curr == to_curr:
         return 1.0
-        
-    # 1. Try DB (ForexRate)
-    # Search for rate on 'date' or closest previous date
-    stmt = select(ForexRate).where(
-        ForexRate.from_currency == from_curr,
-        ForexRate.to_currency == to_curr,
-        ForexRate.date <= date
-    ).order_by(ForexRate.date.desc()).limit(1)
+
+    pair = (from_curr, to_curr)
     
-    rate_rec = session.exec(stmt).first()
-    if rate_rec:
-         # TODO: Check if rate is too old? (e.g. > 30 days)
-         return rate_rec.rate
+    # 1. Check if we have pre-loaded this series
+    if pair not in _FX_SERIES_CACHE:
+        # Load all records for this pair from DB once
+        stmt = select(ForexRate).where(
+            ForexRate.from_currency == from_curr,
+            ForexRate.to_currency == to_curr
+        ).order_by(ForexRate.date.asc())
+        
+        recs = session.exec(stmt).all()
+        if recs:
+            _FX_SERIES_CACHE[pair] = [(r.date, r.rate) for r in recs]
+        else:
+            # Try reverse lookup if forward fails
+            rev_pair = (to_curr, from_curr)
+            stmt_rev = select(ForexRate).where(
+                ForexRate.from_currency == to_curr,
+                ForexRate.to_currency == from_curr
+            ).order_by(ForexRate.date.asc())
+            
+            recs_rev = session.exec(stmt_rev).all()
+            if recs_rev:
+                _FX_SERIES_CACHE[pair] = [(r.date, 1.0 / r.rate) for r in recs_rev]
+            else:
+                # Still nothing? Mark as None to avoid repeated DB hits
+                _FX_SERIES_CACHE[pair] = None
 
-    # Reverse lookup? 
-    stmt_rev = select(ForexRate).where(
-        ForexRate.from_currency == to_curr,
-        ForexRate.to_currency == from_curr,
-        ForexRate.date <= date
-    ).order_by(ForexRate.date.desc()).limit(1)
-    rate_rec_rev = session.exec(stmt_rev).first()
-    if rate_rec_rev:
-        return 1.0 / rate_rec_rev.rate
+    # 2. Use memory cache if available
+    series = _FX_SERIES_CACHE.get(pair)
+    if series:
+        import bisect
+        # series is sorted by date. Find latest rate where rate_date <= date
+        # bisect_right returns the place where 'date' would be inserted to the right of existing equal elements
+        idx = bisect.bisect_right(series, (date, float('inf')))
+        if idx > 0:
+            return series[idx-1][1]
+        else:
+            # Date is before first available record, use the first one
+            return series[0][1]
 
-    # 2. Fallback to Static
+    # 3. Fallback to Static
     pair1 = f"{to_curr}/{from_curr}"
     pair2 = f"{from_curr}/{to_curr}"
     
     if pair1 in FOREX_RATES: return 1.0 / FOREX_RATES[pair1]
     if pair2 in FOREX_RATES: return FOREX_RATES[pair2]
     
-    logger.warning(f"  ⚠️ 缺失汇率: {from_curr}->{to_curr} on {date}, defaulting to 1.0 (RISK)")
+    # logger.warning(f"  ⚠️ 缺失汇率: {from_curr}->{to_curr} on {date}, defaulting to 1.0 (RISK)")
     return 1.0
 
 def compute_ttm_eps_per_unit(

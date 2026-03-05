@@ -686,9 +686,20 @@ class DataFetcher:
                     for _, row in df.iterrows():
                         date_val = row.get('时间')
                         if isinstance(date_val, (datetime, pd.Timestamp)):
-                            date_str = date_val.strftime('%Y-%m-%d %H:%M:%S')
+                            ts = date_val
                         else:
-                            date_str = str(date_val)
+                            ts = pd.to_datetime(date_val)
+                        
+                        if pd.isna(ts): continue
+
+                        # Normalization (Unify with process_raw_data_optimized.py)
+                        if ts.hour == 0 and ts.minute == 0:
+                            if market == 'CN':
+                                ts = ts.replace(hour=15)
+                            else: # HK, US
+                                ts = ts.replace(hour=16)
+                        
+                        date_str = ts.strftime('%Y-%m-%d %H:%M:%S')
                         
                         try:
                             close_p = float(row.get('收盘', row.get('close', 0)))

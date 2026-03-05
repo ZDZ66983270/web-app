@@ -1,9 +1,40 @@
 #!/usr/bin/env python3
 """
-PE 回填脚本 - 最终优化版
-- 预加载财报数据
-- 缓存股本数据
-- 正确的 TTM 和汇率计算
+PE 历史回填脚本 - 最终优化版 (backfill_valuation_history.py)
+==============================================================================
+
+功能说明:
+本脚本为 `MarketDataDaily` 表中所有 STOCK 类资产的历史日线记录，
+批量回填 `pe` (静态市盈率) 和 `eps` (每股收益) 字段。
+
+适用场景:
+- 在系统初始化后，历史行情数据已存在但 PE/EPS 尚未计算时执行一次全量回填。
+- 在财报数据更新后（如新增季报）重跑，修正历史 PE 数据。
+
+核心算法:
+1. **批量预加载 (Pre-fetch)**: 一次性从 DB 加载所有目标 symbols 的财报数据到内存，
+   避免逐行查询造成的 N+1 SQL 性能瓶颈。
+2. **股本缓存 (Shares Cache)**: 使用全局字典 `SHARES_CACHE` 缓存股本数据，
+   避免对同一标的重复调用 API 或数据库。
+3. **TTM 净利润推导**: 调用 `valuation_calculator.get_ttm_net_income`，
+   基于对应日期之前最近 4 个季度财报的净利润，计算 TTM (Trailing Twelve Months) 净利润。
+4. **汇率对齐**: 通过 `compute_ttm_eps_per_unit` 自动处理财报货币 → 市价货币的换算，
+   并支持 ADR 证券的股本调整（如 TSMC 的 5:1 ADS 比率）。
+5. **分批提交 (Batch Commit)**: 每 100 条记录提交一次，含数据库锁重试机制（最多 3 次）。
+
+PE 计算公式:
+EPS = TTM净利润 / 股本 / (ADR比例) × 汇率修正
+PE  = 收盘价 / EPS
+
+使用方法:
+    python3 backfill_valuation_history.py
+
+前置条件:
+- `FinancialFundamentals` 表中已有财报数据 (来自 fetch_financials.py)。
+- `MarketDataDaily` 表中已有历史行情 (来自 process_raw_data_optimized.py)。
+
+作者: Antigravity
+日期: 2026-01-23
 """
 import sys
 import time
@@ -12,16 +43,14 @@ from sqlmodel import Session, select
 import logging
 from collections import defaultdict
 
-# 添加后端路径
-sys.path.append('backend')
-from database import engine
-from models import MarketDataDaily, Watchlist, FinancialFundamentals
-from valuation_calculator import (
+from backend.database import engine
+from backend.models import MarketDataDaily, Watchlist, FinancialFundamentals
+from backend.valuation_calculator import (
     get_ttm_net_income, 
     compute_ttm_eps_per_unit,
     get_shares_outstanding
 )
-from symbols_config import SYMBOLS_CONFIG, normalize_code
+from backend.symbols_config import SYMBOLS_CONFIG, normalize_code
 
 # 配置日志
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

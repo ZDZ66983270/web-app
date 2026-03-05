@@ -1,7 +1,38 @@
 """
-ETL脚本：从历史数据仓库(MarketDataDaily)提取最新数据，填充到生产快照(MarketSnapshot)
-- 计算涨跌幅（基于前一日收盘价）
-- 数据验证和清洗
+ETL 快照同步脚本 (MarketDataDaily → MarketSnapshot)
+==============================================================================
+
+功能说明:
+本脚本是 VERA 系统 ETL 流程的**最终同步步骤**，负责将历史日线库的最新值
+提取并写入前端实时看板所依赖的 `MarketSnapshot` 快照表。
+
+核心逻辑:
+1. **遍历全部唯一标的**: 从 `MarketDataDaily` 表中取出所有不重复的 (symbol, market) 组合。
+2. **取最新日线记录**: 对每个标的，取 timestamp 最新一条日线数据。
+3. **计算涨跌幅**:
+   - 优先从 `MarketDataDaily` 中取前一交易日的收盘价计算 change / pct_change。
+   - 若无前一日数据，则使用记录自身已存的 change/pct_change 字段作为备用。
+4. **UPSERT 到 MarketSnapshot**:
+   - 若该标的已有快照 → UPDATE
+   - 若无快照 → INSERT
+
+数据流:
+RawMarketData → [process_raw_data_optimized.py] → MarketDataDaily → [本脚本] → MarketSnapshot
+
+字段说明:
+- MarketSnapshot.price = MarketDataDaily.close (最新收盘价)
+- MarketSnapshot.pe 字段: 优先使用日线表中的 pe；若缺失但有 eps，则本地通过 close/eps 计算。
+- MarketSnapshot.data_source = 'etl' (区分于 realtime API 写入的快照)
+
+使用方法:
+    python3 run_etl.py
+
+注意:
+- 本脚本不下载任何新数据，仅是数据库内部的表间同步。
+- 应在 `process_raw_data_optimized.py` 之后运行，以确保 MarketDataDaily 已是最新。
+
+作者: Antigravity
+日期: 2026-01-23
 """
 import sys
 sys.path.insert(0, 'backend')

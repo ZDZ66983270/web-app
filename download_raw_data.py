@@ -77,7 +77,19 @@ def save_raw_data_to_db(df: pd.DataFrame, symbol: str, market: str) -> int:
             low_val = get_val(['最低', 'low', 'Low'], default=close_val)
 
             try:
-                date_value = str(row.get('时间', row.get('date', row.get('Date', ''))))
+                date_val = row.get('时间', row.get('date', row.get('Date', '')))
+                ts = pd.to_datetime(date_val)
+                if pd.isna(ts): continue
+                
+                # Normalization (Unify with process_raw_data_optimized.py)
+                if ts.hour == 0 and ts.minute == 0:
+                    if market == 'CN':
+                        ts = ts.replace(hour=15)
+                    else: # HK, US
+                        ts = ts.replace(hour=16)
+                
+                date_value = ts.strftime('%Y-%m-%d %H:%M:%S')
+                
                 if not date_value or date_value in existing_days:
                     continue
                 
@@ -109,13 +121,25 @@ print("\n📊 第一步：下载指数历史数据")
 print("-" * 70)
 
 indices = get_all_indices()
+# Convert to Canonical IDs to avoid symbols like ^DJI entering the database
+from backend.symbol_utils import get_canonical_id
+canonical_indices = []
+for s in indices:
+    info = get_symbol_info(s)
+    market = info.get("market", "US")
+    asset_type = info.get("type", "INDEX").upper()
+    cid, _ = get_canonical_id(s, market, asset_type)
+    canonical_indices.append(cid)
+
+indices = list(set(canonical_indices)) # Deduplicate e.g. DJI and ^DJI
 print(f"共 {len(indices)} 个指数\n")
 
 for idx, symbol in enumerate(indices, 1):
     try:
         info = get_symbol_info(symbol)
         name = info.get("name", symbol)
-        market = info.get("market", "US")
+        # Use parts of cid if available
+        market = symbol.split(':')[0] if ':' in symbol else info.get("market", "US")
         
         # --- 增量下载决策 (Pre-check) ---
         db_count, min_ts, max_ts = get_db_data_info(symbol, market)

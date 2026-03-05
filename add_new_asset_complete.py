@@ -1,7 +1,39 @@
 #!/usr/bin/env python3
 """
-一键式个股管理程序 (Add New Asset Orchestrator)
-用法: python3 add_new_asset_complete.py --symbol 00700.HK --name 腾讯控股 --market HK
+一键新增资产全流程编排器 (Add New Asset Complete Orchestrator)
+==============================================================================
+
+功能说明:
+本脚本是向 VERA 系统新增资产的**端到端自动化流水线**。输入一个或多个标的后，
+自动按序执行从注册、下载到导出的完整初始化流程。
+
+执行步骤 (Pipeline Steps):
+1. **Watchlist 注册**: 将新标的插入 `Watchlist` 表（若已存在则跳过）。
+2. **财报下载**: 调用 `fetch_financials.py` 拉取该标的的财务报表。
+3. **行情同步**: 调用 `download_raw_data.py` 下载指定年限的历史 OHLCV 数据。
+4. **指标计算 & ETL**:
+   - 调用 `backend/advanced_metrics.py` 计算高级指标 (PE, EPS 等)。
+   - 调用 `run_etl.py` 将最新日线同步到快照表 (MarketSnapshot)。
+5. **CSV 导出**: 将财报历史 (financial_history.csv) 和日线数据 (market_daily.csv)
+   导出至 `outputs/` 目录，供离线分析使用。
+
+参数:
+--symbols    股票代码列表，逗号分隔（如 "09988.HK,NVDA"）
+--names      股票名称列表，逗号分隔（可选，与 symbols 一一对应）
+--market     强制指定市场 (CN / HK / US)，不指定则自动推断
+--history_years  行情历史深度，默认 10 年
+
+市场自动推断规则:
+- 以 `.HK` 结尾 或 数字且 <= 5 位 → HK
+- 以 `.SH` / `.SZ` 结尾 或 6 位数字 → CN
+- 其他 → US
+
+使用示例:
+    python3 add_new_asset_complete.py --symbols 09988.HK,NVDA --names 阿里巴巴,英伟达
+    python3 add_new_asset_complete.py --symbols 600519.SH --market CN
+
+作者: Antigravity
+日期: 2026-01-23
 """
 import sys
 import os

@@ -34,24 +34,18 @@ def normalize_symbol_db(symbol: str, market: str) -> str:
     if not symbol:
         return symbol
     
-    symbol = symbol.upper().strip()
+    # Use the robust get_canonical_id logic to return a full Canonical ID
+    from symbol_utils import get_canonical_id
     
-    # ✅ 应用别名映射（防止重复数据）
-    from symbols_config import get_canonical_symbol
-    symbol = get_canonical_symbol(symbol)
+    # Guess asset type if not provided
+    asset_type = 'STOCK'
+    if symbol.startswith('^') or symbol in ['DJI', 'SPX', 'NDX', 'HSI', 'HSTECH', 'HSCE', 'HSCC']:
+        asset_type = 'INDEX'
+    elif '.SS' in symbol or '.SZ' in symbol:
+        if symbol.startswith(('5', '1')): asset_type = 'ETF'
     
-    if market == 'US':
-        # Remove common US exchange suffixes
-        for suffix in ['.OQ', '.N', '.K', '.O', '.AM']:
-            if symbol.endswith(suffix):
-                return symbol.replace(suffix, '')
-        
-        # Generic split if dot exists
-        if '.' in symbol:
-            return symbol.split('.')[0]
-    
-    # HK/CN: Keep suffix
-    return symbol
+    canonical_id, _ = get_canonical_id(symbol, market, asset_type)
+    return canonical_id
 
 
 def to_akshare_us_symbol(symbol: str, for_minute: bool = False) -> str:

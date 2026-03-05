@@ -1,5 +1,39 @@
+"""
+外汇汇率历史数据获取脚本 (fetch_forex_rates.py)
+==============================================================================
 
-import sys
+功能说明:
+本脚本通过 Yahoo Finance (`yfinance`) 下载 USD/CNY 和 USD/HKD 的历史汇率数据，
+并写入数据库 `ForexRate` 表，为系统内多市场估值计算提供汇率支撑。
+
+背景 (为何需要汇率数据):
+VERA 系统同时持有 HK / CN / US 三地资产，财报货币可能与市价货币不一致，典型场景：
+- 港股 H 股: 股价为 HKD，但财报可能以 CNY 计（如 601919 中远海控 H 股）。
+- 美股 ADR: 股价为 USD，但基础财报可能是 CNY（如 BABA / PDD 等）。
+汇率数据使系统能在计算 PE / PB 时进行精确的跨币种调整。
+
+存储数据对 (Canonical Pairs):
+- USD → CNY: Yahoo 符号 `CNY=X`（返回值为每 1 USD 兑换多少 CNY）
+- USD → HKD: Yahoo 符号 `HKD=X`（返回值为每 1 USD 兑换多少 HKD）
+
+Upsert 逻辑:
+- 对每个 (date, from_currency, to_currency) 三元组执行 UPSERT。
+- 若已存在则更新 rate 和 updated_at；若不存在则插入新记录。
+
+默认历史深度: 5 年 (1826 天)
+
+依赖:
+- `backend.models.ForexRate`: 汇率存储模型
+- `backend.database.engine`: 数据库连接
+
+使用方法:
+    python3 fetch_forex_rates.py
+
+作者: Antigravity
+日期: 2026-01-23
+"""
+
+
 import os
 import logging
 from datetime import datetime, timedelta

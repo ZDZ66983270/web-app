@@ -3,7 +3,7 @@ import requests
 import logging
 import datetime
 
-def fetch_cn_pdf(symbol: str, save_dir: str):
+def fetch_cn_pdf(symbol: str, save_dir: str, mode: str = 'inc'):
     """
     Unified Fetcher for CN (A-Share) and HK (Hong Kong) reports from CNINFO.
     symbol: e.g. 'CN:STOCK:600309' or 'HK:STOCK:00700'
@@ -42,9 +42,12 @@ def fetch_cn_pdf(symbol: str, save_dir: str):
     sec_name_resolved = None
     count = 0
     # 1. Fetch multiple pages without restrictive categories for maximum robustness
-    # Rolling 10-year window (default). Use YYYY-MM-DD string for comparisons.
-    ten_years_ago = datetime.date.today().replace(year=datetime.date.today().year - 10)
-    cutoff_date = ten_years_ago.strftime("%Y-%m-%d")
+    if mode == 'inc':
+        # Incremental mode: Look back 2 years
+        cutoff_date = datetime.date.today().replace(year=datetime.date.today().year - 2).strftime("%Y-%m-%d")
+    else:
+        # Full mode: Look back 10 years
+        cutoff_date = datetime.date.today().replace(year=datetime.date.today().year - 10).strftime("%Y-%m-%d")
     
     earliest_seen = None
     for page in range(1, 101): 

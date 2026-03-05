@@ -595,7 +595,7 @@ if __name__ == "__main__":
     
     # 1. Configuration
     target_full = args.full
-    if not target_market and not target_symbol:
+    if not target_market and not target_symbol and not args.full:
         cfg = configure()
         target_market = list(cfg.selected_markets)
         target_types = list(cfg.selected_types)

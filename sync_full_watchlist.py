@@ -1,6 +1,34 @@
 #!/usr/bin/env python3
 """
-完整同步脚本 - 根据最新清单更新关注列表和指数表
+Watchlist & Index 全量同步脚本 (硬编码目标清单版)
+==============================================================================
+
+功能说明:
+本脚本以**硬编码方式**定义了 VERA 系统的完整监控资产清单，并通过"清空+重建"
+的全量同步策略，将 `Watchlist` 和 `Index` 两张表与预定义清单保持一致。
+
+与 manage_data.py 的关系:
+- `manage_data.py` → 从文件 (`imports/symbols.txt`) 动态读取，支持灵活增删。
+- 本脚本 → 直接硬编码在代码中，架构更稳定，适合在代码层面版本化管理资产配置。
+
+资产清单说明:
+- WATCHLIST_TARGETS: 港股 / 美股 / A股 的个股 + 各类 ETF（共约 60 个标的）。
+- INDEX_TARGETS: HK / US / CN 三地核心指数（共 11 个），存入独立的 Index 表。
+
+同步策略 (Full Replace):
+1. 对比 (文件清单 vs 数据库)，打印新增数量。
+2. 执行 DELETE + INSERT，完全重建两表。
+   - ⚠️ 注意: 这一策略会删除所有行但历史行情数据不受影响（仅配置表被清空）。
+
+返回值:
+new_stocks: 本次新增的 Watchlist 标的列表 (用于调用方触发数据同步)
+new_indices: 本次新增的 Index 标的列表
+
+使用方法:
+    python3 sync_full_watchlist.py
+
+作者: Antigravity
+日期: 2026-01-23
 """
 import sys
 import os

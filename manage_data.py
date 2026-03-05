@@ -1,7 +1,47 @@
 #!/usr/bin/env python3
 """
-数据管理工具 - 交互式清理和导入
-允许用户选择性清理数据和导入配置
+Data Management Console - 数据管理中枢 (交互式清理 / 导入 / 同步)
+==============================================================================
+
+功能说明:
+本脚本是 VERA 系统的**运维控制台**，提供对核心数据库表的增删改同步操作，
+是系统初始化、重置和维护的主要入口。通过一个交互式菜单统一管理以下功能：
+
+操作项:
+1. **清除行情数据** (rawmarketdata / marketdatadaily / marketsnapshot)
+   - 全量清空行情相关三表。用于重置下载或修复数据问题。
+
+2. **清除财务数据** (financialfundamentals / dividendfact / splitfact)
+   - 全量清空财报及企业行为数据。
+
+3. **清除监控列表** (watchlist)
+   - ⚠️ 危险操作: 需要二次 'yes' 确认。
+
+4. **从 symbols.txt 重新导入** (Force Re-import)
+   - 先清空 watchlist，再从 `imports/symbols.txt` 全量解析导入。
+   - 解析规则: 行级注释 `#` 定义 `市场/类型` 分组（如 `# CN Stocks`），
+     后续非空行即为该组资产的代码。
+
+5. **同步监控列表 (Smart Sync)** ⭐ 推荐
+   - 增量对比: 计算 (文件 vs 数据库) 的新增 / 待移除 delta。
+   - 新增和移除均有单独的交互确认步骤，安全可控。
+
+6. **全量财务补全与估值重算** (Full Backfill & Repair)
+   - 依序调用: fetch_financials.py (HK -> US -> CN) + 估值重算脚本。
+   - 包含限流等待（避免 Yahoo 频率限制）。
+
+文件依赖:
+- `imports/symbols.txt`: 监控资产清单文件
+- `backend/database.db`: 主 SQLite 数据库
+- `fetch_financials.py`: 财报获取脚本 (被 run_full_backfill 调用)
+
+注意事项:
+- 清除操作无法撤销，请谨慎执行。
+- `Smart Sync` (5号) 比 `Force Re-import` (4号) 更安全，优先使用。
+- 行情数据清除后需重新运行 `download_full_history.py` → `process_raw_data_optimized.py`。
+
+作者: Antigravity
+日期: 2026-01-23
 """
 
 import sys

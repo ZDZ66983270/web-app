@@ -186,52 +186,104 @@ class PDFFinancialParser:
         # 1. Global Unit Detection
         global_unit = 1.0
         header_text = self.text_content[:20000] # Use a larger window for header search
-        
+
         # Determine Market Context
         is_cn_market = False
+        is_hk_market = False
         if self.asset_id and "CN:STOCK" in self.asset_id:
-             is_cn_market = True
-             self.log("[DEBUG] A-Share (CN) Market Detected. Using conservative unit detection.")
+            is_cn_market = True
+            self.log("[DEBUG] A-Share (CN) Market Detected. Using conservative unit detection.")
+        elif self.asset_id and "HK:STOCK" in self.asset_id:
+            is_hk_market = True
+            self.log("[DEBUG] HK Market Detected. Using strict HK unit detection to avoid '億' false positives.")
 
-        # Enhanced unit detection: Search for EXPLICIT patterns like "单位：人民币xxx" or "Unit: HK$'000"
-        # Capture BOTH Currency (Group 1) and Unit (Group 2)
-        unit_match = re.search(r'(?:单位|單位|Unit|Currency|金額)[:：]\s*(人民币|人民幣|港元|港幣|USD|HKD|CNY)?\s*(百万元|百萬元|亿元|億元|万元|萬元|million|billion|thousand|\'000|mn|k)', header_text[:5000], re.IGNORECASE)
-        
+        # ── HK MARKET: Explicit unit scan FIRST ────────────────────────────────
+        # HK financial reports use "千港元" (thousands of HKD) or "百萬港元" (millions of HKD)
+        # The body text contains many occurrences of "億" (billions) in narrative descriptions,
+        # which would incorrectly set global_unit=1e8 if we use keyword fallback.
+        # We MUST detect the declared accounting unit from table headers / footnotes.
         explicitly_found = False
         detected_cur = None
-        
-        if unit_match:
-            cur_str = unit_match.group(1)
-            u_str = unit_match.group(2).lower()
-            
-            # Resolve Currency
-            if cur_str:
-                if any(x in cur_str for x in ["人民币", "人民幣", "CNY"]): detected_cur = "CNY"
-                elif any(x in cur_str for x in ["港元", "港幣", "HKD"]): detected_cur = "HKD"
-                elif any(x in cur_str for x in ["USD", "美元"]): detected_cur = "USD"
-                if detected_cur:
-                    self.log(f"Detected Currency from header: {detected_cur} (Raw: {cur_str})")
-            
-            if u_str in ["百万元", "百萬元", "million", "mn"]:
-                global_unit = 1_000_000
-                self.log(f"Detected Global Unit from header: Millions ({u_str})")
-                explicitly_found = True
-            elif u_str in ["亿元", "億元", "billion", "bn"]:
-                global_unit = 100_000_000
-                self.log(f"Detected Global Unit from header: 100M/亿 ({u_str})")
-                explicitly_found = True
-            elif u_str in ["万元", "萬元"]:
-                global_unit = 10_000
-                self.log(f"Detected Global Unit from header: 10k/万 ({u_str})")
-                explicitly_found = True
-            elif u_str in ["thousand", "'000", "k"]:
+
+        if is_hk_market and not explicitly_found:
+            # Pattern 1: "港元千元" / "千港元" / "HK$'000" / "HK$ thousands" / "以千港元列示"
+            hk_unit_patterns = [
+                # Thousands patterns (most common for HK mid/large caps)
+                (r'(?:以|按|港幣|港元|HK\$)\s*(?:千|千元|千港元|\'000|thousands?)', 1_000),
+                (r'千港元', 1_000),
+                (r"HK\$\s*'?000", 1_000),
+                (r'港元千', 1_000),
+                (r'HKD\s*thousand', 1_000),
+                # Millions patterns
+                (r'(?:以|按|港幣|港元|HK\$)\s*(?:百萬|百万|million)', 1_000_000),
+                (r'百萬港元', 1_000_000),
+                (r'HK\$\s*million', 1_000_000),
+                # RMB thousands (some listed HK co. report in RMB thousands)
+                (r'人民幣\s*千元', 1_000),
+                (r'RMB\s*thousand', 1_000),
+                (r'人民幣\s*百萬', 1_000_000),
+            ]
+            for pattern, unit_val in hk_unit_patterns:
+                if re.search(pattern, header_text[:10000], re.IGNORECASE):
+                    global_unit = unit_val
+                    explicitly_found = True
+                    self.log(f"[HK] Detected unit from explicit HK pattern '{pattern}': {unit_val}")
+                    break
+
+            if not explicitly_found:
+                # Default HK fallback: 千港元 (thousands) is by far the most common
+                # HK Listing Rules require financial statements in HKD; Large caps use '000
                 global_unit = 1_000
-                self.log(f"Detected Global Unit from header: Thousand ({u_str})")
-                explicitly_found = True
-        
-        # Conservative Fallback: Only enable keyword guessing if NOT A-share
-        if not explicitly_found and not is_cn_market:
-            # Quick keyword fallback
+                self.log("[HK] No explicit unit declaration found. Defaulting to 千港元 (×1,000). "
+                         "This is the standard for HK annual/interim reports.")
+                explicitly_found = True  # Mark as resolved so we skip the dangerous fallback below
+
+        # ── Enhanced unit detection: explicit header patterns (non-HK) ──────────
+        # Search for EXPLICIT patterns like "单位：人民币xxx" or "Unit: HK$'000"
+        # Capture BOTH Currency (Group 1) and Unit (Group 2)
+        if not explicitly_found:
+            unit_match = re.search(
+                r'(?:单位|單位|Unit|Currency|金額)[:：]\s*'
+                r'(人民币|人民幣|港元|港幣|USD|HKD|CNY)?\s*'
+                r"(百万元|百萬元|亿元|億元|万元|萬元|million|billion|thousand|'000|mn|k)",
+                header_text[:5000], re.IGNORECASE
+            )
+
+            if unit_match:
+                cur_str = unit_match.group(1)
+                u_str = unit_match.group(2).lower()
+
+                # Resolve Currency
+                if cur_str:
+                    if any(x in cur_str for x in ["人民币", "人民幣", "CNY"]): detected_cur = "CNY"
+                    elif any(x in cur_str for x in ["港元", "港幣", "HKD"]): detected_cur = "HKD"
+                    elif any(x in cur_str for x in ["USD", "美元"]): detected_cur = "USD"
+                    if detected_cur:
+                        self.log(f"Detected Currency from header: {detected_cur} (Raw: {cur_str})")
+
+                if u_str in ["百万元", "百萬元", "million", "mn"]:
+                    global_unit = 1_000_000
+                    self.log(f"Detected Global Unit from header: Millions ({u_str})")
+                    explicitly_found = True
+                elif u_str in ["亿元", "億元", "billion", "bn"]:
+                    global_unit = 100_000_000
+                    self.log(f"Detected Global Unit from header: 100M/亿 ({u_str})")
+                    explicitly_found = True
+                elif u_str in ["万元", "萬元"]:
+                    global_unit = 10_000
+                    self.log(f"Detected Global Unit from header: 10k/万 ({u_str})")
+                    explicitly_found = True
+                elif u_str in ["thousand", "'000", "k"]:
+                    global_unit = 1_000
+                    self.log(f"Detected Global Unit from header: Thousand ({u_str})")
+                    explicitly_found = True
+
+        # ── Conservative Fallback: Only for non-CN, non-HK markets ─────────────
+        # IMPORTANT: HK market MUST NOT use this fallback — '億' appears constantly
+        # in HK report narrative text (e.g., '本集团实现收入XX亿元人民币') and would
+        # incorrectly set global_unit = 1e8 when the actual accounting unit is 千港元.
+        if not explicitly_found and not is_cn_market and not is_hk_market:
+            # Quick keyword fallback for other markets (e.g., US ADR proxy reports)
             if any(x in header_text for x in ["百万元", "百萬元", "million", "百萬"]):
                 global_unit = 1_000_000
                 self.log("Detected Global Unit by keyword: Millions")
@@ -242,8 +294,8 @@ class PDFFinancialParser:
                 global_unit = 1_000
                 self.log("Detected Global Unit by keyword: Thousand")
         elif not explicitly_found and is_cn_market:
-             self.log("A-Share Global Unit Default: 1.0 (Reason: No explicit '单位:' header found)")
-        
+            self.log("A-Share Global Unit Default: 1.0 (Reason: No explicit '单位:' header found)")
+
         self.global_unit = global_unit
         
         # 1.5 Report Type Detection

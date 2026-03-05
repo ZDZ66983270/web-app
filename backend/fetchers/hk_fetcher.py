@@ -7,7 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 
-def fetch_hk_pdf(symbol: str, save_dir: str):
+def fetch_hk_pdf(symbol: str, save_dir: str, mode: str = 'inc'):
     """
     Fetch HK annual reports PDFs from HKEX using Selenium.
     symbol: e.g. '00700' or 'HK:STOCK:00700'

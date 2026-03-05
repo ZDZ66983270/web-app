@@ -63,9 +63,11 @@ Unified entry point for fetching financial data across US, HK, and CN markets.
 
 import sys
 import os
+import json
 import argparse
 import subprocess
 import importlib.util
+import multiprocessing
 
 def check_and_install_dependencies():
     """
@@ -98,12 +100,37 @@ from backend.models import Watchlist, FinancialFundamentals
 
 # Ensure data directories exist
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/reports")
+PARSED_JSON_PATH = os.path.join(DATA_DIR, "parsed_pdfs.json")
 
 # Import Parser (Lazy import inside function or here? Here is fine)
 # Placeholder, will be imported in main()
 PDFFinancialParser = None
 
-def process_pdf_directory(session, symbol: str, directory: str, filter_keyword: str = None):
+def get_parsed_history():
+    if os.path.exists(PARSED_JSON_PATH):
+        try:
+            with open(PARSED_JSON_PATH, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except:
+            pass
+    return {}
+
+def save_parsed_history(history):
+    os.makedirs(os.path.dirname(PARSED_JSON_PATH), exist_ok=True)
+    with open(PARSED_JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(history, f, indent=2)
+
+def _parse_worker(fpath, symbol, return_dict):
+    try:
+        from backend.parsers.pdf_parser import PDFFinancialParser
+        parser = PDFFinancialParser(pdf_path=fpath, asset_id=symbol)
+        data = parser.parse_financials()
+        return_dict['data'] = data
+        return_dict['is_summary'] = parser.is_summary
+    except Exception as e:
+        return_dict['error'] = str(e)
+
+def process_pdf_directory(session, symbol: str, directory: str, filter_keyword: str = None, parse_mode: str = 'inc'):
     """
     Parse all valid PDFs in the directory for the given symbol.
     """
@@ -134,8 +161,17 @@ def process_pdf_directory(session, symbol: str, directory: str, filter_keyword: 
     
     count = 0
     has_core_metrics = False
+    
+    parsed_history = get_parsed_history()
+    
     for fname in files:
         fpath = os.path.join(directory, fname)
+        file_key = f"{symbol}_{fname}"
+        
+        # Incremental Skip
+        if parse_mode == 'inc' and parsed_history.get(file_key):
+            print(f"          ⏭️  Skipping {fname} (Already successfully parsed in incremental mode)")
+            continue
         
         # Skip Performance Forecasts (Text-based ranges, often empty financials)
         if any(x in fname for x in ["业绩预告", "预盈", "预亏", "Forecast"]):
@@ -143,19 +179,39 @@ def process_pdf_directory(session, symbol: str, directory: str, filter_keyword: 
              continue
 
         try:
-            print(f"        Parsing {fname}...")
-            parser = PDFFinancialParser(pdf_path=fpath, asset_id=symbol)
-            data = parser.parse_financials()
+            print(f"        Parsing {fname} (Timeout: 180s)...")
             
-            if parser.is_summary:
-                print(f"          ⚠️ Skipping {fname} (Summary/Abstract report)")
+            manager = multiprocessing.Manager()
+            return_dict = manager.dict()
+            p = multiprocessing.Process(target=_parse_worker, args=(fpath, symbol, return_dict))
+            p.start()
+            p.join(timeout=180) # 3 minutes timeout to prevent stuck process
+            
+            if p.is_alive():
+                print(f"        ❌ Timeout parsing {fname}, terminating stuck process...")
+                p.terminate()
+                p.join()
                 continue
-            # Map fields: parser key -> DB model key
-            # report_date -> as_of_date
-            # report_type -> report_type
+                
+            if 'error' in return_dict:
+                print(f"        ❌ Parse Error {fname}: {return_dict['error']}")
+                continue
+                
+            data = return_dict.get('data', {})
+            is_summary = return_dict.get('is_summary', False)
+            
+            if is_summary:
+                print(f"          ⚠️ Skipping {fname} (Summary/Abstract report)")
+                # Still mark as parsed so we don't try again
+                parsed_history[file_key] = True
+                save_parsed_history(parsed_history)
+                continue
             
             if not data.get('report_date'):
                 print("          ⚠️ No report date found, skipping.")
+                # Mark as parsed so we don't try again
+                parsed_history[file_key] = True
+                save_parsed_history(parsed_history)
                 continue
             
             # DEBUG: Track revenue for 600309 2023-12-31
@@ -246,8 +302,14 @@ def process_pdf_directory(session, symbol: str, directory: str, filter_keyword: 
                 upsert_financials(session, db_record)
                 session.commit() # Forced commit per record to ensure visibility
                 count += 1
+                parsed_history[file_key] = True
+                save_parsed_history(parsed_history)
             else:
                 print(f"          ⚠️ Skipping {fname} (No core metrics found)")
+                # Mark as parsed to avoid repeated empty attempts
+                parsed_history[file_key] = True
+                save_parsed_history(parsed_history)
+                
             if not has_core_metrics:
                 core_keys = [
                     "revenue_ttm", "net_income_ttm", "total_assets", "total_liabilities",
@@ -256,9 +318,9 @@ def process_pdf_directory(session, symbol: str, directory: str, filter_keyword: 
                 has_core_metrics = any(db_record.get(k) is not None for k in core_keys)
             
         except Exception as e:
-            print(f"        ❌ Parse Error {fname}: {e}")
+            print(f"        ❌ Parse Failed {fname}: {e}")
             
-    print(f"      ✅ Successfully parsed {count} reports.")
+    print(f"      ✅ Successfully processed and extracted data from {count} reports.")
     return {"parsed": count, "has_core_metrics": has_core_metrics}
 
 def upsert_financials(session, data):
@@ -327,10 +389,14 @@ def main():
     parser = argparse.ArgumentParser(description='Unified Financials Fetcher')
     parser.add_argument('--market', type=str, choices=['CN', 'HK', 'US', 'ALL'], help='Market scope')
     parser.add_argument('--symbol', type=str, help='Specific symbol (e.g. US:STOCK:AAPL)')
+    parser.add_argument('--download-mode', type=str, choices=['inc', 'full'], help='Download mode: incremental or full')
+    parser.add_argument('--parse-mode', type=str, choices=['inc', 'full'], help='Parse mode: incremental or full')
     args = parser.parse_args()
     
     target_market = args.market
     target_symbol = args.symbol
+    download_mode = args.download_mode
+    parse_mode = args.parse_mode
 
     # Interactive Mode
     if not target_market and not target_symbol:
@@ -348,7 +414,24 @@ def main():
         elif c == '3': target_market = 'US'
         else: target_market = 'ALL'
 
-    print(f"\n🚀 Starting Fetch (Market: {target_market}, Symbol: {target_symbol or 'ALL'})...")
+        print("\n📥 PDF Download Mode:")
+        print("  1. Incremental (增量) [Default]")
+        print("  2. Full (全量)")
+        dm = input("Choice [1]: ").strip()
+        download_mode = 'full' if dm == '2' else 'inc'
+
+        print("\n🧠 PDF Parse (OCR) Mode:")
+        print("  1. Incremental (增量 - skips already parsed) [Default]")
+        print("  2. Full (全量 - re-parses all downloaded)")
+        pm = input("Choice [1]: ").strip()
+        parse_mode = 'full' if pm == '2' else 'inc'
+    else:
+        # Fallback to defaults if args not provided via CLI but symbol/market was
+        download_mode = download_mode or 'inc'
+        parse_mode = parse_mode or 'inc'
+
+    print(f"\n🚀 Starting Fetch (Market: {target_market}, Symbol: {target_symbol or 'ALL'})")
+    print(f"🔧 Download Mode: {download_mode.upper()} | Parse Mode: {parse_mode.upper()}...")
 
     with Session(engine) as session:
         # Build list of stocks
@@ -373,8 +456,8 @@ def main():
                 # === DISPATCH ===
                 # === MARKET ROUTING STRATEGY ===
                 if stock.market == 'US':
-                    print(f"   [US] Fetching structural data from SEC EDGAR (XBRL)...")
-                    data_list = fetch_us_xbrl_data(stock.symbol)
+                    print(f"   [US] Fetching structural data from SEC EDGAR (XBRL) ({download_mode} mode)...")
+                    data_list = fetch_us_xbrl_data(stock.symbol, mode=download_mode)
                     
                     if not data_list:
                         print("   ⚠️ No XBRL data found. Switching to Legacy Channels (FMP/Yahoo)...")
@@ -390,14 +473,14 @@ def main():
                         print(f"   ✅ Saved {len(data_list)} records to DB (SEC/Legacy).")
 
                 elif stock.market == 'CN':
-                    print(f"   [CN] Fetching PDF reports from CNINFO...")
-                    fetch_cn_pdf(stock.symbol, "data/reports")
+                    print(f"   [CN] Fetching PDF reports from CNINFO ({download_mode} mode)...")
+                    fetch_cn_pdf(stock.symbol, "data/reports", mode=download_mode)
                     
                     pdf_dir = os.path.join("data/reports", "CN", stock.symbol.split(':')[-1])
                     records_parsed = 0
                     parsed_has_core = False
                     if os.path.exists(pdf_dir):
-                        result = process_pdf_directory(session, stock.symbol, pdf_dir)
+                        result = process_pdf_directory(session, stock.symbol, pdf_dir, parse_mode=parse_mode)
                         records_parsed = result.get("parsed", 0)
                         parsed_has_core = result.get("has_core_metrics", False)
                         if records_parsed > 0: session.commit()
@@ -413,8 +496,8 @@ def main():
 
                 elif stock.market == 'HK':
                     # 1. Primary: CNINFO (Faster/Native HTTP)
-                    print(f"   [HK] [Step 1] Fetching PDF from CNINFO mirror...")
-                    fetch_cn_pdf(stock.symbol, "data/reports")
+                    print(f"   [HK] [Step 1] Fetching PDF from CNINFO mirror ({download_mode} mode)...")
+                    fetch_cn_pdf(stock.symbol, "data/reports", mode=download_mode)
                     
                     hk_code = stock.symbol.split(':')[-1]
                     pdf_dir = os.path.join("data/reports", "HK", hk_code)
@@ -422,12 +505,12 @@ def main():
                     # 2. Backup: HKEX (Selenium)
                     if not os.path.exists(pdf_dir) or not os.listdir(pdf_dir):
                         print(f"   [HK] [Step 2] CNINFO mirror empty. Launching HKEX Backup (Selenium)...")
-                        fetch_hk_pdf(stock.symbol, "data/reports")
+                        fetch_hk_pdf(stock.symbol, "data/reports", mode=download_mode)
                     
                     records_parsed = 0
                     parsed_has_core = False
                     if os.path.exists(pdf_dir):
-                        result = process_pdf_directory(session, stock.symbol, pdf_dir)
+                        result = process_pdf_directory(session, stock.symbol, pdf_dir, parse_mode=parse_mode)
                         records_parsed = result.get("parsed", 0)
                         parsed_has_core = result.get("has_core_metrics", False)
                         if records_parsed > 0: session.commit()

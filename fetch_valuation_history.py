@@ -1342,11 +1342,11 @@ def derive_ps_ttm_from_fundamentals(symbol: str, session: Session, days: int = -
 # ==============================================================================
 
 class Config:
-    def __init__(self):
+    def __init__(self, days: int = -1):
         self.markets = {'CN', 'HK', 'US'}
         # Default all selected
         self.selected_markets = self.markets.copy()
-        self.days = -1 # -1 means full history
+        self.days = days # Inherit from CLI or use default -1
 
 def clear_screen():
     print("\033[H\033[J", end="")
@@ -1372,8 +1372,8 @@ def print_menu(cfg: Config):
     print(" [Q] 退出")
     print("="*60)
 
-def configure():
-    cfg = Config()
+def configure(default_days: int = -1):
+    cfg = Config(days=default_days)
     
     # Mapping keys to toggle actions
     toggles = {
@@ -1604,7 +1604,7 @@ def main():
         # Interactive Mode
         print("进入交互模式...")
         try:
-            cfg = configure()
+            cfg = configure(default_days=args.days)
             selected_markets = cfg.selected_markets
             args.days = cfg.days
         except KeyboardInterrupt:
