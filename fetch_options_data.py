@@ -45,7 +45,7 @@ except ImportError as e:
     FUTU_AVAILABLE = False
     # 暂时用 print，因为 logger 可能尚未配置好 (取决于执行顺序)
     # 不过上面的 logger = logging.getLogger(__name__) 已经在配置之后了，所以可以用 logger
-    logger.warning(f"Futu API (futu-api) 导入失败，港股期权不可用。错误详情: {e}")
+    print(f"Futu API (futu-api) 导入失败，港股期权不可用。错误详情: {e}")
 
 # 必须在 futu 之后导入 sqlmodel，以确保 Session 指向 sqlmodel.Session
 from sqlmodel import Session, select, delete
@@ -60,7 +60,7 @@ def load_csp_config():
             config = yaml.safe_load(f)
             return config.get("csp_contract_prefs", {})
     except Exception as e:
-        logger.warning(f"Failed to load CSP config: {e}")
+        print(f"Failed to load CSP config: {e}")
         return {}
 
 def save_csp_candidate(session, candidate_data):
@@ -70,7 +70,7 @@ def save_csp_candidate(session, candidate_data):
         session.commit()
     except Exception as e:
         session.rollback()
-        logger.error(f"Failed to save CSP candidate: {e}")
+        print(f"Failed to save CSP candidate: {e}")
 
 def filter_and_save_csp_candidates(chain_df, spot_price, expiry_date, session, symbol, market, prefs):
     """
@@ -116,7 +116,7 @@ def filter_and_save_csp_candidates(chain_df, spot_price, expiry_date, session, s
             
             # Check Moneyness Filter (Low 3-7%)
             if not (min_discount <= discount_pct <= max_discount):
-                # logger.info(f"debug: reject s={strike} disc={discount_pct:.2f}")
+                # print(f"debug: reject s={strike} disc={discount_pct:.2f}")
                 continue
                 
             # Extract Data
@@ -167,10 +167,10 @@ def filter_and_save_csp_candidates(chain_df, spot_price, expiry_date, session, s
             count += 1
             
         if count > 0:
-            logger.info(f"    ✨ Found {count} CSP candidates for {expiry_date}")
+            print(f"    ✨ Found {count} CSP candidates for {expiry_date}")
 
     except Exception as e:
-        logger.error(f"Error filtering CSP candidates: {e}")
+        print(f"Error filtering CSP candidates: {e}")
 
 
 
@@ -222,7 +222,7 @@ def find_target_expiry_dates(ticker, target_months=[1, 2, 3]):
         return target_dates
         
     except Exception as e:
-        logger.error(f"查找到期日失败: {e}")
+        print(f"查找到期日失败: {e}")
         return {}
 
 def find_target_expiry_dates_with_csp(ticker, target_months=[1, 2, 3], csp_prefs=None):
@@ -255,7 +255,7 @@ def find_target_expiry_dates_with_csp(ticker, target_months=[1, 2, 3], csp_prefs
                    target_dates[display_key] = expiry_str
                    
     except Exception as e:
-        logger.warning(f"Error finding CSP expiries: {e}")
+        print(f"Error finding CSP expiries: {e}")
         
     return target_dates
 
@@ -311,27 +311,30 @@ def calculate_greeks(underlying_price, strike, risk_free_rate, days_to_expiry, i
             'theoretical_price': greeks.putPrice
         }
     except Exception as e:
-        logger.warning(f"计算希腊字母失败: {e}")
+        print(f"计算希腊字母失败: {e}")
         return None
 
-def fetch_hk_options_futu(symbol, session, target_months, csp_prefs=None):
+def fetch_hk_options_futu(symbol, session, target_months, csp_prefs=None, quote_ctx=None):
     """
     使用 Futu OpenD 获取港股期权数据
     需要本地运行 OpenD (127.0.0.1:11111)
     """
     if not FUTU_AVAILABLE:
-        logger.error("❌ Futu API 未安装，无法获取港股期权")
+        print("❌ Futu API 未安装，无法获取港股期权")
         return 0
         
-    # 格式转换 HK:STOCK:00700 -> HK.00700
     code = symbol.split(':')[-1]
     futu_symbol = f"HK.{code}"
     
-    logger.info(f"\n{'='*60}")
-    logger.info(f"Futu 处理 {symbol} -> {futu_symbol}")
-    logger.info(f"{'='*60}")
+    print(f"\n{'='*60}")
+    print(f"Futu 处理 {symbol} -> {futu_symbol}")
+    print(f"{'='*60}")
     
-    quote_ctx = OpenQuoteContext(host='127.0.0.1', port=11111)
+    close_ctx_here = False
+    if quote_ctx is None:
+        quote_ctx = OpenQuoteContext(host='127.0.0.1', port=11111)
+        close_ctx_here = True
+        
     total_saved = 0
     import time
     
@@ -339,20 +342,22 @@ def fetch_hk_options_futu(symbol, session, target_months, csp_prefs=None):
         # 1. 获取正股当前价格
         ret, snap_df = quote_ctx.get_market_snapshot([futu_symbol])
         if ret != RET_OK:
-            logger.error(f"❌ 无法获取 {futu_symbol} 当前价格: {snap_df}")
-            quote_ctx.close()
+            print(f"❌ 无法获取 {futu_symbol} 当前价格: {snap_df}")
+            if close_ctx_here: quote_ctx.close()
             return 0
             
         underlying_price = snap_df['last_price'][0]
-        logger.info(f"  💰 当前价格: ${underlying_price:.2f}")
-        time.sleep(0.2) # Prevent rate limit
+        print(f"  💰 当前价格: ${underlying_price:.2f}")
+        time.sleep(0.5) # Prevent rate limit
         
         # 2. 获取到期日列表
         ret, expiry_df = quote_ctx.get_option_expiration_date(code=futu_symbol)
         if ret != RET_OK:
-            logger.warning(f"  ⚠️  无法获取到期日: {expiry_df}")
-            quote_ctx.close()
+            print(f"  ⚠️  无法获取到期日: {expiry_df}")
+            if close_ctx_here: quote_ctx.close()
             return 0
+            
+        time.sleep(0.5) # Prevent rate limit after expiration query
             
         # 筛选目标月份的到期日
         target_dates = {}
@@ -389,9 +394,9 @@ def fetch_hk_options_futu(symbol, session, target_months, csp_prefs=None):
                         if exp not in target_dates.values():
                             target_dates[f"CSP_{days}d"] = exp
             except Exception as e:
-                logger.warning(f"Error adding HK CSP dates: {e}")
+                print(f"Error adding HK CSP dates: {e}")
                 
-        logger.info(f"  📅 目标到期日: {list(target_dates.values())}")
+        print(f"  📅 目标到期日: {list(target_dates.values())}")
 
         # 3. 遍历到期日获取期权链
         for month, expiry_date in target_dates.items():
@@ -406,13 +411,13 @@ def fetch_hk_options_futu(symbol, session, target_months, csp_prefs=None):
             )
             
             if ret != RET_OK:
-                logger.warning(f"  ⚠️  无法获取 {expiry_date} 期权链: {chain_df}")
+                print(f"  ⚠️  无法获取 {expiry_date} 期权链: {chain_df}")
                 continue
                 
             if chain_df.empty:
                 continue
 
-            time.sleep(0.2) # Prevent rate limit after chain query
+            time.sleep(3.1) # 严格控制获取期权链频率，每30秒最多10次
             
             filter_and_save_csp_candidates(chain_df, underlying_price, expiry_date, session, symbol, 'HK', csp_prefs)
 
@@ -423,17 +428,17 @@ def fetch_hk_options_futu(symbol, session, target_months, csp_prefs=None):
             chain_df['distance'] = abs(chain_df['strike'] - underlying_price)
             near_puts = chain_df.nsmallest(3, 'distance')
             
-            logger.info(f"\n  📊 {expiry_date} - 找到 {len(near_puts)} 个近价 PUT")
+            print(f"\n  📊 {expiry_date} - 找到 {len(near_puts)} 个近价 PUT")
             
             # 批量获取期权行情快照
             option_codes = near_puts['code'].tolist()
             ret, opt_snaps = quote_ctx.get_market_snapshot(option_codes)
             if ret != RET_OK:
-                logger.warning(f"  ⚠️  无法获取期权行情: {opt_snaps}")
+                print(f"  ⚠️  无法获取期权行情: {opt_snaps}")
                 time.sleep(1) # Backoff
                 continue
             
-            time.sleep(0.2) # Prevent rate limit
+            time.sleep(0.5) # Prevent rate limit
             
             # 合并数据
             merged = pd.merge(near_puts, opt_snaps, on='code', how='inner')
@@ -472,7 +477,7 @@ def fetch_hk_options_futu(symbol, session, target_months, csp_prefs=None):
                     # 此处假设它是百分比数值，需转为小数? (yfinance 是小数 0.305)
                     # 经查证，Futu API 返回的 IV 通常是百分比 (例如 25.5)，为了统一，我们应除以 100 吗？
                     # 我们的数据库期望小数 (0.255) 还是百分比 (25.5)?
-                    # fetch_options_data.py 里: logger.info(f"IV {option.get('impliedVolatility', 0)*100:.1f}%")
+                    # fetch_options_data.py 里: print(f"IV {option.get('impliedVolatility', 0)*100:.1f}%")
                     # 说明 fetch_options_data 认为 yfinance 返回的是小数 (0.x)。
                     # Futu 返回的 IV 通常也是小数 (0.x) 或者百分比。
                     # 让我们先保持原值，如果发现是百分比 (例如 > 1)，我们再处理。
@@ -533,21 +538,22 @@ def fetch_hk_options_futu(symbol, session, target_months, csp_prefs=None):
                     total_saved += 1
                     
                     itm_status = "价内" if moneyness > 0 else "价外" if moneyness < 0 else "平值"
-                    logger.info(f"     ✓ ${strike:.2f} ({itm_status}) - Last: ${last_price:.2f}")
+                    print(f"     ✓ ${strike:.2f} ({itm_status}) - Last: ${last_price:.2f}")
 
                 except Exception as e:
-                    logger.error(f"Save Error: {e}")
+                    print(f"Save Error: {e}")
                     
             session.commit()
             
     except Exception as e:
-        logger.error(f"Futu Error: {e}")
+        print(f"Futu Error: {e}")
     finally:
-        quote_ctx.close()
+        if close_ctx_here:
+            quote_ctx.close()
         
     return total_saved
 
-def fetch_options_for_symbol(symbol, market, target_months, session, csp_prefs=None):
+def fetch_options_for_symbol(symbol, market, target_months, session, csp_prefs=None, quote_ctx=None):
     """
     为单个股票下载期权数据
     """
@@ -557,16 +563,16 @@ def fetch_options_for_symbol(symbol, market, target_months, session, csp_prefs=N
 
     # 针对港股，优先使用 Futu
     if market == 'HK':
-        return fetch_hk_options_futu(symbol, session, target_months, csp_prefs)
+        return fetch_hk_options_futu(symbol, session, target_months, csp_prefs, quote_ctx=quote_ctx)
 
     # 针对美股，继续使用 yfinance
     # 使用统一工具函数获取 yfinance 格式的 symbol (例如 HK:STOCK:00700 -> 0700.HK)
     raw_symbol = symbol.split(':')[-1]
     ticker_symbol = get_yahoo_symbol(raw_symbol, market, 'STOCK')
     
-    logger.info(f"\n{'='*60}")
-    logger.info(f"处理 {symbol} -> Ticker: {ticker_symbol}")
-    logger.info(f"{'='*60}")
+    print(f"\n{'='*60}")
+    print(f"处理 {symbol} -> Ticker: {ticker_symbol}")
+    print(f"{'='*60}")
     
     try:
         # 获取股票数据
@@ -580,13 +586,13 @@ def fetch_options_for_symbol(symbol, market, target_months, session, csp_prefs=N
                 underlying_price = hist['Close'].iloc[-1] if not hist.empty else None
             
             if not underlying_price:
-                logger.error(f"  ❌ 无法获取 {ticker_symbol} 的当前价格")
+                print(f"  ❌ 无法获取 {ticker_symbol} 的当前价格")
                 return 0
             
-            logger.info(f"  💰 当前价格: ${underlying_price:.2f}")
+            print(f"  💰 当前价格: ${underlying_price:.2f}")
             
         except Exception as e:
-            logger.error(f"  ❌ 获取价格失败: {e}")
+            print(f"  ❌ 获取价格失败: {e}")
             return 0
         
         # 获取货币单位
@@ -596,13 +602,13 @@ def fetch_options_for_symbol(symbol, market, target_months, session, csp_prefs=N
         target_expiries = find_target_expiry_dates_with_csp(ticker, target_months, csp_prefs)
         
         if not target_expiries:
-            logger.warning(f"  ⚠️  没有找到合适的期权到期日")
+            print(f"  ⚠️  没有找到合适的期权到期日")
             return 0
         
-        logger.info(f"  📅 目标到期日:")
+        print(f"  📅 目标到期日:")
         for month, expiry in target_expiries.items():
             days = calculate_days_to_expiry(expiry)
-            logger.info(f"     {month}个月: {expiry} (距今{days}天)")
+            print(f"     {month}个月: {expiry} (距今{days}天)")
         
         # 获取无风险利率
         risk_free_rate = RISK_FREE_RATES.get(market, 0.04)
@@ -617,20 +623,20 @@ def fetch_options_for_symbol(symbol, market, target_months, session, csp_prefs=N
                 days_to_expiry = calculate_days_to_expiry(expiry_date)
                 
                 if days_to_expiry <= 0:
-                    logger.warning(f"  ⚠️  {expiry_date} 已过期，跳过")
+                    print(f"  ⚠️  {expiry_date} 已过期，跳过")
                     continue
                 
                 # 找到近价看跌期权
                 near_puts = find_near_money_puts(option_chain, underlying_price, num_strikes=3)
                 
                 if near_puts.empty:
-                    logger.warning(f"  ⚠️  {expiry_date} 没有看跌期权数据")
+                    print(f"  ⚠️  {expiry_date} 没有看跌期权数据")
                     continue
                 
                 # Filter CSP
                 filter_and_save_csp_candidates(option_chain.puts, underlying_price, expiry_date, session, symbol, 'US', csp_prefs)
                 
-                logger.info(f"\n  📊 {expiry_date} - 找到 {len(near_puts)} 个近价看跌期权")
+                print(f"\n  📊 {expiry_date} - 找到 {len(near_puts)} 个近价看跌期权")
                 
                 # 保存每个期权
                 for idx, (_, option) in enumerate(near_puts.iterrows()):
@@ -707,25 +713,25 @@ def fetch_options_for_symbol(symbol, market, target_months, session, csp_prefs=N
                         
                         # 输出详情
                         itm_status = "价内" if moneyness > 0 else "价外" if moneyness < 0 else "平值"
-                        logger.info(f"     ✓ ${option['strike']:.2f} ({itm_status}) - "
+                        print(f"     ✓ ${option['strike']:.2f} ({itm_status}) - "
                                   f"Last: ${option['lastPrice']:.2f}, IV {option.get('impliedVolatility', 0)*100:.1f}%")
                         
                     except Exception as e:
-                        logger.error(f"     ✗ 保存期权失败: {e}")
+                        print(f"     ✗ 保存期权失败: {e}")
                         continue
                 
             except Exception as e:
-                logger.error(f"  ❌ 处理到期日 {expiry_date} 失败: {e}")
+                print(f"  ❌ 处理到期日 {expiry_date} 失败: {e}")
                 continue
         
         # 提交所有更改
         session.commit()
-        logger.info(f"\n  ✅ 成功保存 {total_saved} 条期权数据")
+        print(f"\n  ✅ 成功保存 {total_saved} 条期权数据")
         
         return total_saved
         
     except Exception as e:
-        logger.error(f"  ❌ 处理 {symbol} 失败: {e}")
+        print(f"  ❌ 处理 {symbol} 失败: {e}")
         session.rollback()
         return 0
 
@@ -740,10 +746,10 @@ def clean_expired_options(session):
         session.commit()
         
         deleted_count = result.rowcount if hasattr(result, 'rowcount') else 0
-        logger.info(f"🗑️  清理了 {deleted_count} 条过期期权数据")
+        print(f"🗑️  清理了 {deleted_count} 条过期期权数据")
         
     except Exception as e:
-        logger.error(f"清理过期数据失败: {e}")
+        print(f"清理过期数据失败: {e}")
         session.rollback()
 
 def main():
@@ -813,17 +819,17 @@ def main():
     # Load CSP Config
     csp_prefs = load_csp_config()
     if csp_prefs:
-        logger.info("🔧 Loaded CSP Preferences")
+        print("🔧 Loaded CSP Preferences")
     else:
-        logger.warning("⚠️ CSP Config Could not be loaded or is empty")
+        print("⚠️ CSP Config Could not be loaded or is empty")
 
-    logger.info("="*60)
-    logger.info("期权数据下载任务启动")
-    logger.info("="*60)
-    logger.info(f"市场: {final_market_arg}")
-    logger.info(f"目标月份: {target_months}")
-    logger.info(f"清理过期数据: {'是' if args.clean else '否'}") 
-    logger.info("="*60)
+    print("="*60)
+    print("期权数据下载任务启动")
+    print("="*60)
+    print(f"市场: {final_market_arg}")
+    print(f"目标月份: {target_months}")
+    print(f"清理过期数据: {'是' if args.clean else '否'}") 
+    print("="*60)
     
     with Session(engine) as session:
         # 清理过期数据
@@ -847,38 +853,52 @@ def main():
         # 即使选了 ALL，也必须剔除 CN (A股) 等不支持的市场
         valid_stocks = [s for s in stocks if s.symbol.split(':')[0] in ['US', 'HK']]
         
-        logger.info(f"\n找到 {len(valid_stocks)} 只符合条件的股票 (已过滤不支持的市场)\n")
+        print(f"\n找到 {len(valid_stocks)} 只符合条件的股票 (已过滤不支持的市场)\n")
         
         if not valid_stocks:
-            logger.warning("❌ 没有找到符合条件的股票，任务结束")
+            print("❌ 没有找到符合条件的股票，任务结束")
             return
-
+            
         total_options = 0
         success_count = 0
-        
-        for item in valid_stocks:
-            # 提取市场
-            market = item.symbol.split(':')[0]
             
-            # 下载期权数据
-            saved = fetch_options_for_symbol(
-                item.symbol,
-                market,
-                target_months,
-                session,
-                csp_prefs
-            )
-            
-            if saved > 0:
-                success_count += 1
-                total_options += saved
-        
-        logger.info("\n" + "="*60)
-        logger.info("下载任务完成")
-        logger.info("="*60)
-        logger.info(f"成功处理: {success_count}/{len(valid_stocks)} 只股票")
-        logger.info(f"总计保存: {total_options} 条期权数据")
-        logger.info("="*60)
+        quote_ctx = None
+        if FUTU_AVAILABLE and any(s.symbol.startswith('HK:') for s in valid_stocks):
+            try:
+                quote_ctx = OpenQuoteContext(host='127.0.0.1', port=11111)
+            except Exception as e:
+                print(f"❌ 无法连接到 Futu OpenD: {e}")
+                
+        try:
+            for item in valid_stocks:
+                # 提取市场
+                market = item.symbol.split(':')[0]
+                
+                # 下载期权数据
+                saved = fetch_options_for_symbol(
+                    item.symbol,
+                    market,
+                    target_months,
+                    session,
+                    csp_prefs,
+                    quote_ctx=quote_ctx
+                )
+                
+                if saved > 0:
+                    success_count += 1
+                    total_options += saved
+                    
+                # 为了防止 yfinance 限制/Futu频繁调用，适当延时
+                time.sleep(1.0)
+        finally:
+            if quote_ctx:
+                quote_ctx.close()
+        print("\n" + "="*60)
+        print("下载任务完成")
+        print("="*60)
+        print(f"成功处理: {success_count}/{len(valid_stocks)} 只股票")
+        print(f"总计保存: {total_options} 条期权数据")
+        print("="*60)
         
         # 打印导出提示
         print("\n📝  后续步骤:")
